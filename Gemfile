@@ -47,6 +47,10 @@ gem "bootsnap", require: false
 # Universal Gems
 gem "faraday"
 gem "jsonapi-serializer"
+gem "dotenv-rails", groups: [:development, :test]
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem 'omniauth-rails_csrf_protection' #, '~> 0.1'
 
 group :development do
   gem "web-console"

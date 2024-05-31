@@ -36,3 +36,6 @@
 
 # SimpleCov Report
 /coverage/
+
+# ENV
+.env
