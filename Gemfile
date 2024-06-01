@@ -48,6 +48,9 @@ gem "bootsnap", require: false
 gem "faraday"
 gem "jsonapi-serializer"
 
+# Design
+gem "bootstrap", "~> 5.2.0"
+
 group :development do
   gem "web-console"
   # gem "rack-mini-profiler"
