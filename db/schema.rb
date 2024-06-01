@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_01_185417) do
     t.string "uid"
     t.string "username"
     t.string "token"
+    t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
