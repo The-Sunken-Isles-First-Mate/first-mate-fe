@@ -2,12 +2,12 @@
 
 <section class="character_form">
   <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
-    <h2> Character Name </h2>
+    <h3> Character Name </h3>
     <%= form.text_field :name %> <br>
 
+    <br>
     <p> This is where the class will go </p>
     <p> This is where the race will go </p>
-
     <br>
 
     <%= form.submit "Create Character" %>
