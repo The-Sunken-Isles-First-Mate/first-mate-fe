@@ -38,5 +38,16 @@ module RailsApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # ensure the middleware for sessions is loaded before OmniAuth
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use OmniAuth::Builder do
+      provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
+      # {
+      #   scope: 'email, profile',
+      #   prompt: 'select_account',
+      #   access_type: 'offline'
+      # }
+    end
   end
 end
