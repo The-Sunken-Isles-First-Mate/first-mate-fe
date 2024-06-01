@@ -27,6 +27,9 @@ class SessionsController < ApplicationController
     response = conn.get('/user')
     data = JSON.parse(response.body, symbolize_names: true)
 
+    # get to be with token - if not found then create a user with the token
+    # get or post, with all params (username, uid, token)
+
     user          = User.find_or_create_by(uid: data[:id])
     user.username = data[:login]
     user.uid      = data[:id]

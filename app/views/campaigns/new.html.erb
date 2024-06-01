@@ -1,0 +1,16 @@
+<h1> Create Campaign </h1>
+
+<section class="campaign_form">
+  <%= form_with url: campaigns_path, method: :post, data: {turbo: false} do |form| %>
+    <h3> Campaign Name </h3>
+    <%= form.text_field :name %> <br><br>
+
+    <h3> Invite Players by Email </h3>
+    Player 1: <%= form.text_field :player_1 %> <br><br>
+    Player 2: <%= form.text_field :player_2 %> <br><br>
+    Player 3: <%= form.text_field :player_3 %> <br><br>
+    Player 4: <%= form.text_field :player_4 %> <br><br>
+
+    <%= form.submit "Create Campaign" %>
+  <% end %>
+</section>
