@@ -3,7 +3,7 @@ require 'simplecov'
 SimpleCov.start
 
 # Webmock
-require 'webmock/rspec'
+# require 'webmock/rspec'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
@@ -79,4 +79,16 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+# VCR.configure do |config|
+#   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+#   config.hook_into :webmock
+#   config.filter_sensitive_data('<TOMTOM_API_KEY>') { ENV['tomtom_api_key'] }
+#   config.configure_rspec_metadata!
+# end
+
+def check_hash_structure(object, key, data_type)
+  expect(object).to have_key(key)
+  expect(object[key]).to be_a(data_type)
 end

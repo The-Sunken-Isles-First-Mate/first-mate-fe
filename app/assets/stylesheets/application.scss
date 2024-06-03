@@ -17,5 +17,21 @@
 @import "bootstrap";
 
 body {
-  padding: 5%;
+  padding: 20px;
+}
+
+.responsive {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-color: black;
+  border-style: solid;
+}
+
+.main_content{
+  padding: 10%;
+  margin: 0 auto;
+  width: 70%;
 }
