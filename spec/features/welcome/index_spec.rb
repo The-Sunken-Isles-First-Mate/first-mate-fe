@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Welcome Index Page", type: :feature do
+  it "has main logo for Sunken Isles" do
+    visit root_path
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_selector("#main_logo")
+  end
+
   it "has button to sign into GitHub" do
     visit root_path
 
