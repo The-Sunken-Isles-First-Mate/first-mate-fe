@@ -24,6 +24,20 @@ class BackendService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_user(url, user_hash)
+    response = connection.get(url) do |request|
+      request.body = 
+      {
+        user: {
+          username: user_hash[:username],
+          token: user_hash[:token],
+        }
+      }.to_json
+    end
+
+    json = JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
 
   def self.connection

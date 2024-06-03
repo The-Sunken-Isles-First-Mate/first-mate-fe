@@ -16,4 +16,8 @@ class BackendFacade
   def self.create_character(data)
     response = BackendService.post_db(data)
   end
+
+  def self.get_user(user_hash)
+    response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
+  end
 end
