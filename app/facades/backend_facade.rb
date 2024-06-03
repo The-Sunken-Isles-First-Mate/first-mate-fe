@@ -5,14 +5,15 @@ class BackendFacade
   end
 
   def self.campaign_items(id, camp_id)
-
   end
 
   def self.campaigns 
-
   end
 
   def self.management_forms(camp_id)
-    
+  end
+
+  def self.create_character(data)
+    response = BackendService.post_db(data)
   end
 end
