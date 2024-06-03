@@ -1,15 +1,18 @@
 <h1> Create a Character </h1>
 
+<br>
+
 <section class="character_form">
   <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
     <h3> Character Name </h3>
-    <%= form.text_field :name %> <br>
+    <%= form.text_field :name %> <br><br>
 
-    <br>
-    <p> This is where the class will go </p>
-    <p> This is where the race will go </p>
-    <br>
+    <h3> Character Race </h3>
+    <%= form.select :race, @classes, selected: @classes.first %> <br><br>
 
+    <h3> Character Class </h3>
+    <%= form.select :class, @races, selected: @races.first %> <br><br><br>
+    
     <%= form.submit "Create Character" %>
   <% end %>
 </section>
