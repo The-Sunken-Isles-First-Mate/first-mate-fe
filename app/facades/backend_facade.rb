@@ -25,6 +25,10 @@ class BackendFacade
     response = BackendService.post_db_user_campaign_dm(campaign_id, current_user)
   end
 
+  def self.create_user_campaign_pl(campaign_id, player_id)
+    response = BackendService.post_db_user_campaign_pl(campaign_id, player_id)
+  end
+
   def self.get_user(user_hash)
     response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
   end
