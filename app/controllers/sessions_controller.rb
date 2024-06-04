@@ -29,15 +29,6 @@ class SessionsController < ApplicationController
     })
 
     session[:user] = user
-  
-    # This is for when we DO NOT have the API call implemented
-    # user          = User.find_or_create_by(uid: data[:id])
-    # user.username = data[:login]
-    # user.uid      = data[:id]
-    # user.token    = access_token
-    # user.save
-    
-    # session[:user] = user.id
 
     redirect_to dashboard_path
   end
