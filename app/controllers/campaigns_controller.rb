@@ -35,6 +35,13 @@ class CampaignsController < ApplicationController
     dm_conn = BackendFacade.create_user_campaign_dm(campaign.id, current_user)
     
     # Create the UserCampaign for all players
+    players = [params[:player_1], params[:player_2], params[:player_3], params[:player_4]] # Player IDs
+    # players.each do |player|
+    #   if !player.empty?
+    #     pl_conn = BackendFacade.create_user_campaign_pl(campaign.id, player)
+    #   end
+    # end
+
     binding.pry
 
     # Temp redirect back to dashboard - will go to the summary page
