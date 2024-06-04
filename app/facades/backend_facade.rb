@@ -46,13 +46,18 @@ class BackendFacade
     })
   end
 
+  def self.get_user(user_hash)
+    response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
+    user = User.new({
+      id: response[:data][:id],
+      uid: response[:data][:attributes][:uid],
+      username: response[:data][:attributes][:username]
+    })
+  end
+
   ### Not Formatted
   def self.item(id)
     response = BackendService.call_db("api/v1/items/#{id}")
-  end
-
-  def self.get_user(user_hash)
-    response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
   end
 
   # def self.campaign_items(id, camp_id)
