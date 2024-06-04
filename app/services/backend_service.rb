@@ -3,10 +3,10 @@ class BackendService
     response = connection.get(url) do |request|
     end
 
-    JSON.parse(response.body, symbolize_names: true)
+    json = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.post_db(data)
+  def self.post_db_character(data)
     url = data[:url]
     response = connection.post(url) do |request|
       request.body = 
@@ -20,8 +20,34 @@ class BackendService
         }
       }.to_json
     end
+    JSON.parse(response.body, symbolize_names: true)
+  end
 
-    json = JSON.parse(response.body, symbolize_names: true)
+  def self.post_db_campaign(data)
+    url = data[:url]
+    response = connection.post(url) do |request|
+      request.body = 
+      {
+        campaign: {
+          name: data[:name],
+        }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.post_db_user_campaign_dm(campaign_id, current_user)
+    response = connection.post("/api/v1/user_campaigns") do |request|
+      request.body = 
+      {
+        user_campaign: {
+          user_id: current_user.id,
+          campaign_id: campaign_id,
+          role: 1
+        }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.call_db_for_user(url, user_hash)
@@ -34,8 +60,6 @@ class BackendService
         }
       }.to_json
     end
-
-    json = JSON.parse(response.body, symbolize_names: true)
   end
 
   private

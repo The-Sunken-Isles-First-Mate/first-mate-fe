@@ -25,27 +25,25 @@ class SessionsController < ApplicationController
     response = conn.get('/user')
     data = JSON.parse(response.body, symbolize_names: true)
 
-    # get to be with token - if not found then create a user with the token
-    # get or post, with all params (username, uid, token)
+    # This is for when we DO HAVE the API call implemented
+      # user_hash = {
+      #   uid: data[:id],
+      #   username: data[:login],
+      #   token: access_token
+      # }
 
-    user_hash = {
-      uid: data[:id],
-      username: data[:login],
-      token: access_token
-    }
+      # be_facade = BackendFacade.get_user(user_hash)
+      # session[:user_id] = be_facade[:data][:id]
 
-    be_facade = BackendFacade.get_user(user_hash)
+    # This is for when we DO NOT HAVE the API call implemented
+      user          = User.find_or_create_by(uid: data[:id])
+      user.username = data[:login]
+      user.uid      = data[:id]
+      user.token    = access_token
+      user.save
+      
+      session[:user_id] = user.id
 
-    # user          = User.find_or_create_by(uid: data[:id])
-    # user.username = data[:login]
-    # user.uid      = data[:id]
-    # user.token    = access_token
-    # user.save
-
-    binding.pry
-
-    session[:user_id] = be_facade[:data][:id]
-    
     redirect_to dashboard_path
   end
 

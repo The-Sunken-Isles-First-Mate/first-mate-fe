@@ -14,7 +14,15 @@ class BackendFacade
   end
 
   def self.create_character(data)
-    response = BackendService.post_db(data)
+    response = BackendService.post_db_character(data)
+  end
+
+  def self.create_campaign(data)
+    response = BackendService.post_db_campaign(data)
+  end
+
+  def self.create_user_campaign_dm(campaign_id, current_user)
+    response = BackendService.post_db_user_campaign_dm(campaign_id, current_user)
   end
 
   def self.get_user(user_hash)
