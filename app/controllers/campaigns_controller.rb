@@ -35,7 +35,6 @@ class CampaignsController < ApplicationController
     dm_conn = BackendFacade.create_user_campaign_dm(campaign.id, current_user)
     
     # Create the UserCampaign for all players
-    
     binding.pry
 
     # Temp redirect back to dashboard - will go to the summary page
