@@ -50,6 +50,20 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.post_db_user_campaign_pl(campaign_id, player_id)
+    response = connection.post("/api/v1/user_campaigns") do |request|
+      request.body = 
+      {
+        user_campaign: {
+          user_id: player_id,
+          campaign_id: campaign_id,
+          role: 0
+        }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.call_db_for_user(url, user_hash)
     response = connection.get(url) do |request|
       request.body = 

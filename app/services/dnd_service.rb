@@ -11,4 +11,3 @@ class DndService
     Faraday.new('https://www.dnd5eapi.co/api/')
   end
 end
-
