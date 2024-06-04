@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
       name: params[:name],
       dnd_race: params[:race],
       dnd_class: params[:class],
-      user_id: session[:user_id]
+      user_id: session[:user]
     })
 
     redirect_to dashboard_path

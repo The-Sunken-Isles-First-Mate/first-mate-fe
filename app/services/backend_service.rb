@@ -11,12 +11,12 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.post_db_user_campaign_dm(campaign_id, current_user)
+  def self.post_db_user_campaign_dm(campaign_id, main_user)
     response = connection.post("/api/v1/user_campaigns") do |request|
       request.body = 
       {
         user_campaign: {
-          user_id: current_user.id,
+          user_id: main_user.id,
           campaign_id: campaign_id,
           role: 1
         }

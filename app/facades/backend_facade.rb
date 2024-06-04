@@ -18,8 +18,8 @@ class BackendFacade
     })
   end
 
-  def self.create_user_campaign_dm(campaign_id, current_user)
-    response = BackendService.post_db_user_campaign_dm(campaign_id, current_user)
+  def self.create_user_campaign_dm(campaign_id, main_user)
+    response = BackendService.post_db_user_campaign_dm(campaign_id, main_user)
     dm = Dm.new({
       id: response[:data][:id],
       campaign_id: response[:data][:relationships][:campaign][:data][:id]

@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
     response = conn.get('/user')
     data = JSON.parse(response.body, symbolize_names: true)
 
-    # This is for when we DO have the API call implemented
     user = BackendFacade.get_user({
       uid: data[:id],
       username: data[:login],

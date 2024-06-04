@@ -13,8 +13,6 @@ RSpec.describe BackendService do
   xit 'can make API call to database' do
     query = BackendService.call_db('/api/v1/users/1')
     result = query[:results]
-    
-    binding.pry
 
     expect(query).to be_an Hash
     expect(result).to be_a Array
