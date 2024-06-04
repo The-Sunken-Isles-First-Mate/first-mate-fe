@@ -1,4 +1,17 @@
 class BackendService
+  def self.call_db_for_user(url, user_hash)
+    response = connection.get(url) do |request|
+      request.body = 
+      {
+        user: {
+          username: user_hash[:username],
+          token: user_hash[:token]
+        }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
       request.body = 
@@ -11,12 +24,12 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.post_db_user_campaign_dm(campaign_id, main_user)
+  def self.post_db_user_campaign_dm(campaign_id, current_user)
     response = connection.post("/api/v1/user_campaigns") do |request|
       request.body = 
       {
         user_campaign: {
-          user_id: main_user.id,
+          user_id: current_user.id,
           campaign_id: campaign_id,
           role: 1
         }
@@ -49,19 +62,6 @@ class BackendService
           dnd_class: new_character_data[:dnd_class],
           user_id: new_character_data[:user_id],
           picture_url: nil
-        }
-      }.to_json
-    end
-    JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def self.call_db_for_user(url, user_hash)
-    response = connection.get(url) do |request|
-      request.body = 
-      {
-        user: {
-          username: user_hash[:username],
-          token: user_hash[:token]
         }
       }.to_json
     end
