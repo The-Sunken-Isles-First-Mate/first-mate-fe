@@ -1,35 +1,10 @@
 class BackendService
-  def self.call_db(url)
-    response = connection.get(url) do |request|
-    end
-
-    json = JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def self.post_db_character(data)
-    url = data[:url]
-    response = connection.post(url) do |request|
-      request.body = 
-      {
-        character: {
-          name: data[:name],
-          dnd_race: data[:dnd_race],
-          dnd_class: data[:dnd_class],
-          user_id: data[:user_id],
-          picture_url: nil
-        }
-      }.to_json
-    end
-    JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def self.post_db_campaign(data)
-    url = data[:url]
-    response = connection.post(url) do |request|
+  def self.post_db_campaign(campaign_name)
+    response = connection.post("/api/v1/campaigns") do |request|
       request.body = 
       {
         campaign: {
-          name: data[:name],
+          name: campaign_name,
         }
       }.to_json
     end
@@ -64,6 +39,29 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.post_db_character(new_character_data)
+    response = connection.post("api/v1/characters") do |request|
+      request.body = 
+      {
+        character: {
+          name: new_character_data[:name],
+          dnd_race: new_character_data[:dnd_race],
+          dnd_class: new_character_data[:dnd_class],
+          user_id: new_character_data[:user_id],
+          picture_url: nil
+        }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  ### Not formatted
+  def self.call_db(url)
+    response = connection.get(url) do |request|
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.call_db_for_user(url, user_hash)
     response = connection.get(url) do |request|
       request.body = 
@@ -75,13 +73,12 @@ class BackendService
       }.to_json
     end
   end
+  ###
 
   private
-
-  def self.connection
-    # td: replace with hosted database once established
+  def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: 'http://localhost:3000/',
+      url: "http://localhost:3000/",
       headers: {'Content-Type' => 'application/json'}
     )
   end
