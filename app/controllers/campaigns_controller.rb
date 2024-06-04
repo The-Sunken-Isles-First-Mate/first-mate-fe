@@ -12,6 +12,6 @@ class CampaignsController < ApplicationController
       end
     end
 
-    redirect_to dashboard_path
+    redirect_to summary_path(campaign.id)
   end
 end
