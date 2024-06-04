@@ -55,23 +55,24 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  ### Not formatted
-  def self.call_db(url)
-    response = connection.get(url) do |request|
-    end
-    JSON.parse(response.body, symbolize_names: true)
-  end
-
   def self.call_db_for_user(url, user_hash)
     response = connection.get(url) do |request|
       request.body = 
       {
         user: {
           username: user_hash[:username],
-          token: user_hash[:token],
+          token: user_hash[:token]
         }
       }.to_json
     end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  ### Not formatted
+  def self.call_db(url)
+    response = connection.get(url) do |request|
+    end
+    JSON.parse(response.body, symbolize_names: true)
   end
   ###
 
