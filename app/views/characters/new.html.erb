@@ -1,18 +1,62 @@
-<h1> Create a Character </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Character</title>
+    <!-- Bootstrap CSS -->
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', media: 'all' %>
+    <style>
+        body {
+            background-image: url('<%= asset_path('dnd-character-creation-d20.jpg') %>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: black; /* Fallback color if the image is unavailable */
+            color: white; /* Text color */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .overlay-content {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+        }
+        .btn {
+            margin-top: 10px; /* Add some margin between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-content">
+        <h1>Create a Character</h1>
+        <br>
+        <section class="character_form">
+            <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
+                <h3>Character Name</h3>
+                <%= form.text_field :name, class: "form-control" %> <br><br>
 
-<br>
+                <h3>Character Race</h3>
+                <%= form.select :race, @races, selected: @races.first, class: "form-control" %> <br><br>
 
-<section class="character_form">
-  <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
-    <h3> Character Name </h3>
-    <%= form.text_field :name %> <br><br>
+                <h3>Character Class</h3>
+                <%= form.select :class, @classes, selected: @classes.first, class: "form-control" %> <br><br><br>
 
-    <h3> Character Race </h3>
-    <%= form.select :race, @classes, selected: @classes.first %> <br><br>
+                <%= form.submit "Create Character", class: "btn btn-primary" %>
+            <% end %>
+        </section>
+    </div>
 
-    <h3> Character Class </h3>
-    <%= form.select :class, @races, selected: @races.first %> <br><br><br>
-    
-    <%= form.submit "Create Character" %>
-  <% end %>
-</section>
+    <!-- Bootstrap JS and dependencies -->
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %>
+</body>
+</html>
