@@ -17,32 +17,27 @@ class SessionsController < ApplicationController
 
     access_token = data[:access_token]
 
-    conn = Faraday.new(
-    url: 'https://api.github.com',
-    headers: {
-        'Authorization': "token #{access_token}"
-    })
+    conn = Faraday.new(url: 'https://api.github.com', headers: {'Authorization': "token #{access_token}"})
     response = conn.get('/user')
     data = JSON.parse(response.body, symbolize_names: true)
 
-    # This is for when we DO HAVE the API call implemented
-      # user_hash = {
-      #   uid: data[:id],
-      #   username: data[:login],
-      #   token: access_token
-      # }
+    # This is for when we DO have the API call implemented
+    user = BackendFacade.get_user({
+      uid: data[:id],
+      username: data[:login],
+      token: access_token
+    })
 
-      # be_facade = BackendFacade.get_user(user_hash)
-      # session[:user_id] = be_facade[:data][:id]
-
-    # This is for when we DO NOT HAVE the API call implemented
-      user          = User.find_or_create_by(uid: data[:id])
-      user.username = data[:login]
-      user.uid      = data[:id]
-      user.token    = access_token
-      user.save
-      
-      session[:user_id] = user.id
+    session[:user] = user
+  
+    # This is for when we DO NOT have the API call implemented
+    # user          = User.find_or_create_by(uid: data[:id])
+    # user.username = data[:login]
+    # user.uid      = data[:id]
+    # user.token    = access_token
+    # user.save
+    
+    # session[:user] = user.id
 
     redirect_to dashboard_path
   end
