@@ -15,4 +15,9 @@ RSpec.describe "Dashboard Show Page", type: :feature do
     visit dashboard_path
     #save_and_open_page
   end
+
+  xit "user cannot access the dashboard unless logged in" do
+    visit dashboard_path
+    #save_and_open_page
+  end
 end

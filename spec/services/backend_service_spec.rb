@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe BackendService do
-  it "can hit back end endpoint - items" do
+  it "can hit back end endpoint - items", :vcr do
     query = BackendService.call_db('api/v1/items/1')
     result = query[:data]
 
