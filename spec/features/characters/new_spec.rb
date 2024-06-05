@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Characters New Page", type: :feature do
-  it "is a form to create a new character" do
+  it "is a form to create a new character", :vcr do
     visit new_character_path
 
     expect(current_path).to eq(new_character_path)

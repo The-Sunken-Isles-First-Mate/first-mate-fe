@@ -1,7 +1,7 @@
 class BackendService
   def self.call_db_for_user(url, user_hash)
     response = connection.get(url) do |request|
-      request.body = 
+      request.body =
       {
         user: {
           username: user_hash[:username],
@@ -12,9 +12,19 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_campaign(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_campaign_items(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
-      request.body = 
+      request.body =
       {
         campaign: {
           name: campaign_name,
@@ -26,7 +36,7 @@ class BackendService
 
   def self.post_db_user_campaign_dm(campaign_id, current_user)
     response = connection.post("/api/v1/user_campaigns") do |request|
-      request.body = 
+      request.body =
       {
         user_campaign: {
           user_id: current_user.id,
@@ -40,7 +50,7 @@ class BackendService
 
   def self.post_db_user_campaign_pl(campaign_id, player_id)
     response = connection.post("/api/v1/user_campaigns") do |request|
-      request.body = 
+      request.body =
       {
         user_campaign: {
           user_id: player_id,
@@ -54,7 +64,7 @@ class BackendService
 
   def self.post_db_character(new_character_data)
     response = connection.post("api/v1/characters") do |request|
-      request.body = 
+      request.body =
       {
         character: {
           name: new_character_data[:name],

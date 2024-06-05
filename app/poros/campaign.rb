@@ -1,4 +1,4 @@
-class DndCampaign
+class Campaign
   attr_reader :id,
               :name,
               :week,

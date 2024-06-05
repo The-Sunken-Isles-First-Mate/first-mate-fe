@@ -1,1 +1,48 @@
-<h1> Summary for Campaign </h1>
+<div class="container text-center">
+  <h1>Summary for <%= @campaign.name %> </h1>
+  <section id="campaign_summary">
+    <div class="row">
+      <div class="col">
+        <h2> Week <%= @campaign.week %> </h2>
+        <p> Current Villagers: <%= @campaign.villagers %> </h2>
+
+        <section id="campaign_summary_resources">
+          <h3> Resources </h3>
+          <ul style="list-style-type: none; padding: 0">
+            <li>Animal Products: <%= @campaign.animal_products %></li>
+            <li>Cloth: <%= @campaign.cloth %></li>
+            <li>Farmed Goods: <%= @campaign.farmed_goods %></li>
+            <li>Food: <%= @campaign.food %></li>
+            <li>Foraged Goods: <%= @campaign.foraged_goods %></li>
+            <li>Metal: <%= @campaign.metal %></li>
+            <li>Monster Parts: <%= @campaign.monster_parts %></li>
+            <li>Stone: <%= @campaign.stone %></li>
+            <li>Wood: <%= @campaign.wood %></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+      <div class="row">
+        <section id="campaign_summary_items">
+          <h3>Owned Items</h3>
+          <div class="col-lg-6 col-xs-12">
+            <ul style="list-style-type: none; padding: 0">
+              <% @items[0..13].each do |item| %>
+                <li><%= item.name %>: <%= item.quantity %></li>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-xs-12">
+            <ul style="list-style-type: none; padding: 0">
+              <% @items[14..-1].each do |item| %>
+                <li><%= item.name %>: <%= item.quantity %></li>
+              <% end %>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
