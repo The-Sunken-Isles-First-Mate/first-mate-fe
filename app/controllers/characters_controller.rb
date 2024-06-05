@@ -9,18 +9,17 @@ class CharactersController < ApplicationController
   end
 
   def create
-    data = {
-      url: "api/v1/characters",
+    character = BackendFacade.create_character({
       name: params[:name],
       dnd_race: params[:race],
       dnd_class: params[:class],
-      user_id: session[:user_id]
-    }
+      user_id: current_user.id
+    })
 
-    BackendFacade.create_character(data)
+    # Commented out because we need to figure out how the campaign and character are linked
+    # redirect_to summary_path(campaign.id)
 
-    # Temp redirect back to dashboard - will go to the summary page
-    redirect_to "/dashboard"
+    redirect_to dashboard_path
   end
 
   private

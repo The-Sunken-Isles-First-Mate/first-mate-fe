@@ -9,7 +9,7 @@ RSpec.describe "Campaigns New Page", type: :feature do
     within ".campaign_form" do
       expect(page).to have_content("Campaign Name")
       expect(page).to have_field (:name)
-      expect(page).to have_content("Invite Players by Email")
+      expect(page).to have_content("Invite Players by ID")
       expect(page).to have_field (:player_1)
       expect(page).to have_field (:player_2)
       expect(page).to have_field (:player_3)
