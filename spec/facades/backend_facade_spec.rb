@@ -15,6 +15,14 @@ RSpec.describe BackendFacade do
     expect(result.username).to eq("testuser123")
   end
 
+  describe '#get_campaign' do
+    it 'returns a campaign object', :vcr do
+      campaign = BackendFacade.get_campaign(1)
+
+      expect(campaign).to be_a Campaign
+    end
+  end
+
   # Character
 
   # User Campaign
