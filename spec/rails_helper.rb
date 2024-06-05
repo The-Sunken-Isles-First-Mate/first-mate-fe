@@ -38,7 +38,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.formatter = :documentation
-  config.include FactoryBot::Syntax::Methods
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
@@ -81,14 +81,13 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-# VCR.configure do |config|
-#   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-#   config.hook_into :webmock
-#   config.filter_sensitive_data('<TOMTOM_API_KEY>') { ENV['tomtom_api_key'] }
-#   config.configure_rspec_metadata!
-# end
-
 def check_hash_structure(object, key, data_type)
   expect(object).to have_key(key)
   expect(object[key]).to be_a(data_type)
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
 end
