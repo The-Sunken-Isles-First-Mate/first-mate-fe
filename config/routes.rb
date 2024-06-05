@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   resources :campaigns, only: [:new, :create] do
     get '/summary', to: 'summary#show'
     get '/management', to: 'management#edit'
+    post '/advance_week', to: 'management#advance_week'
   end
+
   resources :characters, only: [:new, :create]
+
+  resources :management, only: [:update]
 
   resources :party, only: [:index]
 end
