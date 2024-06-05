@@ -1,53 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to The Sunken Isles!</title>
-    <!-- Bootstrap CSS -->
-    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', media: 'all' %>
-    <style>
-        body {
-            background-image: url('<%= asset_path('pirate-battle.jpg') %>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: black; /* Fallback color if the image is unavailable */
-            color: white; /* Text color */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .overlay-content {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            width: 100%;
-        }
-        .btn {
-            margin-top: 10px; /* Add some margin between buttons */
-        }
-    </style>
-</head>
-<body>
-    <div class="overlay-content">
-        <h1>Welcome, <%= current_user.username %> to The Sunken Isles!</h1>
-        <br>
-        <%= button_to "Create Campaign", new_campaign_path, method: :get, class: "btn btn-primary" %> <br>
-        <%= button_to "Create Character", new_character_path, method: :get, class: "btn btn-secondary" %>
-        <br>
-        <h2>Your Active Campaigns</h2>
-        <!-- Add more content as needed -->
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js' %>
-    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' %>
-    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %>
-</body>
-</html>
+<div class="overlay-content">
+    <h1>Welcome, <%= current_user.username %> to The Sunken Isles!</h1>
+    <br>
+    <%= button_to "Create Campaign", new_campaign_path, method: :get, class: "btn btn-primary" %> <br>
+    <%= button_to "Create Character", new_character_path, method: :get, class: "btn btn-secondary" %>
+    <br>
+    <h2>Your Active Campaigns</h2>
+</div>

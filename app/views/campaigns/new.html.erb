@@ -1,66 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Campaign</title>
-    <!-- Bootstrap CSS -->
-    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', media: 'all' %>
-    <style>
-        body {
-            background-color: black;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .background-image {
-            background-image: url('<%= asset_path('bloody_map.jpg') %>');
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure the image is behind the form */
-        }
-        .campaign-form {
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-            margin: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="background-image"></div>
+<div class="campaign-form">
+    <h1 class="text-center">Create Campaign</h1>
+    <section class="campaign_form">
+        <%= form_with url: campaigns_path, method: :post, data: { turbo: false } do |form| %>
+            <h3>Campaign Name</h3>
+            <%= form.text_field :name, class: "form-control" %> <br><br><br>
 
-    <div class="campaign-form">
-        <h1 class="text-center">Create Campaign</h1>
-        <section class="campaign_form">
-            <%= form_with url: campaigns_path, method: :post, data: { turbo: false } do |form| %>
-                <h3>Campaign Name</h3>
-                <%= form.text_field :name, class: "form-control" %> <br><br><br>
+            <h3>Invite Players by ID</h3>
+            Player 1: <%= form.text_field :player_1, class: "form-control" %> <br><br>
+            Player 2: <%= form.text_field :player_2, class: "form-control" %> <br><br>
+            Player 3: <%= form.text_field :player_3, class: "form-control" %> <br><br>
+            Player 4: <%= form.text_field :player_4, class: "form-control" %> <br><br><br>
 
-                <h3>Invite Players by ID</h3>
-                Player 1: <%= form.text_field :player_1, class: "form-control" %> <br><br>
-                Player 2: <%= form.text_field :player_2, class: "form-control" %> <br><br>
-                Player 3: <%= form.text_field :player_3, class: "form-control" %> <br><br>
-                Player 4: <%= form.text_field :player_4, class: "form-control" %> <br><br><br>
-
-                <%= form.submit "Create Campaign", class: "btn btn-primary" %>
-            <% end %>
-        </section>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js' %>
-    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' %>
-    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %>
-</body>
-</html>
+            <%= form.submit "Create Campaign", class: "btn btn-primary" %>
+        <% end %>
+    </section>
+</div>
