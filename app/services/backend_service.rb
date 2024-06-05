@@ -71,7 +71,7 @@ class BackendService
           dnd_race: new_character_data[:dnd_race],
           dnd_class: new_character_data[:dnd_class],
           user_id: new_character_data[:user_id],
-          picture_url: nil
+          character_image: new_character_data[:character_image]
         }
       }.to_json
     end

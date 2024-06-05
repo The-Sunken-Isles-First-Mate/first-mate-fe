@@ -9,7 +9,8 @@ class CharactersController < ApplicationController
       name: params[:name],
       dnd_race: params[:race],
       dnd_class: params[:class],
-      user_id: current_user.id
+      user_id: current_user.id,
+      character_image: params[:character_image]
     })
 
     # Commented out because we need to figure out how the campaign and character are linked
