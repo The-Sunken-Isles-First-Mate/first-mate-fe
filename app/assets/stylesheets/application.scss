@@ -35,3 +35,17 @@ body {
   margin: 0 auto;
   width: 90%;
 }
+
+body {
+  background-image: url("dnd-character-creation-d20.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ }

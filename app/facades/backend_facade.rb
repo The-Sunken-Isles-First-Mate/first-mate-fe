@@ -13,7 +13,7 @@ class BackendFacade
     campaign = DndCampaign.new({
       id: response[:data][:id],
       name: response[:data][:attributes][:name],
-      week: response[:data][:attributes][:week], 
+      week: response[:data][:attributes][:week],
       animal_products: response[:data][:attributes][:animal_products],
       cloth: response[:data][:attributes][:cloth],
       farmed_goods: response[:data][:attributes][:farmed_goods],
