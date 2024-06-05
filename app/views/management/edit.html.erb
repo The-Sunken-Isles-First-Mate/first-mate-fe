@@ -1,1 +1,80 @@
-<h1> Management </h1>
+<h1> Resource Management for <%= @campaign.name %> </h1>
+
+<br>
+
+<section class="available_resources">
+  <h2> Resources Available </h2>
+  <%# Villagers %>
+  <p> Week <%= @campaign.week %> </p>
+  <p> Villagers Available: <%= @campaign.villagers %> </p>
+
+  <%# Essentials %>
+  <p> Food: <%= @campaign.food %> </p>
+  <p> Farmed Goods: <%= @campaign.farmed_goods %> </p>
+  <p> Foraged Goods: <%= @campaign.foraged_goods %> </p>
+
+  <%# Crafting Elements %>
+  <p> Wood: <%= @campaign.wood %> </p>
+  <p> Stone: <%= @campaign.stone %> </p>
+  <p> Metal: <%= @campaign.metal %> </p>
+
+  <%# Extra %>
+  <p> Cloth: <%= @campaign.cloth %> </p>
+  <p> Animal Products: <%= @campaign.animal_products %> </p>
+  <p> Monster Parts: <%= @campaign.monster_parts %> </p>
+</section>
+
+<br>
+
+<h2> Management Form </h2>
+<section class="management_form">
+  <%= form_with url: management_path(@management_form), method: :patch, data: {turbo: false} do |form| %>
+    <h4> Assign Villagers </h4>
+      <%= form.label :food, "Food:" %> 
+      <%= form.text_field :food %> <br>
+
+      <%= form.label :farmed_goods, "Farmed Goods:" %>
+      <%= form.text_field :farmed_goods %> <br>
+
+      <%= form.label :farmed_goods, "Foraged Goods:" %>
+      <%= form.text_field :foraged_goods %> <br>
+
+      <%= form.label :wood, "Wood:" %>
+      <%= form.text_field :wood %> <br>
+
+      <%= form.label :stone, "Stone:" %>
+      <%= form.text_field :stone %> <br>
+
+      <%= form.label :metal, "metal:" %>
+      <%= form.text_field :metal %> <br>
+
+      <%= form.label :cloth, "Cloth:" %>
+      <%= form.text_field :cloth %> <br>
+
+      <%= form.label :metal, "metal:" %>
+      <%= form.text_field :metal %> <br>
+
+      <%= form.label :animal_products, "Animal Products:" %>
+      <%= form.text_field :animal_products %> <br>
+
+      <%= form.label :monster_parts, "Moster Parts:" %>
+      <%= form.text_field :monster_parts %> <br>
+
+  <h4> Craft Items </h4>
+  
+    <%# Dropdown %>
+    <%# Dropdown %>
+    <%# Dropdown %>
+    <%# Dropdown %>
+    <%#= form.select :class, @classes, selected: @classes.first, class: "form-control" %> <br><br><br>
+
+    <%= form.submit "Update" %>
+  <% end %>
+</section>
+
+<%#
+If current_user == @campaign.dm
+If the current user is the dm of the campaign,
+show them the advance time button,
+%>
+<%= button_to "Advance Week", campaign_advance_week_path(@campaign), method: :post %>
