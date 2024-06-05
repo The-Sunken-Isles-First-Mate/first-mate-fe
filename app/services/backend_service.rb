@@ -22,6 +22,17 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_management_form(id, week)
+    response = connection.get('/api/v1/management_form') do |request|
+      request.body = 
+      {
+        campaign_id: id,
+        week: week
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
       request.body =
