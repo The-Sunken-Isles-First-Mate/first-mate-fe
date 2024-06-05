@@ -1,0 +1,5 @@
+class PartyController < ApplicationController
+  def index
+    # binding.pry
+  end
+end

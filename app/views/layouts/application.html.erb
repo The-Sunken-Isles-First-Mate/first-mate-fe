@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsApp</title>
+    <title> Welcome to The Sunken Isles! </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', media: 'all' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+
     <section class="main_image">
       <%= image_tag("https://d1wgd08o7gfznj.cloudfront.net/uploads/email_campaign/hero_image/8955/optimized_de5f342af424adb004d2a10671de1d6e_original.jpeg", :alt => "main logo", :class => "responsive", id: "main_logo") %>
     </section>
+
     <section class="main_content">
       <%= yield %>
     </section>
+
   </body>
 </html>
 

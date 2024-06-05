@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   resources :campaigns, only: [:new, :create]
   resources :characters, only: [:new, :create]
+
+  resources :summary, only: [:show]
+  resources :management, only: [:edit]
+  resources :party, only: [:index]
 end
