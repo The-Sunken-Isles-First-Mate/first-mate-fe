@@ -10,7 +10,7 @@ class BackendFacade
 
   def self.create_campaign(campaign_name)
     response = BackendService.post_db_campaign(campaign_name)
-    campaign = DndCampaign.new({
+    campaign = Campaign.new({
       id: response[:data][:id],
       name: response[:data][:attributes][:name],
       week: response[:data][:attributes][:week], 
@@ -59,14 +59,4 @@ class BackendFacade
   def self.item(id)
     response = BackendService.call_db("api/v1/items/#{id}")
   end
-
-  # def self.campaign_items(id, camp_id)
-  # end
-
-  # def self.campaigns
-  # end
-
-  # def self.management_forms(camp_id)
-  # end
-  ###
 end
