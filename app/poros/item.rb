@@ -5,5 +5,4 @@ class Item
     @name = attributes[:name]
     @quantity = attributes[:quantity]
   end
-
 end

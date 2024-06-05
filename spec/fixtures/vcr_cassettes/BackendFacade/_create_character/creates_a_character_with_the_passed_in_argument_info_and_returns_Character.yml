@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/characters
+    body:
+      encoding: UTF-8
+      string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1,"picture_url":null}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"db206386e1a2e4518df215a5ac0e13b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '008679fc-9c65-423e-9d70-577b47599212'
+      X-Runtime:
+      - '0.434254'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, unpermitted_parameters.action_controller;dur=0.00,
+        sql.active_record;dur=32.62, instantiation.active_record;dur=5.78, transaction.active_record;dur=33.46,
+        process_action.action_controller;dur=140.70
+      Content-Length:
+      - '256'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"character","attributes":{"name":"Character
+        Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
+  recorded_at: Wed, 05 Jun 2024 07:24:05 GMT
+recorded_with: VCR 6.2.0
