@@ -12,6 +12,9 @@ class CharactersController < ApplicationController
       user_id: current_user.id
     })
 
-    redirect_to summary_path(campaign.id)
+    # Commented out because we need to figure out how the campaign and character are linked
+    # redirect_to summary_path(campaign.id)
+
+    redirect_to dashboard_path
   end
 end
