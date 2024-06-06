@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 06 Jun 2024 16:45:34 GMT
+      - Thu, 06 Jun 2024 16:56:05 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717692334&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=ZZ30IT8J7u5Q0uCX9B9FCMdtqhWnkkIwOr3MsB8RTYE%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717692965&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=9fHrE1vQsBxjaHuN8zU%2FAQifPkvzZH2dJ9SwkbPGu0M%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717692334&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=ZZ30IT8J7u5Q0uCX9B9FCMdtqhWnkkIwOr3MsB8RTYE%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717692965&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=9fHrE1vQsBxjaHuN8zU%2FAQifPkvzZH2dJ9SwkbPGu0M%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -47,6 +47,7 @@ http_interactions:
       Vary:
       - Accept
       Etag:
+<<<<<<< HEAD
       - W/"3f7a1debe13e9d70156e2fbdd0734908"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -54,6 +55,15 @@ http_interactions:
       - 691edb44-bd40-49aa-a2e2-851eeec834d9
       X-Runtime:
       - '0.426205'
+=======
+      - W/"e7e815ac37d4606b98a29162e7640e6b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 44065dd3-f172-455a-aca9-721ab73501da
+      X-Runtime:
+      - '0.712221'
+>>>>>>> 0b5d6c914ae307e4b4b7b73cddbcd0519e70620f
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -62,6 +72,11 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
+<<<<<<< HEAD
       string: '{"data":{"id":"39","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"169","type":"campaign_item"},{"id":"170","type":"campaign_item"},{"id":"171","type":"campaign_item"},{"id":"172","type":"campaign_item"},{"id":"173","type":"campaign_item"},{"id":"174","type":"campaign_item"},{"id":"175","type":"campaign_item"},{"id":"176","type":"campaign_item"},{"id":"177","type":"campaign_item"},{"id":"178","type":"campaign_item"},{"id":"179","type":"campaign_item"},{"id":"180","type":"campaign_item"},{"id":"181","type":"campaign_item"},{"id":"182","type":"campaign_item"},{"id":"183","type":"campaign_item"},{"id":"184","type":"campaign_item"},{"id":"185","type":"campaign_item"},{"id":"186","type":"campaign_item"},{"id":"187","type":"campaign_item"},{"id":"188","type":"campaign_item"},{"id":"189","type":"campaign_item"},{"id":"190","type":"campaign_item"},{"id":"191","type":"campaign_item"},{"id":"192","type":"campaign_item"},{"id":"193","type":"campaign_item"},{"id":"194","type":"campaign_item"},{"id":"195","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
   recorded_at: Thu, 06 Jun 2024 16:45:35 GMT
+=======
+      string: '{"data":{"id":"40","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"196","type":"campaign_item"},{"id":"197","type":"campaign_item"},{"id":"198","type":"campaign_item"},{"id":"199","type":"campaign_item"},{"id":"200","type":"campaign_item"},{"id":"201","type":"campaign_item"},{"id":"202","type":"campaign_item"},{"id":"203","type":"campaign_item"},{"id":"204","type":"campaign_item"},{"id":"205","type":"campaign_item"},{"id":"206","type":"campaign_item"},{"id":"207","type":"campaign_item"},{"id":"208","type":"campaign_item"},{"id":"209","type":"campaign_item"},{"id":"210","type":"campaign_item"},{"id":"211","type":"campaign_item"},{"id":"212","type":"campaign_item"},{"id":"213","type":"campaign_item"},{"id":"214","type":"campaign_item"},{"id":"215","type":"campaign_item"},{"id":"216","type":"campaign_item"},{"id":"217","type":"campaign_item"},{"id":"218","type":"campaign_item"},{"id":"219","type":"campaign_item"},{"id":"220","type":"campaign_item"},{"id":"221","type":"campaign_item"},{"id":"222","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Thu, 06 Jun 2024 16:56:06 GMT
+>>>>>>> 0b5d6c914ae307e4b4b7b73cddbcd0519e70620f
 recorded_with: VCR 6.2.0

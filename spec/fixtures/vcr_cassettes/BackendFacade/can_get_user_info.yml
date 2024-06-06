@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 06 Jun 2024 16:45:31 GMT
+      - Thu, 06 Jun 2024 16:55:51 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717692328&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=6y5kcNw72Y5F7dIqkyTxQ9yg9vX%2FrTO9yXhefYf80p4%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717692945&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=REsZAtpbkQNdrgci3k%2B%2Byn6CtV14FdjKMuuAslVy5eI%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717692328&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=6y5kcNw72Y5F7dIqkyTxQ9yg9vX%2FrTO9yXhefYf80p4%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717692945&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=REsZAtpbkQNdrgci3k%2B%2Byn6CtV14FdjKMuuAslVy5eI%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -51,9 +51,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+<<<<<<< HEAD
       - 804e8b2f-58e0-4a2e-aae4-948b9f7dd83b
       X-Runtime:
       - '2.488262'
+=======
+      - 1407705f-62ef-440b-aa3b-6560670c7dd8
+      X-Runtime:
+      - '6.191134'
+>>>>>>> 0b5d6c914ae307e4b4b7b73cddbcd0519e70620f
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -62,6 +68,11 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
+<<<<<<< HEAD
       string: '{"data":{"id":"1","type":"user","attributes":{"uid":"1234567890","username":"testuser123","token":"1234asdf"},"relationships":{"user_campaigns":{"data":[]},"campaigns":{"data":[]},"characters":{"data":[]}}}}'
   recorded_at: Thu, 06 Jun 2024 16:45:31 GMT
+=======
+      string: '{"data":{"id":"100","type":"user","attributes":{"uid":"1234567890","username":"testuser123","token":"1234asdf"},"relationships":{"user_campaigns":{"data":[]},"campaigns":{"data":[]},"characters":{"data":[]}}}}'
+  recorded_at: Thu, 06 Jun 2024 16:55:52 GMT
+>>>>>>> 0b5d6c914ae307e4b4b7b73cddbcd0519e70620f
 recorded_with: VCR 6.2.0

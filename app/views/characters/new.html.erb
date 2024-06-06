@@ -50,6 +50,9 @@
 					<h3>Character Class</h3>
 					<%= form.select :class, @attrs.classes, selected: @attrs.classes.first, class: "form-control" %> <br><br><br>
 
+                    <h3>Character Image</h3>
+                    <%= form.file_field :character_image, accept: 'image/png, image/gif, image/jpeg', class: "form-control" %> <br><br><br>
+
 					<%= form.submit "Create Character", class: "btn btn-primary" %>
 				<% end %>
 			</section>
