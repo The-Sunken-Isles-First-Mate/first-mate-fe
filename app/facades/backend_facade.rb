@@ -87,7 +87,7 @@ class BackendFacade
       user_id: response[:data][:attributes][:user_id],
       race: response[:data][:attributes][:dnd_race],
       class: response[:data][:attributes][:dnd_class],
-      character_image: response[:data][:attributes][:character_image]
+      image_url: response[:data][:attributes][:character_image]
     })
   end
 

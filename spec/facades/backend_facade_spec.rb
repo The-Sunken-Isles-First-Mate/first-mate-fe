@@ -25,7 +25,7 @@ RSpec.describe BackendFacade do
 
   describe '#create_character', :vcr do
     it 'creates a character with the passed in argument info and returns Character', :vcr do
-      character_info = {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}
+      character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
       character = BackendFacade.create_character(character_info)
 
       expect(character).to be_a Character
