@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 06 Jun 2024 17:11:32 GMT
+      - Thu, 06 Jun 2024 21:55:29 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717693893&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=bQMtpQQhXROVBE%2BefDbmVL1hKQ7wTjs%2BhVtrauUFem8%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717710929&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=3yTIZn8bY48m6qehsTXWdAwAr0UVhijVoxo9QnTodnA%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717693893&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=bQMtpQQhXROVBE%2BefDbmVL1hKQ7wTjs%2BhVtrauUFem8%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717710929&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=3yTIZn8bY48m6qehsTXWdAwAr0UVhijVoxo9QnTodnA%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -47,21 +47,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"f236b25edc07a899c8d607f57d1ad3a9"
+      - W/"2e7c48328d2b8d0a8a85501863f5f3e6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5cfdbf6b-a32c-4eac-ad89-7c81f661c0ff
+      - f1f3634c-0152-43f9-8a91-d9ca122425a7
       X-Runtime:
-      - '0.008514'
+      - '0.014036'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
-      - '892'
+      - '1420'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"88","type":"campaign_item"},{"id":"115","type":"campaign_item"},{"id":"142","type":"campaign_item"},{"id":"169","type":"campaign_item"},{"id":"196","type":"campaign_item"},{"id":"223","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"34","type":"campaign"},{"id":"35","type":"campaign"},{"id":"36","type":"campaign"},{"id":"37","type":"campaign"},{"id":"38","type":"campaign"},{"id":"39","type":"campaign"},{"id":"40","type":"campaign"},{"id":"41","type":"campaign"}]}}}}'
-  recorded_at: Thu, 06 Jun 2024 17:11:32 GMT
+      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"88","type":"campaign_item"},{"id":"115","type":"campaign_item"},{"id":"142","type":"campaign_item"},{"id":"169","type":"campaign_item"},{"id":"196","type":"campaign_item"},{"id":"223","type":"campaign_item"},{"id":"250","type":"campaign_item"},{"id":"277","type":"campaign_item"},{"id":"304","type":"campaign_item"},{"id":"331","type":"campaign_item"},{"id":"358","type":"campaign_item"},{"id":"385","type":"campaign_item"},{"id":"412","type":"campaign_item"},{"id":"439","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"34","type":"campaign"},{"id":"35","type":"campaign"},{"id":"36","type":"campaign"},{"id":"37","type":"campaign"},{"id":"38","type":"campaign"},{"id":"39","type":"campaign"},{"id":"40","type":"campaign"},{"id":"41","type":"campaign"},{"id":"42","type":"campaign"},{"id":"43","type":"campaign"},{"id":"44","type":"campaign"},{"id":"45","type":"campaign"},{"id":"46","type":"campaign"},{"id":"47","type":"campaign"},{"id":"48","type":"campaign"},{"id":"49","type":"campaign"}]}}}}'
+  recorded_at: Thu, 06 Jun 2024 21:55:29 GMT
 recorded_with: VCR 6.2.0

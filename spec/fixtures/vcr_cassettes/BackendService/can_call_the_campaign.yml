@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/users/1234567890
+    method: post
+    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/campaigns
     body:
       encoding: UTF-8
-      string: '{"user":{"username":"testuser123","token":"1234asdf"}}'
+      string: '{"campaign":{"name":{"name":"example"}}}'
     headers:
       Content-Type:
       - application/json
@@ -17,17 +17,17 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Content
     headers:
       Server:
       - Cowboy
       Date:
-      - Thu, 06 Jun 2024 21:55:15 GMT
+      - Thu, 06 Jun 2024 21:29:45 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717710915&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=mDdpx2%2FQtmKZDktzDwE8F%2FopOZGD8w6dp%2Fu7O6e3eXk%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717709385&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=K3khXZJRwLVHHE8uinE%2BD6VeDTLH9KFgqb5CL52vYtM%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717710915&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=mDdpx2%2FQtmKZDktzDwE8F%2FopOZGD8w6dp%2Fu7O6e3eXk%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717709385&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=K3khXZJRwLVHHE8uinE%2BD6VeDTLH9KFgqb5CL52vYtM%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -46,22 +46,21 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
-      Etag:
-      - W/"a145b58d25724b25d43f33b6053e712f"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - ad418085-a1f2-4562-9c40-950df1c43df0
+      - e84b7922-5e26-4480-a86c-5aef498f7449
       X-Runtime:
-      - '0.082472'
+      - '0.003681'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
-      - '209'
+      - '78'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"100","type":"user","attributes":{"uid":"1234567890","username":"testuser123","token":"1234asdf"},"relationships":{"user_campaigns":{"data":[]},"campaigns":{"data":[]},"characters":{"data":[]}}}}'
-  recorded_at: Thu, 06 Jun 2024 21:55:15 GMT
+      string: '{"errors":[{"status":"422","title":"Validation failed: Name can''t
+        be blank"}]}'
+  recorded_at: Thu, 06 Jun 2024 21:29:45 GMT
 recorded_with: VCR 6.2.0
