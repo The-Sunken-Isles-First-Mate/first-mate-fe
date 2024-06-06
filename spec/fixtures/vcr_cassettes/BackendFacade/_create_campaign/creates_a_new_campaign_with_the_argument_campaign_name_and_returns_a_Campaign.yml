@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/campaigns
+    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/campaigns
     body:
       encoding: UTF-8
       string: '{"campaign":{"name":"Random Name"}}'
@@ -20,6 +20,18 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 06 Jun 2024 18:18:05 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717697885&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=zLnulDd8JifsY6TnMTXeQQvKFir6%2F9PnxwL5B77y9WQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717697885&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=zLnulDd8JifsY6TnMTXeQQvKFir6%2F9PnxwL5B77y9WQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -35,21 +47,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"070f45b8f50898bd8cd07f28ee708236"
+      - W/"51c439328312696fc8bb2124a544e65f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9f12a560-4328-4e21-8c62-9890e750681d
+      - cc1c9e53-fd15-41e3-947a-e9d18da1bc22
       X-Runtime:
-      - '0.352050'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=87.72,
-        instantiation.active_record;dur=1.88, transaction.active_record;dur=235.47,
-        process_action.action_controller;dur=278.30
+      - '0.176291'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       Content-Length:
-      - '1996'
+      - '2024'
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"28","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
-  recorded_at: Wed, 05 Jun 2024 07:29:02 GMT
+      string: '{"data":{"id":"43","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"277","type":"campaign_item"},{"id":"278","type":"campaign_item"},{"id":"279","type":"campaign_item"},{"id":"280","type":"campaign_item"},{"id":"281","type":"campaign_item"},{"id":"282","type":"campaign_item"},{"id":"283","type":"campaign_item"},{"id":"284","type":"campaign_item"},{"id":"285","type":"campaign_item"},{"id":"286","type":"campaign_item"},{"id":"287","type":"campaign_item"},{"id":"288","type":"campaign_item"},{"id":"289","type":"campaign_item"},{"id":"290","type":"campaign_item"},{"id":"291","type":"campaign_item"},{"id":"292","type":"campaign_item"},{"id":"293","type":"campaign_item"},{"id":"294","type":"campaign_item"},{"id":"295","type":"campaign_item"},{"id":"296","type":"campaign_item"},{"id":"297","type":"campaign_item"},{"id":"298","type":"campaign_item"},{"id":"299","type":"campaign_item"},{"id":"300","type":"campaign_item"},{"id":"301","type":"campaign_item"},{"id":"302","type":"campaign_item"},{"id":"303","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Thu, 06 Jun 2024 18:18:05 GMT
 recorded_with: VCR 6.2.0

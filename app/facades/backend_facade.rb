@@ -13,6 +13,7 @@ class BackendFacade
 
     response[:data].map do |campaign|
       UserCampaign.new({
+        id: campaign[:id],
         user_id: campaign[:relationships][:user][:data][:id],
         campaign_id: campaign[:relationships][:campaign][:data][:id],
         role: campaign[:attributes][:role],

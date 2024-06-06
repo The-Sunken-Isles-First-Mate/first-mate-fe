@@ -10,7 +10,7 @@ RSpec.describe BackendFacade do
     })
 
     expect(result).to be_a User
-    expect(result.id).to eq("1")
+    expect(result.id).to eq("100")
     expect(result.uid).to eq("1234567890")
     expect(result.username).to eq("testuser123")
   end
@@ -72,8 +72,12 @@ RSpec.describe BackendFacade do
   end
 
   describe '#get_user_campaigns' do
-    it 'returns an array of all user campaigns that a user has', :vcr do
+    it 'returns an array of all UserCampaign objects that a user has', :vcr do
       user_campaigns = BackendFacade.get_user_campaigns(1)
+
+      user_campaigns.each do |campaign|
+        expect(campaign).to be_a UserCampaign
+      end
     end
   end
 
