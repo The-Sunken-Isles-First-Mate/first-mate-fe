@@ -1,7 +1,16 @@
 class CharactersController < ApplicationController
   def new
-    @classes = DndFacade.classes.map  { |race| race.name }
-    @races = DndFacade.races.map { |race| race.name }
+    @attrs = nil
+    cache_data = Rails.cache.instance_variable_get(:@data)
+
+    if cache_data
+      cache_data.keys.each do |key|
+        @attrs = cached_attrs(key)
+        break if @attrs
+      end
+    end
+
+    @attrs ||= DndFacade.get_attrs
   end
 
   def create
@@ -20,5 +29,13 @@ class CharactersController < ApplicationController
     # redirect_to summary_path(campaign.id)
 
     redirect_to dashboard_path
+  end
+end
+
+
+  private
+
+  def cached_attrs(key)
+    Rails.cache.fetch(key) if key.include?("attrs_list")
   end
 end
