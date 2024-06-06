@@ -26,7 +26,6 @@ class ManagementController < ApplicationController
     }
     
     updated_form = BackendFacade.patch_management_form(params[:campaign_id], form_data)
-    binding.pry
     
     redirect_to campaign_management_path
   end

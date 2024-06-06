@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get '/summary', to: 'summary#show'
     get '/management', to: 'management#edit'
     patch '/management/update', to: 'management#update'
+    
     #post '/advance_week', to: 'management#advance_week'
   end
 

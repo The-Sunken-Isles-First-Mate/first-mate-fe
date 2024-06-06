@@ -145,8 +145,6 @@ class BackendFacade
     response = BackendService.update_db_management_form(campaign_id, form_data)
   end
 
-
-
   ### Not Formatted
   def self.item(id)
     BackendService.call_db("api/v1/items/#{id}")
