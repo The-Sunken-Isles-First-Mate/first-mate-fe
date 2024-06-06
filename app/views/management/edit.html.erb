@@ -66,22 +66,22 @@
     <h4> Item Crafting </h4>
 
     <%= form.label :item_1, "Craft a:" %>
-    <%= form.select :item_1, @all_items, class: "form-control" %> <%# if you want to include a blank space in the dropdown, add ':include_blank => true' %>
+    <%= form.select :item_1, @all_items, class: "form-control", :include_blank => true, selected: @management_form %>
     <%= form.label :item_1_quantity, "Quantity:" %>
     <%= form.text_field :item_1_quantity, :size=>"4", value: 0 %> <br><br>
 
     <%= form.label :item_2, "Craft a:" %>
-    <%= form.select :item_2, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.select :item_2, @all_items, class: "form-control", :include_blank => true %>
     <%= form.label :item_2_quantity, "Quantity:" %>
     <%= form.text_field :item_2_quantity, :size=>"4", value: 0 %> <br><br>
 
     <%= form.label :item_3, "Craft a:" %>
-    <%= form.select :item_3, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.select :item_3, @all_items, class: "form-control", :include_blank => true %>
     <%= form.label :item_3_quantity, "Quantity:" %>
     <%= form.text_field :item_3_quantity, :size=>"4", value: 0 %> <br><br>
 
     <%= form.label :item_4, "Craft a:" %>
-    <%= form.select :item_4, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.select :item_4, @all_items, class: "form-control", :include_blank => true %>
     <%= form.label :item_4_quantity, "Quantity:" %>
     <%= form.text_field :item_4_quantity, :size=>"4", value: 0 %> <br><br>
 
@@ -92,5 +92,4 @@
 <br>
 
 <%# Only show this button if current_user.id == @campaign's DM's ID %>
-
-<%#= button_to "Advance Week", campaign_advance_week_path(@campaign), params: {id: @campaign.id}, method: :post %>
+<%= button_to "Advance Week", campaign_management_advance_path(@campaign.id), method: :post %>
