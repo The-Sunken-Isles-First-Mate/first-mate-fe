@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe DndFacade do
-  # VCR.use_cassette('cassette_name.yml') do
-    it 'get class info' do
+    it 'get class info', :vcr do
       result = DndFacade.get_attrs
       c = result.classes
       r = result.races
@@ -13,5 +12,4 @@ RSpec.describe DndFacade do
       expect(r[0]).to be_an(String)
       expect(c[0]).to be_an(String)
     end
-    # end
 end
