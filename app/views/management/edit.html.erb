@@ -1,80 +1,95 @@
-<h1> Resource Management for <%= @campaign.name %> </h1>
+<h1> Resource Management for <%= @campaign.name %> </h1> <br>
+<h1> Week <%= @campaign.week %></h1> <br>
 
-<br>
-
+<h2> Resources Available </h2> <br>
 <section class="available_resources">
-  <h2> Resources Available </h2>
-  <%# Villagers %>
-  <p> Week <%= @campaign.week %> </p>
-  <p> Villagers Available: <%= @campaign.villagers %> </p>
+  <h4> Villagers </h4>
+  <ul>
+    <li> <p> Available Villagers: <%= @campaign.villagers %> </p> </li>
+  </ul>
 
-  <%# Essentials %>
-  <p> Food: <%= @campaign.food %> </p>
-  <p> Farmed Goods: <%= @campaign.farmed_goods %> </p>
-  <p> Foraged Goods: <%= @campaign.foraged_goods %> </p>
+  <h4> Essentials </h4>
+  <ul>
+    <li> <p> Food: <%= @campaign.food %> </p> </li>
+    <li> <p> Farmed Goods: <%= @campaign.farmed_goods %> </p> </li>
+    <li> <p> Foraged Goods: <%= @campaign.foraged_goods %> </p> </li>
+  </ul>
 
-  <%# Crafting Elements %>
-  <p> Wood: <%= @campaign.wood %> </p>
-  <p> Stone: <%= @campaign.stone %> </p>
-  <p> Metal: <%= @campaign.metal %> </p>
-
-  <%# Extra %>
-  <p> Cloth: <%= @campaign.cloth %> </p>
-  <p> Animal Products: <%= @campaign.animal_products %> </p>
-  <p> Monster Parts: <%= @campaign.monster_parts %> </p>
+  <h4> Crafting Materials </h4>
+  <ul>
+    <li> <p> Wood: <%= @campaign.wood %> </p> </li>
+    <li> <p> Stone: <%= @campaign.stone %> </p> </li>
+    <li> <p> Metal: <%= @campaign.metal %> </p> </li>
+    <li> <p> Cloth: <%= @campaign.cloth %> </p> </li>
+    <li> <p> Animal Products: <%= @campaign.animal_products %> </p> </li>
+    <li> <p> Monster Parts: <%= @campaign.monster_parts %> </p> </li>
+  </ul>
 </section>
 
 <br>
 
-<h2> Management Form </h2>
+<h2> Management Form </h2> <br>
 <section class="management_form">
-  <%= form_with url: management_path(@management_form), method: :patch, data: {turbo: false} do |form| %>
-    <h4> Assign Villagers </h4>
-      <%= form.label :food, "Food:" %> 
-      <%= form.text_field :food %> <br>
+  <%= form_with url: campaign_management_update_path(@campaign.id), method: :patch, data: {turbo: false} do |form| %>
 
-      <%= form.label :farmed_goods, "Farmed Goods:" %>
-      <%= form.text_field :farmed_goods %> <br>
+    <h4> Assign Villagers - <%= @campaign.villagers %> Available </h4>
 
-      <%= form.label :farmed_goods, "Foraged Goods:" %>
-      <%= form.text_field :foraged_goods %> <br>
+    <%= form.label :food, "Food:" %>
+    <%= form.text_field :food, value: @management_form.food %> <br>
 
-      <%= form.label :wood, "Wood:" %>
-      <%= form.text_field :wood %> <br>
+    <%= form.label :farmed_goods, "Farmed Goods:" %>
+    <%= form.text_field :farmed_goods, value: @management_form.farmed_goods %> <br>
 
-      <%= form.label :stone, "Stone:" %>
-      <%= form.text_field :stone %> <br>
+    <%= form.label :foraged_goods, "Foraged Goods:" %>
+    <%= form.text_field :foraged_goods, value: @management_form.foraged_goods %> <br>
 
-      <%= form.label :metal, "metal:" %>
-      <%= form.text_field :metal %> <br>
+    <%= form.label :wood, "Wood:" %>
+    <%= form.text_field :wood, value: @management_form.wood %> <br>
 
-      <%= form.label :cloth, "Cloth:" %>
-      <%= form.text_field :cloth %> <br>
+    <%= form.label :stone, "Stone:" %>
+    <%= form.text_field :stone, value: @management_form.stone %> <br>
 
-      <%= form.label :metal, "metal:" %>
-      <%= form.text_field :metal %> <br>
+    <%= form.label :metal, "Metal:" %>
+    <%= form.text_field :metal, value: @management_form.metal %> <br>
 
-      <%= form.label :animal_products, "Animal Products:" %>
-      <%= form.text_field :animal_products %> <br>
+    <%= form.label :cloth, "Cloth:" %>
+    <%= form.text_field :cloth, value: @management_form.cloth %> <br>
 
-      <%= form.label :monster_parts, "Moster Parts:" %>
-      <%= form.text_field :monster_parts %> <br>
+    <%= form.label :animal_products, "Animal Products:" %>
+    <%= form.text_field :animal_products, value: @management_form.animal_products %> <br>
 
-  <h4> Craft Items </h4>
-  
-    <%# Dropdown %>
-    <%# Dropdown %>
-    <%# Dropdown %>
-    <%# Dropdown %>
-    <%#= form.select :class, @classes, selected: @classes.first, class: "form-control" %> <br><br><br>
+    <%= form.label :monster_parts, "Monster Parts:" %>
+    <%= form.text_field :monster_parts, value: @management_form.monster_parts %> <br>
+
+    <br>
+
+    <h4> Item Crafting </h4>
+
+    <%= form.label :item_1, "Craft a:" %>
+    <%= form.select :item_1, @all_items, class: "form-control" %> <%# if you want to include a blank space in the dropdown, add ':include_blank => true' %>
+    <%= form.label :item_1_quantity, "Quantity:" %>
+    <%= form.text_field :item_1_quantity, :size=>"4", value: 0 %> <br><br>
+
+    <%= form.label :item_2, "Craft a:" %>
+    <%= form.select :item_2, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.label :item_2_quantity, "Quantity:" %>
+    <%= form.text_field :item_2_quantity, :size=>"4", value: 0 %> <br><br>
+
+    <%= form.label :item_3, "Craft a:" %>
+    <%= form.select :item_3, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.label :item_3_quantity, "Quantity:" %>
+    <%= form.text_field :item_3_quantity, :size=>"4", value: 0 %> <br><br>
+
+    <%= form.label :item_4, "Craft a:" %>
+    <%= form.select :item_4, @all_items, selected: @all_items.first, class: "form-control" %>
+    <%= form.label :item_4_quantity, "Quantity:" %>
+    <%= form.text_field :item_4_quantity, :size=>"4", value: 0 %> <br><br>
 
     <%= form.submit "Update" %>
   <% end %>
 </section>
 
-<%#
-If current_user == @campaign.dm
-If the current user is the dm of the campaign,
-show them the advance time button,
-%>
-<%= button_to "Advance Week", campaign_advance_week_path(@campaign), method: :post %>
+<br>
+
+<%# Only show this button if current_user.id == @campaign's DM's ID %>
+<%#= button_to "Advance Week", campaign_advance_week_path(@campaign), params: {id: @campaign.id}, method: :post %>
