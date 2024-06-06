@@ -6,8 +6,8 @@ RSpec.describe Character do
       id: "12345",
       name: "Severus",
       user_id: 1,
-      race: "Elf",
-      class: "Druid",
+      dnd_race: "Elf",
+      dnd_class: "Druid",
       image_url: nil
     })
 
@@ -15,8 +15,8 @@ RSpec.describe Character do
     expect(character.id).to eq("12345")
     expect(character.name).to eq("Severus")
     expect(character.user_id).to eq(1) 
-    expect(character.race).to eq("Elf") 
-    expect(character.class).to eq("Druid") 
+    expect(character.dnd_race).to eq("Elf") 
+    expect(character.dnd_class).to eq("Druid") 
     expect(character.image_url).to eq(nil) 
   end
 end

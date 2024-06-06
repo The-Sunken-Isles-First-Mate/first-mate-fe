@@ -5,7 +5,7 @@ http_interactions:
     uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/characters
     body:
       encoding: UTF-8
-      string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1,"picture_url":null}}'
+      string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1}}'
     headers:
       Content-Type:
       - application/json

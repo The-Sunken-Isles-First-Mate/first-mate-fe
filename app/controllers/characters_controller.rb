@@ -1,16 +1,34 @@
 class CharactersController < ApplicationController
   def new
     @user_campaign_id = params[:user_campaign_id]
-    @classes = DndFacade.classes.map  { |race| race.name }
-    @races = DndFacade.races.map { |race| race.name }
+    @attrs = nil
+    cache_data = Rails.cache.instance_variable_get(:@data)
+
+    if cache_data
+      cache_data.keys.each do |key|
+        @attrs = cached_attrs(key)
+        break if @attrs
+      end
+    end
+
+    @attrs ||= DndFacade.get_attrs
   end
 
   def create
     character = BackendFacade.create_character({
+      data: {
       name: params[:name],
       dnd_race: params[:race],
       dnd_class: params[:class],
-      user_id: current_user.id
+      user_id: current_user.id},
+      character_image: {
+      image: params[:character_image]
+  }
+    })
+
+    BackendFacade.update_user_campaign({
+      user_campaign_id: params[:user_campaign_id],
+      character_id: character.id
     })
 
     BackendFacade.update_user_campaign({
@@ -22,5 +40,11 @@ class CharactersController < ApplicationController
     # redirect_to summary_path(campaign.id)
 
     redirect_to dashboard_path
+  end
+
+  private
+
+  def cached_attrs(key)
+    Rails.cache.fetch(key) if key.include?("attrs_list")
   end
 end
