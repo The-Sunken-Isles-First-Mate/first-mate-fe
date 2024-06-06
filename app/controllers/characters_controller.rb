@@ -1,10 +1,15 @@
 class CharactersController < ApplicationController
   def new
     @attrs = nil
-    Rails.cache.instance_variable_get(:@data).keys.each do |key|
-      @attrs = cached_attrs(key)
-      break if @attrs 
+    cache_data = Rails.cache.instance_variable_get(:@data)
+
+    if cache_data
+      cache_data.keys.each do |key|
+        @attrs = cached_attrs(key)
+        break if @attrs 
+      end
     end
+    
     @attrs ||= DndFacade.get_attrs
   end
 
