@@ -1,7 +1,6 @@
 class BackendFacade
   def self.get_user(user_hash)
     response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
-
     User.new({
       id: response[:data][:id],
       uid: response[:data][:attributes][:uid],

@@ -87,9 +87,10 @@ class BackendService
   ###
 
   private
+  
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000/",
+      url: "https://first-mate-be-1f1d4528b074.herokuapp.com/",
       headers: {'Content-Type' => 'application/json'}
     )
   end
