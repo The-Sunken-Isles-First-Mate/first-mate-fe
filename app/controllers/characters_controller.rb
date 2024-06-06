@@ -6,19 +6,23 @@ class CharactersController < ApplicationController
     if cache_data
       cache_data.keys.each do |key|
         @attrs = cached_attrs(key)
-        break if @attrs 
+        break if @attrs
       end
     end
-    
+
     @attrs ||= DndFacade.get_attrs
   end
 
   def create
     character = BackendFacade.create_character({
+      data: {
       name: params[:name],
       dnd_race: params[:race],
       dnd_class: params[:class],
-      user_id: current_user.id
+      user_id: current_user.id},
+      character_image: {
+      image: params[:character_image]
+  }
     })
 
     # Commented out because we need to figure out how the campaign and character are linked
@@ -33,4 +37,3 @@ class CharactersController < ApplicationController
     Rails.cache.fetch(key) if key.include?("attrs_list")
   end
 end
-
