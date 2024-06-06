@@ -10,7 +10,7 @@ RSpec.describe BackendFacade do
     })
 
     expect(result).to be_a User
-    expect(result.id).to eq("1")
+    expect(result.id).to eq("100")
     expect(result.uid).to eq("1234567890")
     expect(result.username).to eq("testuser123")
   end

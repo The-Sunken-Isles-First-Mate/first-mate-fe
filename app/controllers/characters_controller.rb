@@ -30,8 +30,6 @@ class CharactersController < ApplicationController
 
     redirect_to dashboard_path
   end
-end
-
 
   private
 
