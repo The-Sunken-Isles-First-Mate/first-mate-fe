@@ -12,6 +12,11 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_user_campaigns(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.call_db_for_campaign(url)
     response = connection.get(url)
     JSON.parse(response.body, symbolize_names: true)
@@ -87,7 +92,7 @@ class BackendService
   ###
 
   private
-  
+
   def self.connection # Replace with hosted database once established
     Faraday.new(
       url: "https://first-mate-be-1f1d4528b074.herokuapp.com/",

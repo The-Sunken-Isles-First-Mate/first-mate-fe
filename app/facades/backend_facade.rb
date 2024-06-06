@@ -8,6 +8,19 @@ class BackendFacade
     })
   end
 
+  def self.get_user_campaigns(user_id)
+    response = BackendService.call_db_for_user_campaigns("/api/v1/users/#{user_id}/user_campaigns")
+
+    response[:data].map do |campaign|
+      UserCampaign.new({
+        user_id: campaign[:relationships][:user][:data][:id],
+        campaign_id: campaign[:relationships][:campaign][:data][:id],
+        role: campaign[:attributes][:role],
+        character_id: (campaign[:relationships][:character][:data][:id] if campaign[:relationships][:character][:data].present?)
+      })
+    end
+  end
+
   def self.get_campaign(campaign_id)
     response = BackendService.call_db_for_campaign("/api/v1/campaigns/#{campaign_id}")
 

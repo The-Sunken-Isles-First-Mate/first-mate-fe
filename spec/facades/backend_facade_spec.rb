@@ -41,7 +41,7 @@ RSpec.describe BackendFacade do
     end
   end
 
-  describe '#get_campaign_items', :vcr do
+  describe '#get_campaign_items' do
     it 'returns an array of item objects', :vcr do
       items = BackendFacade.get_campaign_items(1)
 
@@ -68,6 +68,12 @@ RSpec.describe BackendFacade do
       expect(result[:data][:attributes][:stone_cost]).to eq(0)
       expect(result[:data][:attributes][:wood_cost]).to eq(0)
       expect(result[:data][:attributes][:monster_parts_cost]).to eq(0)
+    end
+  end
+
+  describe '#get_user_campaigns' do
+    it 'returns an array of all user campaigns that a user has', :vcr do
+      user_campaigns = BackendFacade.get_user_campaigns(1)
     end
   end
 
