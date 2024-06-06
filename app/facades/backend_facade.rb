@@ -84,6 +84,12 @@ class BackendFacade
     })
   end
 
+  def self.get_all_items
+    response = BackendService.call_db_for_items
+
+    response[:data].map { |item| item[:attributes][:name] }
+  end
+
   def self.create_campaign(campaign_name)
     response = BackendService.post_db_campaign(campaign_name)
 
@@ -134,6 +140,12 @@ class BackendFacade
       image_url: response[:data][:attributes][:image_url]
     })
   end
+
+  def self.patch_management_form(campaign_id, form_data)
+    response = BackendService.update_db_management_form(campaign_id, form_data)
+  end
+
+
 
   ### Not Formatted
   def self.item(id)
