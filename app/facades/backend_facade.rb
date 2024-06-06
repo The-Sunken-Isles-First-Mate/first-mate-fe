@@ -145,6 +145,10 @@ class BackendFacade
     response = BackendService.update_db_management_form(campaign_id, form_data)
   end
 
+  def self.post_advance_week(campaign_id, management_form)
+    response = BackendService.post_db_advance_week(campaign_id, management_form)
+  end
+
   ### Not Formatted
   def self.item(id)
     BackendService.call_db("api/v1/items/#{id}")
