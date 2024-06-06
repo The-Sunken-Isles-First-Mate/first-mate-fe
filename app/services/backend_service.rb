@@ -24,12 +24,17 @@ class BackendService
 
   def self.call_db_for_management_form(id, week)
     response = connection.get('/api/v1/management_form') do |request|
-      request.body = 
+      request.body =
       {
         campaign_id: id,
         week: week
       }.to_json
     end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_items
+    response = connection.get('/api/v1/items')
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -84,6 +89,16 @@ class BackendService
           user_id: new_character_data[:user_id],
           picture_url: nil
         }
+      }.to_json
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.update_db_management_form(campaign_id, form_data)
+    response = connection.patch("/api/v1/management_forms/#{campaign_id}") do |request|
+      request.body = 
+      {
+        management_form: form_data
       }.to_json
     end
     JSON.parse(response.body, symbolize_names: true)
