@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 06 Jun 2024 17:02:05 GMT
+      - Thu, 06 Jun 2024 17:13:02 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717693325&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=B5Gb0hzaxtoOSL2TWwr%2FZNLsspyvs13EE15IGCd9LSc%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717693983&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=CMZMNcXZuUfoHfQKro7plZAiiyc%2B9NHwNdrlBijZlt0%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717693325&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=B5Gb0hzaxtoOSL2TWwr%2FZNLsspyvs13EE15IGCd9LSc%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717693983&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=CMZMNcXZuUfoHfQKro7plZAiiyc%2B9NHwNdrlBijZlt0%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -51,9 +51,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 24a6ecb3-15f5-4a80-91a6-03d820dc2ceb
+      - d57d079a-1554-4a67-989e-931071ea52ab
       X-Runtime:
-      - '0.073919'
+      - '0.031279'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -63,5 +63,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"campaign","attributes":{"name":"Test Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"1","type":"user_campaign"},{"id":"2","type":"user_campaign"},{"id":"3","type":"user_campaign"}]},"users":{"data":[{"id":"1","type":"user"},{"id":"2","type":"user"},{"id":"3","type":"user"}]},"characters":{"data":[{"id":"1","type":"character"},{"id":"2","type":"character"}]},"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"2","type":"campaign_item"},{"id":"3","type":"campaign_item"},{"id":"4","type":"campaign_item"},{"id":"5","type":"campaign_item"},{"id":"6","type":"campaign_item"},{"id":"7","type":"campaign_item"},{"id":"8","type":"campaign_item"},{"id":"9","type":"campaign_item"},{"id":"10","type":"campaign_item"},{"id":"11","type":"campaign_item"},{"id":"12","type":"campaign_item"},{"id":"13","type":"campaign_item"},{"id":"14","type":"campaign_item"},{"id":"15","type":"campaign_item"},{"id":"16","type":"campaign_item"},{"id":"17","type":"campaign_item"},{"id":"18","type":"campaign_item"},{"id":"19","type":"campaign_item"},{"id":"20","type":"campaign_item"},{"id":"21","type":"campaign_item"},{"id":"22","type":"campaign_item"},{"id":"23","type":"campaign_item"},{"id":"24","type":"campaign_item"},{"id":"25","type":"campaign_item"},{"id":"26","type":"campaign_item"},{"id":"27","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
-  recorded_at: Thu, 06 Jun 2024 17:02:05 GMT
+  recorded_at: Thu, 06 Jun 2024 17:13:03 GMT
 recorded_with: VCR 6.2.0

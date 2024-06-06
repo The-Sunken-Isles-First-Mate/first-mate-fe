@@ -53,4 +53,21 @@ RSpec.describe BackendService do
     expect(result[:relationships]).to have_key(:items)
     expect(result[:relationships][:items]).to be_a Hash
   end
+
+
+  it "can return all characters from a campaign and their attributes", :vcr do
+    query = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/1/characters")
+
+    result = query[:data]
+
+    result.each do |character|
+      expect(character[:id]).to be_a String
+      expect(character[:type]).to eq "character"
+      expect(character[:attributes][:name]).to be_a String
+      expect(character[:attributes][:user_id]).to be_an Integer
+      expect(character[:attributes][:dnd_race]).to be_a String
+      expect(character[:attributes][:dnd_class]).to be_a String
+      expect(character[:attributes]).to have_key(:image_url) 
+    end
+  end
 end

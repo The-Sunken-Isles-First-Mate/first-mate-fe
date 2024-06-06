@@ -22,6 +22,11 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_campaign_characters(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
       request.body =

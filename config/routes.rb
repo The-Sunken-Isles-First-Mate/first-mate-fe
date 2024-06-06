@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :campaigns, only: [:new, :create] do
     get '/summary', to: 'summary#show'
+    get '/party', to: 'party#index'
   end
   resources :characters, only: [:new, :create]
 
   resources :management, only: [:edit]
-  resources :party, only: [:index]
 end

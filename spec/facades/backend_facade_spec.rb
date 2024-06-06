@@ -52,6 +52,17 @@ RSpec.describe BackendFacade do
     end
   end
 
+  describe '#get_campaign_characters', :vcr do
+    it 'returns an array of character objects', :vcr do
+      characters = BackendFacade.get_campaign_characters(1)
+
+      expect(characters).to be_an Array
+      characters.each do |character|
+        expect(character).to be_a Character
+      end
+    end
+  end
+
   describe '#item' do
     it "can get item info", :vcr do
       result = BackendFacade.item(1)
