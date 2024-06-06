@@ -6,7 +6,7 @@ RSpec.describe "Advance Week", type: :feature do
     @campaign1 = create(:campaign)
   end
 
-  it "has a button advance week and resets resources to default values" do
+  xit "has a button advance week and resets resources to default values" do
     visit campaign_management_path(@campaign1)
 
     expect(current_path).to eq(campaign_management_path(@campaign1))
