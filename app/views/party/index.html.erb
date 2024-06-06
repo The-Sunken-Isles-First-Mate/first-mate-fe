@@ -1,1 +1,7 @@
 <h1> Party </h1>
+
+<%= @characters.each do |character| %>
+  <div id="character-<%= character.id %>">
+    <%= character.name %>
+  </div>
+<% end %>
