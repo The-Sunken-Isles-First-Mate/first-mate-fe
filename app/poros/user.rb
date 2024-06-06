@@ -14,14 +14,22 @@ class User
   end
 
   def dm_campaigns
-    @dm_campaigns ||= user_campaigns.select do |campaign|
+    user_campaigns.select do |campaign|
       campaign.role == 'dm'
     end
   end
 
   def party_campaigns
-    @party_campaigns ||= user_campaigns.select do |campaign|
-      campaign.role == 'party_member'
+    user_campaigns.select do |campaign|
+      campaign.role == 'party_member' &&
+      campaign.character_id.present?
+    end
+  end
+
+  def invited_campaigns
+    user_campaigns.select do |campaign|
+      campaign.role == 'party_member' &&
+      campaign.character_id.nil?
     end
   end
 end

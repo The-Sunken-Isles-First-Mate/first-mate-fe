@@ -22,6 +22,10 @@ class BackendFacade
     end
   end
 
+  def self.update_user_campaign(params)
+    BackendService.patch_db_for_user_campaign(params)
+  end
+
   def self.get_campaign(campaign_id)
     response = BackendService.call_db_for_campaign("/api/v1/campaigns/#{campaign_id}")
 

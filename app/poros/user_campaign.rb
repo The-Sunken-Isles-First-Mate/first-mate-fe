@@ -12,4 +12,8 @@ class UserCampaign
     @role = attributes[:role]
     @character_id = attributes[:character_id]
   end
+
+  def campaign_name
+    @campaign_name ||= BackendFacade.get_campaign(@campaign_id).name
+  end
 end

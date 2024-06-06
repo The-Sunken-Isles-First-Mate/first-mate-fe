@@ -12,6 +12,19 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.patch_db_for_user_campaign(params)
+    require 'pry'; binding.pry
+    response = connection.patch("api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+      request.body = {
+        user_campaign: {
+          character_id: params[:character_id]
+        }
+      }.to_json
+    end
+require 'pry'; binding.pry
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.call_db_for_user_campaigns(url)
     response = connection.get(url)
     JSON.parse(response.body, symbolize_names: true)
@@ -80,6 +93,7 @@ class BackendService
         }
       }.to_json
     end
+    require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
