@@ -2,11 +2,25 @@
 
 ### [First Mate BE GH Repo](https://github.com/The-Sunken-Isles-First-Mate/first-mate-be)
 
-### [First Mate FE Live Deployment]()
+### There is currently no live deployment of this application.
 
 ### About
 
-FE for the First Mates app
+This is the frontend repo for the Sunken Isles First Mates web application. Our minimal viable product (MVP) includes functionality for a user to log in to the web application through GitHub OAuth and create a campaign, create a character, and manipulate data related to the campaign that changes from week to week.
+
+There are three main pages for a campaign - the Summary page, the Resource Management page, and the Party page.
+
+* The Summary page lists all the available resources for a campaign. These are all resources that have been gathered by villagers assigned by the party members of the campaign.
+
+* The Resource Management page lists all the available resources for a campaign, as well as contains a form where party members can assign villagers to perform certain tasks, as well as craft certain items. Note: In order to craft the item, the resources needed to craft the item MUST be in the available resources section. The Resource Management page also has an Advance Week button, which the Dungeon Master of the campaign can click and send into motion the resource gathering and item crafting, as well as advance the week.
+
+* The Party page lists all current party member's characters for the campaign. This includes their name, race, and class
+
+This application is only one half of the Sunken Isles First Mates web application, and is primarily responsible for handling everything user facing (presenting the user the option to login through GH Oauth, displaying the appropriate information for a user, and displaying all the important information for creating a campaign, creating a character, and entering data into a form.
+
+### End Users
+
+Simply put, the end user for this application is someone that loves to play the game Dungeons and Dragons, and wants an easy-to-use tool that would allow them to keep track of all the resouces they currently have in their DnD campaign. We primarily exhibited user empathy by creating a simple, web application that is mobile-friendly and responsive to different screen sizes. There are a limited number of pages, and each page has a semi-transparent background to make reading easier.
 
 ### Local Setup
 
@@ -27,11 +41,11 @@ rails db:{drop,create,migrate,seed}
 
 This will take you to the user dashboard.
 
-2. Click Create Campaign
+2. Click 'Create Campaign'
 
 This will bring you to a form where you will be able to enter a campaign name, and invite any additional players to your campaign (they must have created an account prior).
 
-3. Click the Create Campaign Button
+3. Click the 'Create Campaign' Button
 
 This will navigate you to the campaign summary page, where you will see the name of the campaign, the current week (should start at 0), as well as a list of owned items.
 
@@ -50,51 +64,55 @@ This will take you to the Party page which will list all the current party membe
 
 ### Implementation of OAuth
 
+For this project, we decided to implement GitHub OAuth as the primary way of signing into our web application. We initially tried to implement Google's OAuth, but found some challenges with it that we weren't able to figure out. All of us have prior experience with implementing GitHub OAuth so it was nice to have that as a backup plan while we tried using a new OAuth provider. However, it was not without its challenges. Due to this web application having both a frontend and backend, and the backend is where the users' information is stored, there were some issues with sending the data to the backend, creating the user model, and assigning the current user of the application to the new model that was created. We did succeed in getting it to work by creating a PORO and manually assigning the attributes to they values of the nested hash from the backend API call to see if the user already existed.
+
 ### Screenshots
 
-### Progress
+<details>
+  <summary> See Screenshots </summary>
+  
+![image (7)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/f652e424-f42d-4279-b954-2de617303a4c)
+![image (6)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/9ac1a2a1-2968-4901-ba57-d6533d0e7393)
+![image (8)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/44d495e1-6dde-46ff-90a5-bc6a6d99d230)
+![image (2)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/78983368-51fb-4e8f-84e7-a8ab2d6a7b6b)
+![image (4)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/6a5e941f-5067-463d-a917-ba6811fe5179)
+![image (5)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/a31b8477-3770-4948-ae04-ff22f9313ce4)
+![image (3)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/2a08831c-6477-461c-8c50-341784fddcf9)
+![image (1)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/f3795f66-bd30-403b-be0a-6a0500f75356)
 
-x / 17 User Stories Completed
+</details>
 
 ### Goals
 
 Feature Delivery
-- [ ] 90% or more MVP stories are completed
+- [x] 90% or more MVP stories are completed
 - [x] at least 1 external API is consumed
-- [ ] OAuth works error-free in incognito/private
-- [ ] Students can explain in-depth what features use their chosen technologies, either FE or BE
-- [ ] Project meets point threshold (5)
+- [x] OAuth works error-free in incognito/private
+- [x] Students can explain in-depth what features use their chosen technologies, either FE or BE
+- [x] Project meets point threshold (5)
 
 Technical Quality
-- [ ] Code follows DRY and SRP design
-- [ ] Routes follow RESTful patterns (Frontend, User-facing routes are friendly)
+- [x] Code follows DRY and SRP design
+- [x] Routes follow RESTful patterns (Frontend, User-facing routes are friendly)
 - [x] Controllers utilize Facades
 - [x] Facades utilize Service calls to store/retrieve data
-- [ ] Deploy to the internet (using Render, Heroku, etc)
+- [x] Deploy to the internet (using Render, Heroku, etc)
 - [x] No data storage (models, database schema, etc) is done at this layer; user info, sessions and caching are the exception
-- [ ] Application is easy to navigate for non-technical users
+- [x] Application is easy to navigate for non-technical users
 
 Testing
-- [ ] FE Repo - 90% or more test coverage, includes happy path and sad path expectations
-- [ ] API calls to external services are tested using mocks/stubs in at least one application (using tools like Webmock, VCR, etc.)
-
-README
-- [ ] Outlines MVP of the Project
-- [ ] Discusses end users, persona analysis
-- [ ] Discusses technical design choices made
-- [x] Contains a link to the other project repo and production link
-- [x] Contains a list of contributors, their GH profiles, and LinkedIn profiles
-- [ ] Discusses the purpose of it's purpose (how it fits into SOA - FE being FE)
-- [ ] Discusses how to install and test the repo
-- [ ] Has screenshots
-- [ ] Discusses OAuth
-- [ ] Explains user personas and exhibits user empathy 
+- [x] FE Repo - 90% or more test coverage, includes happy path and sad path expectations
+- [x] API calls to external services are tested using mocks/stubs in at least one application (using tools like Webmock, VCR, etc.)
 
 ### Tests
 
-* 40 Total Tests (100% coverage on x/x LOC)
-* X Feature Tests (100% coverage on x/x LOC)
-* X Model Tests (100% coverage on x/x LOC)
+To run the test suite, in the root folder of the application:
+
+```
+bundle exec rspec spec
+```
+
+* 51 Total Tests (Over 90% test coverage)
 
 ### Resources
 
