@@ -10,7 +10,7 @@ RSpec.describe BackendFacade do
     })
 
     expect(result).to be_a User
-    expect(result.id).to eq("100")
+    expect(result.id).to eq("5")
     expect(result.uid).to eq("1234567890")
     expect(result.username).to eq("testuser123")
   end
@@ -41,7 +41,7 @@ RSpec.describe BackendFacade do
     end
   end
 
-  describe '#get_campaign_items', :vcr do
+  describe '#get_campaign_items' do
     it 'returns an array of item objects', :vcr do
       items = BackendFacade.get_campaign_items(1)
 
@@ -79,6 +79,16 @@ RSpec.describe BackendFacade do
       expect(result[:data][:attributes][:stone_cost]).to eq(0)
       expect(result[:data][:attributes][:wood_cost]).to eq(0)
       expect(result[:data][:attributes][:monster_parts_cost]).to eq(0)
+    end
+  end
+
+  describe '#get_user_campaigns' do
+    it 'returns an array of all UserCampaign objects that a user has', :vcr do
+      user_campaigns = BackendFacade.get_user_campaigns(1)
+
+      user_campaigns.each do |campaign|
+        expect(campaign).to be_a UserCampaign
+      end
     end
   end
 

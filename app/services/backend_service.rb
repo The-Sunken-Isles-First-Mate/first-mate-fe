@@ -12,6 +12,23 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.patch_db_for_user_campaign(params)
+    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+      request.body = {
+        user_campaign: {
+          character_id: params[:character_id]
+        }
+      }.to_json
+    end
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_user_campaigns(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.call_db_for_campaign(url)
     response = connection.get(url)
     JSON.parse(response.body, symbolize_names: true)
@@ -95,6 +112,7 @@ class BackendService
         request.body = json_payload
       end
     end
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -107,10 +125,10 @@ class BackendService
   ###
 
   private
-  
+
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "https://first-mate-be-1f1d4528b074.herokuapp.com/",
+      url: "http://localhost:3000/api/v1",
       headers: {'Content-Type' => 'application/json'}
     )
   end

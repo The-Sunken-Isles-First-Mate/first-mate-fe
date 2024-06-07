@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1234567890
+    uri: http://localhost:3000/api/v1/users/1/user_campaigns
     body:
-      encoding: UTF-8
-      string: '{"user":{"username":"testuser123","token":"1234asdf"}}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Content-Type:
       - application/json
@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bdb81b01131846cfcf412902fe08deba"
+      - W/"dd3c1a7c4dde7d05fdc1e7eb68af1d39"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c92c771b-7b49-4496-b568-4ea07f11d412
+      - 1b2c951a-f059-46c1-aa8e-cc1ac3da77f1
       X-Runtime:
-      - '0.069406'
+      - '0.012584'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=5.01, transaction.active_record;dur=5.15,
-        process_action.action_controller;dur=33.35
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.45, instantiation.active_record;dur=0.12,
+        process_action.action_controller;dur=2.70
       Content-Length:
-      - '207'
+      - '205'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"user","attributes":{"uid":"1234567890","username":"testuser123","token":"1234asdf"},"relationships":{"user_campaigns":{"data":[]},"campaigns":{"data":[]},"characters":{"data":[]}}}}'
-  recorded_at: Fri, 07 Jun 2024 00:11:57 GMT
+      string: '{"data":[{"id":"1","type":"user_campaign","attributes":{"role":"dm"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}]}'
+  recorded_at: Fri, 07 Jun 2024 00:12:01 GMT
 recorded_with: VCR 6.2.0

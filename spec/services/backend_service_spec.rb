@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BackendService do
   it "can hit back end endpoint - items", :vcr do
-    query = BackendService.call_db('api/v1/items/1')
+    query = BackendService.call_db('/api/v1/items/1')
     result = query[:data]
 
     expect(query).to be_an Hash
@@ -67,7 +67,7 @@ RSpec.describe BackendService do
       expect(character[:attributes][:user_id]).to be_an Integer
       expect(character[:attributes][:dnd_race]).to be_a String
       expect(character[:attributes][:dnd_class]).to be_a String
-      expect(character[:attributes]).to have_key(:image_url) 
+      expect(character[:attributes]).to have_key(:image_url)
     end
   end
 end
