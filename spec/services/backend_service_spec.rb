@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe BackendService do
   it 'can make a call for users', :vcr do
-    params = { user: {
-                username: "bob",
-                token: "example" }
-              }
+    params = {
+      username: "bob",
+      token: "example"
+    }
+
     query  = BackendService.call_db_for_user('/api/v1/users/1', params )
     result = query[:data][:attributes]
 
@@ -52,7 +53,8 @@ RSpec.describe BackendService do
   end
 
   it "can hit back end endpoint - items", :vcr do
-    query  = BackendService.call_db('api/v1/items/1')
+    query  = BackendService.call_db('/api/v1/items/1')
+
     result = query[:data]
 
     expect(query).to be_an Hash

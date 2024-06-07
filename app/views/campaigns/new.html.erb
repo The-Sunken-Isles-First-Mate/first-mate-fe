@@ -1,17 +1,23 @@
-<div class="campaign-form">
-    <h1 class="text-center">Create Campaign</h1>
-    <section class="campaign_form">
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="overlay-content">
+        <h1 class>Create Campaign</h1>
+        <section class="campaign_form">
         <%= form_with url: campaigns_path, method: :post, data: { turbo: false } do |form| %>
-            <h3>Campaign Name</h3>
-            <%= form.text_field :name, class: "form-control" %> <br><br><br>
+        <h3>Campaign Name</h3>
+        <%= form.text_field :name, class: "form-control" %> <br><br><br>
 
-            <h3>Invite Players by ID</h3>
-            Player 1: <%= form.text_field :player_1, class: "form-control" %> <br><br>
-            Player 2: <%= form.text_field :player_2, class: "form-control" %> <br><br>
-            Player 3: <%= form.text_field :player_3, class: "form-control" %> <br><br>
-            Player 4: <%= form.text_field :player_4, class: "form-control" %> <br><br><br>
+        <h3>Invite Players by ID</h3>
+        Player 1: <%= form.text_field :player_1, class: "form-control" %> <br><br>
+        Player 2: <%= form.text_field :player_2, class: "form-control" %> <br><br>
+        Player 3: <%= form.text_field :player_3, class: "form-control" %> <br><br>
+        Player 4: <%= form.text_field :player_4, class: "form-control" %> <br><br><br>
 
-            <%= form.submit "Create Campaign", class: "btn btn-primary" %>
+        <%= form.submit "Create Campaign", class: "btn btn-primary" %>
         <% end %>
-    </section>
+        </section>
+      </div>
+    </div>
+  </div>
 </div>

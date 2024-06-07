@@ -49,14 +49,14 @@ RSpec.describe BackendFacade do
     end
   end
 
-  describe '#get_campaign_characters', :vcr do
+  describe '#get_campaign_characters' do
     it 'returns an array of character objects', :vcr do
       result = BackendFacade.get_campaign_characters(1)
       r      = result.first
 
       expect(result).to be_an Array
       expect(r).to be_a Character
-      
+
       expect(r.id).to be_a(String)
       expect(r.name).to be_a(String)
       expect(r.dnd_race).to be_a(String)
@@ -64,8 +64,8 @@ RSpec.describe BackendFacade do
     end
   end
 
-  describe '#create_campaign', :vcr do
-    it 'creates a new campaign with the argument campaign name and returns a Campaign' do
+  describe '#create_campaign' do
+    it 'creates a new campaign with the argument campaign name and returns a Campaign', :vcr do
       result = BackendFacade.create_campaign('Random Name')
 
       expect(result).to be_a Campaign
@@ -85,22 +85,22 @@ RSpec.describe BackendFacade do
     end
   end
 
-  xit "can create a user campaign", :vcr do 
+  xit "can create a user campaign" do
     result = BackendFacade.create_user_campaign_dm(1, 1)
     require 'pry'; binding.pry
   end
 
-  xit "can create a user campaign pl?", :vcr do 
+  xit "can create a user campaign pl?", :vcr do
 
   end
 
-  describe '#create_character', :vcr do
+  describe '#create_character' do
     it 'creates a character with the passed in argument info and returns Character', :vcr do
       character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
       result         = BackendFacade.create_character(character_info)
 
       expect(result).to be_a Character
-      
+
       expect(result.user_id).to be_a(Integer)
       expect(result.id).to be_a(String)
       expect(result.name).to be_a(String)

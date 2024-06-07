@@ -13,7 +13,7 @@ class BackendService
   end
 
   def self.patch_db_for_user_campaign(params)
-    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+    response = connection.patch("/user_campaigns/#{params[:user_campaign_id]}") do |request|
       request.body = {
         user_campaign: {
           character_id: params[:character_id]
@@ -45,7 +45,7 @@ class BackendService
   end
 
   def self.post_db_campaign(campaign_name)
-    response = connection.post("/api/v1/campaigns") do |request|
+    response = connection.post("campaigns") do |request|
       request.body =
       {
         campaign: {
@@ -57,7 +57,7 @@ class BackendService
   end
 
   def self.post_db_user_campaign_dm(campaign_id, current_user)
-    response = connection.post("/api/v1/user_campaigns") do |request|
+    response = connection.post("/user_campaigns") do |request|
       request.body =
       {
         user_campaign: {
@@ -71,7 +71,7 @@ class BackendService
   end
 
   def self.post_db_user_campaign_pl(campaign_id, player_id)
-    response = connection.post("/api/v1/user_campaigns") do |request|
+    response = connection.post("/user_campaigns") do |request|
       request.body =
       {
         user_campaign: {
@@ -108,7 +108,7 @@ class BackendService
         headers: { content_type: 'multipart/form-data' }
       )
     else
-      connection.post("/api/v1/characters") do |request|
+      connection.post("/characters") do |request|
         request.body = json_payload
       end
     end
@@ -128,7 +128,7 @@ class BackendService
 
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000/api/v1",
+      url: "http://localhost:3000/api/v1/",
       headers: {'Content-Type' => 'application/json'}
     )
   end

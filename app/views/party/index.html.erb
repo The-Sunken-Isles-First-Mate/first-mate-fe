@@ -1,20 +1,29 @@
-<h1> Party </h1>
-
-<% @characters.each_slice(2) do |character_pair| %>
-  <div class="row mb-4">
-    <% character_pair.each do |character| %>
-      <div class="col-lg-6 col-md-12 mb-3">
-        <div id="character-<%= character.id %>" class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><%= character.name %></h5>
-            <p class="card-text">Race: <%= character.dnd_race %></p>
-            <p class="card-text">Class: <%= character.dnd_class %></p>
-            <% if character.image_url %>
-              <%= image_tag(character.image_url, alt: character.name, class: "img-fluid") %>
-            <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1> Party </h1>
+    </div>
+  </div>
+  <% @characters.each_slice(2) do |character_pair| %>
+    <div class="row mb-4">
+      <% character_pair.each do |character| %>
+        <div class="col-lg-6 col-md-12 mb-3">
+          <div id="character-<%= character.id %>" class="card h-100">
+            <div class="card-body d-flex">
+              <% if character.image_url %>
+                <div class="col">
+                  <%= image_tag("http://localhost:3000/#{character.image_url}", alt: character.name, class: "img-fluid card-img-start") %>
+                </div>
+              <% end %>
+              <div class="col">
+                <h5 class="card-title"><%= character.name %></h5>
+                <p class="card-text">Race: <%= character.dnd_race %></p>
+                <p class="card-text">Class: <%= character.dnd_class %></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

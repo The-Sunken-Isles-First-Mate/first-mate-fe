@@ -31,11 +31,6 @@ class CharactersController < ApplicationController
       character_id: character.id
     })
 
-    BackendFacade.update_user_campaign({
-      user_campaign_id: params[:user_campaign_id],
-      character_id: character.id
-    })
-
     # Commented out because we need to figure out how the campaign and character are linked
     # redirect_to summary_path(campaign.id)
 

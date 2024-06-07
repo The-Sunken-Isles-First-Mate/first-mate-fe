@@ -67,7 +67,7 @@ class BackendFacade
         user_id: character[:attributes][:user_id],
         dnd_race: character[:attributes][:dnd_race],
         dnd_class: character[:attributes][:dnd_class],
-        image_url: character[:attributes][:image_url]
+        image_url: character[:attributes][:character_image]
       })
     end
 
@@ -79,7 +79,6 @@ class BackendFacade
     Campaign.new({
       id: response[:data][:id],
       name: response[:data][:attributes][:name],
-      week: response[:data][:attributes][:week],
       week: response[:data][:attributes][:week],
       animal_products: response[:data][:attributes][:animal_products],
       cloth: response[:data][:attributes][:cloth],
