@@ -91,7 +91,7 @@ class BackendService
           dnd_race: new_character_data[:data][:dnd_race],
           dnd_class: new_character_data[:data][:dnd_class],
           user_id: new_character_data[:data][:user_id]
-     }}
+        }}
     json_payload = JSON.generate(json_data)
 
     response = if new_character_data[:character_image][:image].present?

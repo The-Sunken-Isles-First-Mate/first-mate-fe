@@ -1,22 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe BackendService do
-  it "can hit back end endpoint - items", :vcr do
-    query = BackendService.call_db('/api/v1/items/1')
-    result = query[:data]
+  it 'can make a call for users', :vcr do
+    params = { user: {
+                username: "bob",
+                token: "example" }
+              }
+    query  = BackendService.call_db_for_user('/api/v1/users/1', params )
+    result = query[:data][:attributes]
 
     expect(query).to be_an Hash
     expect(result).to be_a Hash
-    check_hash_structure(result[:attributes], :name, String)
-  end
-
-  xit 'can make API call to database' do
-    query = BackendService.call_db('/api/v1/users/1')
-    result = query[:results]
-
-    expect(query).to be_an Hash
-    expect(result).to be_a Array
-    check_hash_structure(result.first, :name, String)
+    check_hash_structure(result, :uid, String)
+    check_hash_structure(result, :username, String)
+    check_hash_structure(result, :token, String)
   end
 
   it "can return a campaign and its attributes", :vcr do
@@ -54,9 +51,26 @@ RSpec.describe BackendService do
     expect(result[:relationships][:items]).to be_a Hash
   end
 
+  it "can hit back end endpoint - items", :vcr do
+    query  = BackendService.call_db('api/v1/items/1')
+    result = query[:data]
+
+    expect(query).to be_an Hash
+    expect(result).to be_a Hash
+    check_hash_structure(result[:attributes], :name, String)
+    check_hash_structure(result[:attributes], :animal_products_cost, Integer)
+    check_hash_structure(result[:attributes], :cloth_cost, Integer)
+    check_hash_structure(result[:attributes], :farmed_goods_cost, Integer)
+    check_hash_structure(result[:attributes], :food_cost, Integer)
+    check_hash_structure(result[:attributes], :foraged_goods_cost, Integer)
+    check_hash_structure(result[:attributes], :metal_cost, Integer)
+    check_hash_structure(result[:attributes], :stone_cost, Integer)
+    check_hash_structure(result[:attributes], :wood_cost, Integer)
+    check_hash_structure(result[:attributes], :monster_parts_cost, Integer)
+  end
 
   it "can return all characters from a campaign and their attributes", :vcr do
-    query = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/1/characters")
+    query  = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/1/characters")
 
     result = query[:data]
 
@@ -69,5 +83,33 @@ RSpec.describe BackendService do
       expect(character[:attributes][:dnd_class]).to be_a String
       expect(character[:attributes]).to have_key(:image_url)
     end
+  end
+
+  xit "can call the campaign", :vcr do
+    body  =  {
+                name: "example"
+              }
+    query = BackendService.post_db_campaign(body)
+              require 'pry'; binding.pry
+  end
+
+  it "can hit user campaigns", :vcr do
+    query  = BackendService.post_db_user_campaign_pl(1, 1)
+    result = query[:data]
+    # require 'pry'; binding.pry
+
+    expect(query).to be_an Hash
+    expect(result).to be_a Hash
+    check_hash_structure(result[:attributes], :role, String)
+  end
+
+  xit 'can post a new character', :vcr do
+    data  = { name: "larry",
+              dnd_race: "elf",
+              dnd_class: "rogue",
+              user_id: "99"
+            }
+    query = BackendService.post_db_character(data)
+    require 'pry'; binding.pry
   end
 end
