@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   end
 
   resources :characters, only: [:new, :create]  
-  resources :party, only: [:index]
-  resources :management, only: [:edit]
+  #resources :party, only: [:index]
+  #resources :management, only: [:edit]
 end

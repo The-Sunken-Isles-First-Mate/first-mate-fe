@@ -1,25 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe BackendService do
-  it "can hit back end endpoint - items", :vcr do
-    query = BackendService.call_db('api/v1/items/1')
-    result = query[:data]
+  # it 'can call the db for a user', :vcr do
+  # end
 
-    expect(query).to be_an Hash
-    expect(result).to be_a Hash
-    check_hash_structure(result[:attributes], :name, String)
-  end
-
-  xit 'can make API call to database' do
-    query = BackendService.call_db('/api/v1/users/1')
-    result = query[:results]
-
-    expect(query).to be_an Hash
-    expect(result).to be_a Array
-    check_hash_structure(result.first, :name, String)
-  end
-
-  it "can return a campaign and its attributes", :vcr do
+  it 'can call the db for a campaign', :vcr do
     query = BackendService.call_db_for_campaign("/api/v1/campaigns/1")
     result = query[:data]
 
@@ -54,10 +39,24 @@ RSpec.describe BackendService do
     expect(result[:relationships][:items]).to be_a Hash
   end
 
+  # it 'can call the db for all campaign items', :vcr do
+  # end
 
-  it "can return all characters from a campaign and their attributes", :vcr do
-    query = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/1/characters")
+  # it 'can call the db for a management_form', :vcr do
+  # end
 
+  it 'can call the db for items', :vcr do
+    query = BackendService.call_db('api/v1/items/1')
+    result = query[:data]
+
+    expect(query).to be_an Hash
+    expect(result).to be_a Hash
+    check_hash_structure(result[:attributes], :name, String)
+  end
+
+  it 'can call the db for campaign characters', :vcr do
+    query = BackendService.call_db_for_campaign_characters('/api/v1/campaigns/1/characters')
+    
     result = query[:data]
 
     result.each do |character|
@@ -70,4 +69,25 @@ RSpec.describe BackendService do
       expect(character[:attributes]).to have_key(:image_url) 
     end
   end
+
+  # it 'can create a campaign on the db', :vcr do
+  # end
+
+  # it 'can create a user_campaign_dm', :vcr do
+  # end
+
+  # it 'can create a user_campaign_pl', :vcr do
+  # end
+  
+  # it 'can create character on the db', :vcr do
+  # end
+
+  # it 'update a management form on the db', :vcr do
+  # end
+
+  # it 'post a db advance week', :vcr do
+  # end
+
+  # it 'can call the db', :vcr do
+  # end
 end
