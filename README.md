@@ -92,7 +92,7 @@ README
 
 ### Tests
 
-* X Total Tests (100% coverage on x/x LOC)
+* 40 Total Tests (100% coverage on x/x LOC)
 * X Feature Tests (100% coverage on x/x LOC)
 * X Model Tests (100% coverage on x/x LOC)
 

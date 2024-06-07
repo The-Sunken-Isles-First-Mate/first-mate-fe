@@ -12,8 +12,25 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.call_db_for_campaign(url)
+  def self.patch_db_for_user_campaign(params)
+    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+      request.body = {
+        user_campaign: {
+          character_id: params[:character_id]
+        }
+      }.to_json
+    end
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_user_campaigns(url)
     response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_campaign(campaign_id)
+    response = connection.get("/api/v1/campaigns/#{campaign_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -111,6 +128,7 @@ class BackendService
         request.body = json_payload
       end
     end
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -125,7 +143,7 @@ class BackendService
   end
 
   def self.post_db_advance_week(campaign_id, management_form)
-    response = connection.post("api/v1/campaigns/#{campaign_id}/advance_week") do |request|
+    response = connection.post("/api/v1/campaigns/#{campaign_id}/advance_week") do |request|
       request.body = 
       {
         campaign: {
@@ -179,10 +197,10 @@ class BackendService
   end
 
   private
-  
+
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000/",
+      url: "http://localhost:3000",
       headers: {'Content-Type' => 'application/json'}
     )
   end

@@ -5,7 +5,7 @@ RSpec.describe BackendService do
   # end
 
   it 'can call the db for a campaign', :vcr do
-    query = BackendService.call_db_for_campaign("/api/v1/campaigns/1")
+    query = BackendService.call_db_for_campaign(1) #("/api/v1/campaigns/1")
     result = query[:data]
 
     expect(query).to be_a Hash
@@ -56,7 +56,7 @@ RSpec.describe BackendService do
 
   it 'can call the db for campaign characters', :vcr do
     query = BackendService.call_db_for_campaign_characters('/api/v1/campaigns/1/characters')
-    
+
     result = query[:data]
 
     result.each do |character|
@@ -66,7 +66,7 @@ RSpec.describe BackendService do
       expect(character[:attributes][:user_id]).to be_an Integer
       expect(character[:attributes][:dnd_race]).to be_a String
       expect(character[:attributes][:dnd_class]).to be_a String
-      expect(character[:attributes]).to have_key(:image_url) 
+      expect(character[:attributes]).to have_key(:image_url)
     end
   end
 
@@ -78,7 +78,7 @@ RSpec.describe BackendService do
 
   # it 'can create a user_campaign_pl', :vcr do
   # end
-  
+
   # it 'can create character on the db', :vcr do
   # end
 

@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"94a6917a0ae24833d86053d888cdc904"
+      - W/"c277ec3a106cf5b9c4c1bd4f646f1a8b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ad8a22a8-4650-43b2-ba93-2fd74b9919d9
+      - bd6d0f80-96f0-44b0-b6a4-cfaeb708563d
       X-Runtime:
-      - '0.005886'
+      - '0.007326'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=2.03
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.45, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=2.68
       Content-Length:
-      - '624'
+      - '431'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"},{"id":"55","type":"campaign_item"},{"id":"82","type":"campaign_item"},{"id":"109","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 00:41:25 GMT
+      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:21:37 GMT
 recorded_with: VCR 6.2.0

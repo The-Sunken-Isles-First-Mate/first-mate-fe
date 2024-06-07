@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/items/1
+    uri: http://localhost:3000/api/v1/users/1/user_campaigns
     body:
       encoding: US-ASCII
       string: ''
@@ -35,20 +35,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"022572d1c7252d7b3c21d510030882a2"
+      - W/"dd3c1a7c4dde7d05fdc1e7eb68af1d39"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4c0d1204-4ef9-4fdc-8e19-66a4a6cb280f
+      - c9759530-1cae-4db3-9621-68f08f16448a
       X-Runtime:
-      - '0.005664'
+      - '0.009508'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.42, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.13
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.62, instantiation.active_record;dur=1.89,
+        process_action.action_controller;dur=4.27
       Content-Length:
-      - '367'
+      - '205'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}}'
+      string: '{"data":[{"id":"1","type":"user_campaign","attributes":{"role":"dm"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}]}'
   recorded_at: Fri, 07 Jun 2024 05:21:33 GMT
 recorded_with: VCR 6.2.0

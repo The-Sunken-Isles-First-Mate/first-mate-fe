@@ -8,9 +8,27 @@ class BackendFacade
     })
   end
 
-  def self.get_campaign(campaign_id)
-    response = BackendService.call_db_for_campaign("/api/v1/campaigns/#{campaign_id}")
+  def self.get_user_campaigns(user_id)
+    response = BackendService.call_db_for_user_campaigns("/api/v1/users/#{user_id}/user_campaigns")
 
+    response[:data].map do |campaign|
+      UserCampaign.new({
+        id: campaign[:id],
+        user_id: campaign[:relationships][:user][:data][:id],
+        campaign_id: campaign[:relationships][:campaign][:data][:id],
+        role: campaign[:attributes][:role],
+        character_id: (campaign[:relationships][:character][:data][:id] if campaign[:relationships][:character][:data].present?)
+      })
+    end
+  end
+
+  def self.update_user_campaign(params)
+    BackendService.patch_db_for_user_campaign(params)
+  end
+
+  def self.get_campaign(campaign_id)
+    response = BackendService.call_db_for_campaign(campaign_id)
+    #require 'pry'; binding.pry
     Campaign.new({
       id: response[:data][:id],
       name: response[:data][:attributes][:name],
@@ -165,6 +183,6 @@ class BackendFacade
 
   ### Not Formatted
   def self.item(id)
-    BackendService.call_db("api/v1/items/#{id}")
+    BackendService.call_db("/api/v1/items/#{id}")
   end
 end

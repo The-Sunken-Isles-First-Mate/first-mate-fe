@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/users/1
+    uri: http://localhost:3000/api/v1/users/2/user_campaigns
     body:
       encoding: US-ASCII
       string: ''
@@ -17,8 +17,8 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -34,18 +34,21 @@ http_interactions:
       - application/json; charset=utf-8
       Vary:
       - Accept
+      Etag:
+      - W/"929693851a70c2af2f0bbea2827f5672"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 259431b7-efa8-4c5e-9d7d-f33ede88d267
+      - f2ad6d3b-a192-45ae-bf58-a0fbece46fb9
       X-Runtime:
-      - '0.009476'
+      - '0.006321'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, process_action.action_controller;dur=0.61
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.33, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=1.64
       Content-Length:
-      - '75'
+      - '240'
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"400","title":"Username or Token cannot be missing"}]}'
-  recorded_at: Fri, 07 Jun 2024 02:22:14 GMT
+      string: '{"data":[{"id":"2","type":"user_campaign","attributes":{"role":"party_member"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":{"id":"1","type":"character"}}}}]}'
+  recorded_at: Fri, 07 Jun 2024 05:21:37 GMT
 recorded_with: VCR 6.2.0

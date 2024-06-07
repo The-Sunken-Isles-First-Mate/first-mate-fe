@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '0906a9d6-5c2b-4e4e-b197-0d23f40a4480'
+      - 0215a5fe-3bc8-497a-9bf2-22d41fcb93f0
       X-Runtime:
-      - '0.011975'
+      - '0.011372'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.78, instantiation.active_record;dur=0.04,
-        transaction.active_record;dur=2.45, process_action.action_controller;dur=5.73
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=2.10, instantiation.active_record;dur=0.04,
+        transaction.active_record;dur=2.65, process_action.action_controller;dur=6.48
       Content-Length:
       - '279'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"3","type":"character","attributes":{"name":"Character
         Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
-  recorded_at: Fri, 07 Jun 2024 00:41:23 GMT
+  recorded_at: Fri, 07 Jun 2024 05:21:33 GMT
 recorded_with: VCR 6.2.0
