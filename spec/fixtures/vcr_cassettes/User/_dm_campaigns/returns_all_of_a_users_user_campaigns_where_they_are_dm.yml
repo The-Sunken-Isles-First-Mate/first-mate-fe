@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/users/1/user_campaigns
+    uri: http://localhost:3000/api/v1/users/1/user_campaigns
     body:
       encoding: US-ASCII
       string: ''
@@ -20,18 +20,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 06 Jun 2024 18:37:13 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717699019&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=8JzlREtPPP6AQ7FACSY8ThYU5IAjFj53b%2BmgR1TtPWE%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717699019&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=8JzlREtPPP6AQ7FACSY8ThYU5IAjFj53b%2BmgR1TtPWE%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -51,17 +39,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 892ae4a1-f6d9-405b-8c4c-39632e84ba6a
+      - 1b2c951a-f059-46c1-aa8e-cc1ac3da77f1
       X-Runtime:
-      - '13.810309'
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+      - '0.012584'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.45, instantiation.active_record;dur=0.12,
+        process_action.action_controller;dur=2.70
       Content-Length:
       - '205'
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user_campaign","attributes":{"role":"dm"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}]}'
-  recorded_at: Thu, 06 Jun 2024 18:37:13 GMT
+  recorded_at: Fri, 07 Jun 2024 00:12:01 GMT
 recorded_with: VCR 6.2.0

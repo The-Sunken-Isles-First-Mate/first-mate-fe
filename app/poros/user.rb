@@ -10,7 +10,7 @@ class User
   end
 
   def user_campaigns
-    @user_campaigns ||= BackendFacade.get_user_campaigns(@id)
+    @user_campaigns = BackendFacade.get_user_campaigns(@id)
   end
 
   def dm_campaigns

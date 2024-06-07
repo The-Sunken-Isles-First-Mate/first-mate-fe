@@ -13,15 +13,14 @@ class BackendService
   end
 
   def self.patch_db_for_user_campaign(params)
-    require 'pry'; binding.pry
-    response = connection.patch("api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
       request.body = {
         user_campaign: {
           character_id: params[:character_id]
         }
       }.to_json
     end
-require 'pry'; binding.pry
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -113,7 +112,7 @@ require 'pry'; binding.pry
         request.body = json_payload
       end
     end
-    require 'pry'; binding.pry
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -129,7 +128,7 @@ require 'pry'; binding.pry
 
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "https://first-mate-be-1f1d4528b074.herokuapp.com/",
+      url: "http://localhost:3000/api/v1",
       headers: {'Content-Type' => 'application/json'}
     )
   end

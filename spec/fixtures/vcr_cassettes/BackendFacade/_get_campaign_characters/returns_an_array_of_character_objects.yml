@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/campaigns/1/characters
+    uri: http://localhost:3000/api/v1/campaigns/1/characters
     body:
       encoding: US-ASCII
       string: ''
@@ -20,18 +20,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 06 Jun 2024 17:22:11 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717694529&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=Ghv3Q9eY0fpvNXnRNfhtmyowlOrFfyGJ9uB3E0uynzU%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717694529&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=Ghv3Q9eY0fpvNXnRNfhtmyowlOrFfyGJ9uB3E0uynzU%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -47,23 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1b25cd31a4dd2475c29bc7acb516f458"
+      - W/"0da45370a79082764b6582e7832f1e88"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 75ff6d7a-9d46-4d05-980c-f78f945d4950
+      - 4791c328-3fdc-4cb7-b75b-327b9fba2e0e
       X-Runtime:
-      - '2.100974'
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+      - '0.013884'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=3.99, instantiation.active_record;dur=0.08,
+        process_action.action_controller;dur=10.05
       Content-Length:
-      - '642'
-      Via:
-      - 1.1 vegur
+      - '1021'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"character","attributes":{"name":"Test Character
-        1","user_id":2,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null},"relationships":{"user":{"data":{"id":"2","type":"user"}},"user_campaigns":{"data":[{"id":"2","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"2","type":"character","attributes":{"name":"Test
-        Character 2","user_id":3,"dnd_race":"Human","dnd_class":"Bard","image_url":null},"relationships":{"user":{"data":{"id":"3","type":"user"}},"user_campaigns":{"data":[{"id":"3","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}]}'
-  recorded_at: Thu, 06 Jun 2024 17:22:11 GMT
+        1","user_id":2,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"2","type":"user"}},"user_campaigns":{"data":[{"id":"2","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"2","type":"character","attributes":{"name":"Test
+        Character 2","user_id":3,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"3","type":"user"}},"user_campaigns":{"data":[{"id":"3","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"7","type":"character","attributes":{"name":"Tidus","user_id":4,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"4","type":"user"}},"user_campaigns":{"data":[{"id":"4","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}]}'
+  recorded_at: Fri, 07 Jun 2024 00:11:58 GMT
 recorded_with: VCR 6.2.0

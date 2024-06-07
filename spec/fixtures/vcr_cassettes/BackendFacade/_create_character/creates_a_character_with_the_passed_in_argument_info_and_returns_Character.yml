@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/characters
+    uri: http://localhost:3000/api/v1/characters
     body:
       encoding: UTF-8
       string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1}}'
@@ -20,18 +20,6 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 06 Jun 2024 18:18:04 GMT
-      Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717697885&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=zLnulDd8JifsY6TnMTXeQQvKFir6%2F9PnxwL5B77y9WQ%3D"}]}'
-      Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1717697885&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=zLnulDd8JifsY6TnMTXeQQvKFir6%2F9PnxwL5B77y9WQ%3D
-      Nel:
-      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
-      Connection:
-      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -47,22 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"355a47cd4213c5aacfa0848c07596272"
+      - W/"261bfccb188bc1ce2541514b65482b14"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d8352e51-e297-4992-bc70-20933c069319
+      - 8225e753-f0d9-4c8f-bb9b-f01173b6a195
       X-Runtime:
-      - '0.050747'
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+      - '0.015062'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.61, instantiation.active_record;dur=0.07,
+        transaction.active_record;dur=2.98, process_action.action_controller;dur=8.51
       Content-Length:
-      - '257'
-      Via:
-      - 1.1 vegur
+      - '279'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"37","type":"character","attributes":{"name":"Character
-        Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
-  recorded_at: Thu, 06 Jun 2024 18:18:05 GMT
+      string: '{"data":{"id":"8","type":"character","attributes":{"name":"Character
+        Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
+  recorded_at: Fri, 07 Jun 2024 00:11:58 GMT
 recorded_with: VCR 6.2.0

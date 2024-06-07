@@ -126,6 +126,6 @@ class BackendFacade
 
   ### Not Formatted
   def self.item(id)
-    BackendService.call_db("api/v1/items/#{id}")
+    BackendService.call_db("/api/v1/items/#{id}")
   end
 end
