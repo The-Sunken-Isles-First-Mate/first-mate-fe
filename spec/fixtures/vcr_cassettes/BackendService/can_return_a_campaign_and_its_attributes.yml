@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/campaigns/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"33705e617655f76770f95210b962b251"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 415851f2-f809-4016-8896-8033b6742aa8
+      X-Runtime:
+      - '0.008464'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.68, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=4.95
+      Content-Length:
+      - '2312'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"campaign","attributes":{"name":"Test Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"1","type":"user_campaign"},{"id":"2","type":"user_campaign"},{"id":"3","type":"user_campaign"},{"id":"4","type":"user_campaign"}]},"users":{"data":[{"id":"1","type":"user"},{"id":"2","type":"user"},{"id":"3","type":"user"},{"id":"4","type":"user"}]},"characters":{"data":[{"id":"1","type":"character"},{"id":"2","type":"character"},{"id":"7","type":"character"}]},"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"2","type":"campaign_item"},{"id":"3","type":"campaign_item"},{"id":"4","type":"campaign_item"},{"id":"5","type":"campaign_item"},{"id":"6","type":"campaign_item"},{"id":"7","type":"campaign_item"},{"id":"8","type":"campaign_item"},{"id":"9","type":"campaign_item"},{"id":"10","type":"campaign_item"},{"id":"11","type":"campaign_item"},{"id":"12","type":"campaign_item"},{"id":"13","type":"campaign_item"},{"id":"14","type":"campaign_item"},{"id":"15","type":"campaign_item"},{"id":"16","type":"campaign_item"},{"id":"17","type":"campaign_item"},{"id":"18","type":"campaign_item"},{"id":"19","type":"campaign_item"},{"id":"20","type":"campaign_item"},{"id":"21","type":"campaign_item"},{"id":"22","type":"campaign_item"},{"id":"23","type":"campaign_item"},{"id":"24","type":"campaign_item"},{"id":"25","type":"campaign_item"},{"id":"26","type":"campaign_item"},{"id":"27","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 00:12:01 GMT
+recorded_with: VCR 6.2.0

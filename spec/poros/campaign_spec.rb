@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe DndCampaign do
+RSpec.describe Campaign do
   it 'exists and has attributes' do
-    campaign = DndCampaign.new({
+    campaign = Campaign.new({
       id: "12345",
       name: "Cool Campaign",
       week: 0, 
@@ -18,7 +18,7 @@ RSpec.describe DndCampaign do
       villagers: 120
     })
 
-    expect(campaign).to be_a(DndCampaign)
+    expect(campaign).to be_a(Campaign)
     expect(campaign.id).to eq("12345")
     expect(campaign.name).to eq("Cool Campaign") 
     expect(campaign.week).to eq(0)

@@ -1,5 +1,6 @@
 class SummaryController < ApplicationController
   def show
-    # binding.pry
+    @campaign = BackendFacade.get_campaign(params[:campaign_id])
+    @items = BackendFacade.get_campaign_items(params[:campaign_id])
   end
 end

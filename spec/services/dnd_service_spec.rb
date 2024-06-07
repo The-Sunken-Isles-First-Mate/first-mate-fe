@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe DndService do
-  it 'can make API call to database' do
+  it "can make API call to database", :vcr do
     query = DndService.call_db('classes')
     result = query[:results]
     
@@ -10,7 +10,7 @@ RSpec.describe DndService do
     check_hash_structure(result.first, :name, String)
   end
 
-  it 'can make API call to database' do
+  it "can make API call to database 2", :vcr do
     query = DndService.call_db('races')
     result = query[:results]
     

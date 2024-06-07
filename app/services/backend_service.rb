@@ -1,7 +1,7 @@
 class BackendService
   def self.call_db_for_user(url, user_hash)
     response = connection.get(url) do |request|
-      request.body = 
+      request.body =
       {
         user: {
           username: user_hash[:username],
@@ -12,9 +12,41 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.patch_db_for_user_campaign(params)
+    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+      request.body = {
+        user_campaign: {
+          character_id: params[:character_id]
+        }
+      }.to_json
+    end
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_user_campaigns(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_campaign(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_campaign_items(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.call_db_for_campaign_characters(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
-      request.body = 
+      request.body =
       {
         campaign: {
           name: campaign_name,
@@ -26,7 +58,7 @@ class BackendService
 
   def self.post_db_user_campaign_dm(campaign_id, current_user)
     response = connection.post("/api/v1/user_campaigns") do |request|
-      request.body = 
+      request.body =
       {
         user_campaign: {
           user_id: current_user.id,
@@ -40,7 +72,7 @@ class BackendService
 
   def self.post_db_user_campaign_pl(campaign_id, player_id)
     response = connection.post("/api/v1/user_campaigns") do |request|
-      request.body = 
+      request.body =
       {
         user_campaign: {
           user_id: player_id,
@@ -53,18 +85,34 @@ class BackendService
   end
 
   def self.post_db_character(new_character_data)
-    response = connection.post("api/v1/characters") do |request|
-      request.body = 
-      {
-        character: {
-          name: new_character_data[:name],
-          dnd_race: new_character_data[:dnd_race],
-          dnd_class: new_character_data[:dnd_class],
-          user_id: new_character_data[:user_id],
-          picture_url: nil
-        }
-      }.to_json
+    json_data = {
+      character: {
+          name: new_character_data[:data][:name],
+          dnd_race: new_character_data[:data][:dnd_race],
+          dnd_class: new_character_data[:data][:dnd_class],
+          user_id: new_character_data[:data][:user_id]
+     }}
+    json_payload = JSON.generate(json_data)
+
+    response = if new_character_data[:character_image][:image].present?
+      image_file = new_character_data[:character_image][:image].tempfile
+
+      RestClient::Request.execute(
+        method: :post,
+        url: 'http://localhost:3000/api/v1/characters',
+        payload: {
+          multipart: true,
+          json: json_payload,
+          file: File.new(image_file, 'rb')
+        },
+        headers: { content_type: 'multipart/form-data' }
+      )
+    else
+      connection.post("/api/v1/characters") do |request|
+        request.body = json_payload
+      end
     end
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -77,9 +125,10 @@ class BackendService
   ###
 
   private
+
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000/",
+      url: "http://localhost:3000/api/v1",
       headers: {'Content-Type' => 'application/json'}
     )
   end

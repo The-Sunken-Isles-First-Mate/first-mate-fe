@@ -1,8 +1,47 @@
-<div class="overlay-content">
-    <h1>Welcome, <%= current_user.username %> to The Sunken Isles!</h1>
-    <br>
-    <%= button_to "Create Campaign", new_campaign_path, method: :get, class: "btn btn-primary" %> <br>
-    <%= button_to "Create Character", new_character_path, method: :get, class: "btn btn-secondary" %>
-    <br>
-    <h2>Your Active Campaigns</h2>
+<div class="container text-center">
+  <div class="overlay-content">
+  <div class="row">
+    <div class="col">
+        <h1>Welcome, <%= current_user.username %> to The Sunken Isles!</h1>
+        <br>
+        <%= button_to "Create Campaign", new_campaign_path, method: :get, class: "btn btn-primary" %> <br>
+        <br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <section id="dm-campaigns">
+        <h3>DM Campaigns</h3>
+        <ul>
+          <% current_user.dm_campaigns.each do |campaign| %>
+            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id) %></li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+
+    <div class="col-4">
+      <section id="party-campaigns">
+        <h3>Party Campaigns</h3>
+        <ul>
+          <% current_user.party_campaigns.each do |campaign| %>
+            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id) %></li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+
+    <div class="col-4">
+      <section id="invited-campaigns">
+        <h3>Invited Campaigns</h3>
+        <ul>
+          <% current_user.invited_campaigns.each do |campaign| %>
+            <li><%= button_to "Create Character for Campaign #{campaign.campaign_id}", new_character_path, method: :get, params: { user_campaign_id: campaign.id }, class: "btn btn-secondary" %></li>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+  </div>
+  </div>
 </div>

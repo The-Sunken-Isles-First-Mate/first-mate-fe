@@ -1,19 +1,31 @@
-<div class="overlay-content">
-    <h1>Create a Character</h1>
-    <br>
-    <section class="character_form">
-        <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
+<div class="container text-center">
+  <% cache("attrs_list") do %>
+    <div class="row">
+      <div class="col">
+        <div class="overlay-content">
+          <h1>Create a Character</h1>
+          <br>
+          <section class="character_form">
+          <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
             <h3>Character Name</h3>
             <%= form.text_field :name, class: "form-control" %> <br><br>
 
             <h3>Character Race</h3>
-            <%= form.select :race, @races, selected: @races.first, class: "form-control" %> <br><br>
+            <%= form.select :race, @attrs.races, selected: @attrs.races.first, class: "form-control" %> <br><br>
 
             <h3>Character Class</h3>
-            <%= form.select :class, @classes, selected: @classes.first, class: "form-control" %> <br><br><br>
+            <%= form.select :class, @attrs.classes, selected: @attrs.classes.first, class: "form-control" %> <br><br><br>
+
+            <h3>Character Image</h3>
+            <%= form.file_field :character_image, accept: 'image/png, image/gif, image/jpeg', class: "form-control" %> <br><br><br>
 
             <%= form.submit "Create Character", class: "btn btn-primary" %>
-        <% end %>
-    </section>
+          <% end %>
+          </section>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
+
 

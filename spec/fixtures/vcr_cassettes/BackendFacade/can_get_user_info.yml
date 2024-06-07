@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/users/1234567890
+    body:
+      encoding: UTF-8
+      string: '{"user":{"username":"testuser123","token":"1234asdf"}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"bdb81b01131846cfcf412902fe08deba"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c92c771b-7b49-4496-b568-4ea07f11d412
+      X-Runtime:
+      - '0.069406'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=5.01, transaction.active_record;dur=5.15,
+        process_action.action_controller;dur=33.35
+      Content-Length:
+      - '207'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"user","attributes":{"uid":"1234567890","username":"testuser123","token":"1234asdf"},"relationships":{"user_campaigns":{"data":[]},"campaigns":{"data":[]},"characters":{"data":[]}}}}'
+  recorded_at: Fri, 07 Jun 2024 00:11:57 GMT
+recorded_with: VCR 6.2.0
