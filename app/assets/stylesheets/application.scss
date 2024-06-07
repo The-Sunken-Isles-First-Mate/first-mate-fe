@@ -16,22 +16,111 @@
 
 @import "bootstrap";
 
-body {
-  padding: 20px;
+#main_logo_bg {
+  background-color: #8d826e;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100vw;
+  height: 125px;
+  z-index: 2;
 }
 
-.responsive {
-  display: block;
-  max-width: 1000px;
+.overlay-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
   width: 100%;
-  height: auto;
   margin: 0 auto;
-  border-color: black;
-  border-style: solid;
+  align-content: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.inner_bg {
+  background-color: #8d826e;
+  border: 3px solid black;
+  min-height: 250px;
+  align-content: center;
+  justify-content: center;
 }
 
 .main_content{
-  padding: 10%;
+  padding: 3%;
   margin: 0 auto;
   width: 90%;
+}
+
+body {
+  background-image: url("dnd-character-creation-d20.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+ }
+
+.btn {
+  margin-top: 10px; /* Add some margin between buttons */
+}
+
+.campaign-form {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+nav li {
+  padding-left: 20%;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white; /* Adjust the color as needed */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: lightgray; /* Adjust the hover color as needed */
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px
+}
+
+.management-label {
+  flex: 2;
+  text-align: left;
+}
+
+.management-qty-field {
+  flex: 2;
+  max-width: 50px;
 }

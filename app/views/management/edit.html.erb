@@ -1,95 +1,121 @@
-<h1> Resource Management for <%= @campaign.name %> </h1> <br>
-<h1> Week <%= @campaign.week %></h1> <br>
+<div class="container align-text-center">
+  <div class="row">
+    <div class="col">
+      <div class="overlay-content">
+        <h1> Resource Management for <%= @campaign.name %> </h1> <br>
+        <h1> Week <%= @campaign.week %></h1> <br>
 
-<h2> Resources Available </h2> <br>
-<section class="available_resources">
-  <h4> Villagers </h4>
-  <ul>
-    <li> <p> Available Villagers: <%= @campaign.villagers %> </p> </li>
-  </ul>
+        <h2> Resources Available </h2> <br>
+        <section class="available_resources">
+          <h4> Villagers </h4>
+          <ul>
+            <li> <p> Available Villagers: <%= @campaign.villagers %> </p> </li>
+          </ul>
 
-  <h4> Essentials </h4>
-  <ul>
-    <li> <p> Food: <%= @campaign.food %> </p> </li>
-    <li> <p> Farmed Goods: <%= @campaign.farmed_goods %> </p> </li>
-    <li> <p> Foraged Goods: <%= @campaign.foraged_goods %> </p> </li>
-  </ul>
+          <h4> Essentials </h4>
+          <ul>
+            <li> <p> Food: <%= @campaign.food %> </p> </li>
+            <li> <p> Farmed Goods: <%= @campaign.farmed_goods %> </p> </li>
+            <li> <p> Foraged Goods: <%= @campaign.foraged_goods %> </p> </li>
+          </ul>
 
-  <h4> Crafting Materials </h4>
-  <ul>
-    <li> <p> Wood: <%= @campaign.wood %> </p> </li>
-    <li> <p> Stone: <%= @campaign.stone %> </p> </li>
-    <li> <p> Metal: <%= @campaign.metal %> </p> </li>
-    <li> <p> Cloth: <%= @campaign.cloth %> </p> </li>
-    <li> <p> Animal Products: <%= @campaign.animal_products %> </p> </li>
-    <li> <p> Monster Parts: <%= @campaign.monster_parts %> </p> </li>
-  </ul>
-</section>
+          <h4> Crafting Materials </h4>
+          <ul>
+            <li> <p> Wood: <%= @campaign.wood %> </p> </li>
+            <li> <p> Stone: <%= @campaign.stone %> </p> </li>
+            <li> <p> Metal: <%= @campaign.metal %> </p> </li>
+            <li> <p> Cloth: <%= @campaign.cloth %> </p> </li>
+            <li> <p> Animal Products: <%= @campaign.animal_products %> </p> </li>
+            <li> <p> Monster Parts: <%= @campaign.monster_parts %> </p> </li>
+          </ul>
+        </section>
 
-<br>
+        <br>
 
-<h2> Management Form </h2> <br>
-<section class="management_form">
-  <%= form_with url: campaign_management_update_path(@campaign.id), method: :patch, data: {turbo: false} do |form| %>
+        <h2> Management Form </h2> <br>
+        <section class="management_form">
+          <%= form_with url: campaign_management_update_path(@campaign.id), method: :patch, data: {turbo: false} do |form| %>
+            <h4> Assign Villagers - <%= @campaign.villagers %> Available </h4>
+            <div class="container-flex">
+              <div class="form-group">
+                <%= form.label :food, "Food:", class: "management-label" %>
+                <%= form.text_field :food, value: @management_form.food, class: "management-qty-field" %>
+              </div>
 
-    <h4> Assign Villagers - <%= @campaign.villagers %> Available </h4>
+              <div class="form-group">
+                <%= form.label :farmed_goods, "Farmed Goods:", class: "management-label" %>
+                <%= form.text_field :farmed_goods, value: @management_form.farmed_goods, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :food, "Food:" %>
-    <%= form.text_field :food, value: @management_form.food %> <br>
+              <div class="form-group">
+                <%= form.label :foraged_goods, "Foraged Goods:", class: "management-label" %>
+                <%= form.text_field :foraged_goods, value: @management_form.foraged_goods, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :farmed_goods, "Farmed Goods:" %>
-    <%= form.text_field :farmed_goods, value: @management_form.farmed_goods %> <br>
+              <div class="form-group">
+                <%= form.label :wood, "Wood:", class: "management-label" %>
+                <%= form.text_field :wood, value: @management_form.wood, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :foraged_goods, "Foraged Goods:" %>
-    <%= form.text_field :foraged_goods, value: @management_form.foraged_goods %> <br>
+              <div class="form-group">
+                <%= form.label :stone, "Stone:", class: "management-label" %>
+                <%= form.text_field :stone, value: @management_form.stone, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :wood, "Wood:" %>
-    <%= form.text_field :wood, value: @management_form.wood %> <br>
+              <div class="form-group">
+                <%= form.label :metal, "Metal:", class: "management-label" %>
+                <%= form.text_field :metal, value: @management_form.metal, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :stone, "Stone:" %>
-    <%= form.text_field :stone, value: @management_form.stone %> <br>
+              <div class="form-group">
+                <%= form.label :cloth, "Cloth:", class: "management-label" %>
+                <%= form.text_field :cloth, value: @management_form.cloth, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :metal, "Metal:" %>
-    <%= form.text_field :metal, value: @management_form.metal %> <br>
+              <div class="form-group">
+                <%= form.label :animal_products, "Animal Products:", class: "management-label" %>
+                <%= form.text_field :animal_products, value: @management_form.animal_products, class: "management-qty-field" %>
+              </div>
 
-    <%= form.label :cloth, "Cloth:" %>
-    <%= form.text_field :cloth, value: @management_form.cloth %> <br>
+              <div class="form-group">
+                <%= form.label :monster_parts, "Monster Parts:", class: "management-label" %>
+                <%= form.text_field :monster_parts, value: @management_form.monster_parts, class: "management-qty-field" %>
+              </div>
+            </div>
 
-    <%= form.label :animal_products, "Animal Products:" %>
-    <%= form.text_field :animal_products, value: @management_form.animal_products %> <br>
+            <br>
 
-    <%= form.label :monster_parts, "Monster Parts:" %>
-    <%= form.text_field :monster_parts, value: @management_form.monster_parts %> <br>
+            <h4> Item Crafting </h4>
 
-    <br>
+            <%= form.label :item_1, "Craft a:" %>
+            <%= form.select :item_1, @all_items, class: "management-qty-field", :include_blank => true, selected: @management_form %>
+            <%= form.label :item_1_quantity, "Quantity:" %>
+            <%= form.text_field :item_1_quantity, :size=>"4", value: 0 %> <br><br>
 
-    <h4> Item Crafting </h4>
+            <%= form.label :item_2, "Craft a:" %>
+            <%= form.select :item_2, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.label :item_2_quantity, "Quantity:" %>
+            <%= form.text_field :item_2_quantity, :size=>"4", value: 0 %> <br><br>
 
-    <%= form.label :item_1, "Craft a:" %>
-    <%= form.select :item_1, @all_items, class: "form-control", :include_blank => true, selected: @management_form %>
-    <%= form.label :item_1_quantity, "Quantity:" %>
-    <%= form.text_field :item_1_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.label :item_3, "Craft a:" %>
+            <%= form.select :item_3, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.label :item_3_quantity, "Quantity:" %>
+            <%= form.text_field :item_3_quantity, :size=>"4", value: 0 %> <br><br>
 
-    <%= form.label :item_2, "Craft a:" %>
-    <%= form.select :item_2, @all_items, class: "form-control", :include_blank => true %>
-    <%= form.label :item_2_quantity, "Quantity:" %>
-    <%= form.text_field :item_2_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.label :item_4, "Craft a:" %>
+            <%= form.select :item_4, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.label :item_4_quantity, "Quantity:" %>
+            <%= form.text_field :item_4_quantity, :size=>"4", value: 0 %> <br><br>
 
-    <%= form.label :item_3, "Craft a:" %>
-    <%= form.select :item_3, @all_items, class: "form-control", :include_blank => true %>
-    <%= form.label :item_3_quantity, "Quantity:" %>
-    <%= form.text_field :item_3_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.submit "Update" %>
+          <% end %>
+        </section>
 
-    <%= form.label :item_4, "Craft a:" %>
-    <%= form.select :item_4, @all_items, class: "form-control", :include_blank => true %>
-    <%= form.label :item_4_quantity, "Quantity:" %>
-    <%= form.text_field :item_4_quantity, :size=>"4", value: 0 %> <br><br>
+        <br>
 
-    <%= form.submit "Update" %>
-  <% end %>
-</section>
-
-<br>
-
-<%# Only show this button if current_user.id == @campaign's DM's ID %>
-<%= button_to "Advance Week", campaign_management_advance_path(@campaign.id), method: :post %>
+        <%# Only show this button if current_user.id == @campaign's DM's ID %>
+        <%= button_to "Advance Week", campaign_management_advance_path(@campaign.id), method: :post %>
+      </div>
+    </div>
+  </div>
+</div>

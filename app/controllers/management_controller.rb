@@ -3,6 +3,7 @@ class ManagementController < ApplicationController
     @campaign = BackendFacade.get_campaign(params[:campaign_id])
     @management_form = BackendFacade.get_management_form(@campaign.id, @campaign.week)
     @all_items = BackendFacade.get_all_items.sort
+    session[:campaign_id] = params[:campaign_id]
   end
 
   def update

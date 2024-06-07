@@ -10,7 +10,7 @@ RSpec.describe BackendFacade do
       })
 
       expect(result).to be_a User
-      expect(result.id).to eq("4")
+      expect(result.id).to eq("5")
       expect(result.uid).to eq("1234567890")
       expect(result.username).to eq("testuser123")
     end
@@ -18,10 +18,22 @@ RSpec.describe BackendFacade do
 
   describe '#get_campaign' do
     it 'returns a campaign object', :vcr do
-      campaign = BackendFacade.get_campaign(1)
       result = BackendFacade.get_campaign(1)
 
-      expect(campaign).to be_a Campaign
+      expect(result).to be_a Campaign
+      expect(result.id).to be_an(String)
+      expect(result.name).to be_an(String)
+      expect(result.food).to be_an(Integer)
+      expect(result.week).to be_an(Integer)
+      expect(result.wood).to be_an(Integer)
+      expect(result.metal).to be_an(Integer)
+      expect(result.stone).to be_an(Integer)
+      expect(result.cloth).to be_an(Integer)
+      expect(result.villagers).to be_an(Integer)
+      expect(result.farmed_goods).to be_an(Integer)
+      expect(result.foraged_goods).to be_an(Integer)
+      expect(result.monster_parts).to be_an(Integer)
+      expect(result.animal_products).to be_an(Integer)
       expect(result).to be_a Campaign
       expect(result.id).to be_an(String)
       expect(result.name).to be_an(String)
@@ -41,12 +53,14 @@ RSpec.describe BackendFacade do
 
   describe '#get_campaign_items' do
     it 'returns an array of item objects', :vcr do
-      items = BackendFacade.get_campaign_items(1)
+      result = BackendFacade.get_campaign_items(1)
+      r      = result.first
 
-      expect(items).to be_a Array
-      items.each do |item|
-        expect(item).to be_a Item
-      end
+      expect(result).to be_a Array
+      expect(r).to be_a Item
+
+      expect(r.name).to be_a(String)
+      expect(r.quantity).to be_a(Integer)
     end
   end
 
@@ -57,7 +71,7 @@ RSpec.describe BackendFacade do
 
   describe 'get_all_items' do
     it "can hit back end endpoint - items", :vcr do
-      query  = BackendService.call_db('api/v1/items/1')
+      query  = BackendService.call_db('items/1')
       result = query[:data]
 
       expect(query).to be_an Hash
@@ -77,12 +91,62 @@ RSpec.describe BackendFacade do
 
   describe '#get_campaign_characters' do
     it 'returns an array of character objects', :vcr do
-      characters = BackendFacade.get_campaign_characters(1)
+      result = BackendFacade.get_campaign_characters(1)
+      r      = result.first
 
-      expect(characters).to be_an Array
-      characters.each do |character|
-        expect(character).to be_a Character
-      end
+      expect(result).to be_an Array
+      expect(r).to be_a Character
+
+      expect(r.id).to be_a(String)
+      expect(r.name).to be_a(String)
+      expect(r.dnd_race).to be_a(String)
+      expect(r.dnd_class).to be_a(String)
+    end
+  end
+
+  describe '#create_campaign' do
+    it 'creates a new campaign with the argument campaign name and returns a Campaign', :vcr do
+      result = BackendFacade.create_campaign('Random Name')
+
+      expect(result).to be_a Campaign
+      expect(result.id).to be_an(String)
+      expect(result.name).to be_an(String)
+      expect(result.food).to be_an(Integer)
+      expect(result.week).to be_an(Integer)
+      expect(result.wood).to be_an(Integer)
+      expect(result.metal).to be_an(Integer)
+      expect(result.stone).to be_an(Integer)
+      expect(result.cloth).to be_an(Integer)
+      expect(result.villagers).to be_an(Integer)
+      expect(result.farmed_goods).to be_an(Integer)
+      expect(result.foraged_goods).to be_an(Integer)
+      expect(result.monster_parts).to be_an(Integer)
+      expect(result.animal_products).to be_an(Integer)
+    end
+  end
+
+  xit "can create a user campaign" do
+    result = BackendFacade.create_user_campaign_dm(1, 1)
+    require 'pry'; binding.pry
+  end
+
+  xit "can create a user campaign pl?", :vcr do
+
+  end
+
+  describe '#create_character' do
+    it 'creates a character with the passed in argument info and returns Character', :vcr do
+      character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
+      result         = BackendFacade.create_character(character_info)
+
+      expect(result).to be_a Character
+
+      expect(result.user_id).to be_a(Integer)
+      expect(result.id).to be_a(String)
+      expect(result.name).to be_a(String)
+      expect(result.dnd_race).to (be_a(String).or be_nil)
+      expect(result.dnd_class).to (be_a(String).or be_nil)
+      expect(result.image_url).to (be_a(String).or be_nil)
     end
   end
 

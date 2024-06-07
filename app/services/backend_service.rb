@@ -1,6 +1,6 @@
 class BackendService
-  def self.call_db_for_user(url, user_hash)
-    response = connection.get(url) do |request|
+  def self.call_db_for_user(user_hash)
+    response = connection.get("users/#{user_hash[:uid]}") do |request|
       request.body =
       {
         user: {
@@ -9,11 +9,12 @@ class BackendService
         }
       }.to_json
     end
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.patch_db_for_user_campaign(params)
-    response = connection.patch("/api/v1/user_campaigns/#{params[:user_campaign_id]}") do |request|
+    response = connection.patch("user_campaigns/#{params[:user_campaign_id]}") do |request|
       request.body = {
         user_campaign: {
           character_id: params[:character_id]
@@ -30,17 +31,17 @@ class BackendService
   end
 
   def self.call_db_for_campaign(campaign_id)
-    response = connection.get("/api/v1/campaigns/#{campaign_id}")
+    response = connection.get("campaigns/#{campaign_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.call_db_for_campaign_items(url)
-    response = connection.get(url)
+  def self.call_db_for_campaign_items(campaign_id)
+    response = connection.get("campaigns/#{campaign_id}/items")
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.call_db_for_management_form(id, week)
-    response = connection.get('/api/v1/management_form') do |request|
+    response = connection.get('management_form') do |request|
       request.body =
       {
         campaign_id: id,
@@ -51,17 +52,17 @@ class BackendService
   end
 
   def self.call_db_for_items
-    response = connection.get('/api/v1/items')
+    response = connection.get('items')
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.call_db_for_campaign_characters(url)
-    response = connection.get(url)
+  def self.call_db_for_campaign_characters(campaign_id)
+    response = connection.get("campaigns/#{campaign_id}/characters")
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.post_db_campaign(campaign_name)
-    response = connection.post("/api/v1/campaigns") do |request|
+    response = connection.post("campaigns") do |request|
       request.body =
       {
         campaign: {
@@ -73,7 +74,7 @@ class BackendService
   end
 
   def self.post_db_user_campaign_dm(campaign_id, current_user)
-    response = connection.post("/api/v1/user_campaigns") do |request|
+    response = connection.post("user_campaigns") do |request|
       request.body =
       {
         user_campaign: {
@@ -87,7 +88,7 @@ class BackendService
   end
 
   def self.post_db_user_campaign_pl(campaign_id, player_id)
-    response = connection.post("/api/v1/user_campaigns") do |request|
+    response = connection.post("user_campaigns") do |request|
       request.body =
       {
         user_campaign: {
@@ -107,7 +108,7 @@ class BackendService
           dnd_race: new_character_data[:data][:dnd_race],
           dnd_class: new_character_data[:data][:dnd_class],
           user_id: new_character_data[:data][:user_id]
-    }}
+        }}
     json_payload = JSON.generate(json_data)
 
     response = if new_character_data[:character_image][:image].present?
@@ -124,7 +125,7 @@ class BackendService
         headers: { content_type: 'multipart/form-data' }
       )
     else
-      connection.post("/api/v1/characters") do |request|
+      connection.post("characters") do |request|
         request.body = json_payload
       end
     end
@@ -133,8 +134,8 @@ class BackendService
   end
 
   def self.update_db_management_form(campaign_id, form_data)
-    response = connection.patch("/api/v1/management_forms/#{campaign_id}") do |request|
-      request.body = 
+    response = connection.patch("management_forms/#{campaign_id}") do |request|
+      request.body =
       {
         management_form: form_data
       }.to_json
@@ -143,8 +144,8 @@ class BackendService
   end
 
   def self.post_db_advance_week(campaign_id, management_form)
-    response = connection.post("/api/v1/campaigns/#{campaign_id}/advance_week") do |request|
-      request.body = 
+    response = connection.post("campaigns/#{campaign_id}/advance_week") do |request|
+      request.body =
       {
         campaign: {
           campaign_id: campaign_id,
@@ -200,7 +201,7 @@ class BackendService
 
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000",
+      url: "http://localhost:3000/api/v1/",
       headers: {'Content-Type' => 'application/json'}
     )
   end
