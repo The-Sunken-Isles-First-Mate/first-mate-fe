@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/user_campaigns
+    uri: http://localhost:3000/api/v1/characters
     body:
       encoding: UTF-8
-      string: '{"user_campaign":{"user_id":1,"campaign_id":1,"role":0}}'
+      string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1}}'
     headers:
       Content-Type:
       - application/json
@@ -35,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"dbe3e2a3fd958454b4af1e14d3a24d2d"
+      - W/"624e6096ac31fbce163bd204942a17c5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 64bee16c-763b-43e6-903f-9b2e2a6baf35
+      - 0f7ca46f-b10d-4c04-89b1-02522ab7aa33
       X-Runtime:
-      - '0.011587'
+      - '0.011744'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.79, instantiation.active_record;dur=0.09,
-        transaction.active_record;dur=4.62, process_action.action_controller;dur=5.93
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.54, instantiation.active_record;dur=0.03,
+        transaction.active_record;dur=2.15, process_action.action_controller;dur=5.21
       Content-Length:
-      - '214'
+      - '280'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"17","type":"user_campaign","attributes":{"role":"party_member"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}}'
-  recorded_at: Fri, 07 Jun 2024 06:57:13 GMT
+      string: '{"data":{"id":"18","type":"character","attributes":{"name":"Character
+        Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
+  recorded_at: Fri, 07 Jun 2024 06:50:59 GMT
 recorded_with: VCR 6.2.0

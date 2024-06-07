@@ -35,7 +35,7 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2d4277958d3ce91c1f24f3e0b5ea4d46"
+      - W/"efb7d920e845a487262d823b934fafc7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
@@ -46,7 +46,7 @@ http_interactions:
       - start_processing.action_controller;dur=0.01, sql.active_record;dur=24.25,
         instantiation.active_record;dur=0.45, process_action.action_controller;dur=57.46
       Content-Length:
-      - '2057'
+      - '2046'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"3","type":"campaign","attributes":{"name":"Random Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"6","type":"user_campaign"}]},"users":{"data":[{"id":"4","type":"user"}]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"55","type":"campaign_item"},{"id":"56","type":"campaign_item"},{"id":"57","type":"campaign_item"},{"id":"58","type":"campaign_item"},{"id":"59","type":"campaign_item"},{"id":"60","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"62","type":"campaign_item"},{"id":"63","type":"campaign_item"},{"id":"64","type":"campaign_item"},{"id":"65","type":"campaign_item"},{"id":"66","type":"campaign_item"},{"id":"67","type":"campaign_item"},{"id":"68","type":"campaign_item"},{"id":"69","type":"campaign_item"},{"id":"70","type":"campaign_item"},{"id":"71","type":"campaign_item"},{"id":"72","type":"campaign_item"},{"id":"73","type":"campaign_item"},{"id":"74","type":"campaign_item"},{"id":"75","type":"campaign_item"},{"id":"76","type":"campaign_item"},{"id":"77","type":"campaign_item"},{"id":"78","type":"campaign_item"},{"id":"79","type":"campaign_item"},{"id":"80","type":"campaign_item"},{"id":"81","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
@@ -1517,7 +1517,7 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9059bbdc25c702d9476640c52d93581a"
+      - W/"070f45b8f50898bd8cd07f28ee708236"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
@@ -1528,7 +1528,7 @@ http_interactions:
       - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.12, instantiation.active_record;dur=0.03,
         process_action.action_controller;dur=4.52
       Content-Length:
-      - '2057'
+      - '1996'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"campaign","attributes":{"name":"Random Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"5","type":"user_campaign"}]},"users":{"data":[{"id":"4","type":"user"}]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"28","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'

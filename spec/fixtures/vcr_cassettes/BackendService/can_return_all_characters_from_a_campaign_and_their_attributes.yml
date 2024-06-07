@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/campaigns/1/characters
+    uri: http://localhost:3000/api/v1/campaigns//api/v1/campaigns/1/characters/characters
     body:
       encoding: US-ASCII
       string: ''
@@ -17,40 +17,89 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
       Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept
-      Etag:
-      - W/"0da45370a79082764b6582e7832f1e88"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      - application/json; charset=UTF-8
       X-Request-Id:
-      - 10f2e4f3-3812-4855-8a1c-1322b34742d0
+      - e7caf3cc-8828-403f-be53-0ad477e5b52c
       X-Runtime:
-      - '0.016432'
+      - '0.010961'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.50, instantiation.active_record;dur=0.11,
-        process_action.action_controller;dur=10.89
+      - ''
       Content-Length:
-      - '1021'
+      - '7846'
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"character","attributes":{"name":"Test Character
-        1","user_id":2,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"2","type":"user"}},"user_campaigns":{"data":[{"id":"2","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"2","type":"character","attributes":{"name":"Test
-        Character 2","user_id":3,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"3","type":"user"}},"user_campaigns":{"data":[{"id":"3","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"7","type":"character","attributes":{"name":"Tidus","user_id":4,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"4","type":"user"}},"user_campaigns":{"data":[{"id":"4","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}]}'
-  recorded_at: Fri, 07 Jun 2024 02:10:12 GMT
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [GET] \"/api/v1/campaigns/api/v1/campaigns/1/characters/characters\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":58320,"id":0,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:33:in `call''"},{"exception_object_id":58320,"id":1,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:132:in `call_app''"},{"exception_object_id":58320,"id":2,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:28:in `block in call''"},{"exception_object_id":58320,"id":3,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:17:in `catch''"},{"exception_object_id":58320,"id":4,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:17:in `call''"},{"exception_object_id":58320,"id":5,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call''"},{"exception_object_id":58320,"id":6,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app''"},{"exception_object_id":58320,"id":7,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call''"},{"exception_object_id":58320,"id":8,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged''"},{"exception_object_id":58320,"id":9,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged''"},{"exception_object_id":58320,"id":10,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged''"},{"exception_object_id":58320,"id":11,"trace":"activesupport
+        (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing''"},{"exception_object_id":58320,"id":12,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:24:in `call''"},{"exception_object_id":58320,"id":13,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call''"},{"exception_object_id":58320,"id":14,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call''"},{"exception_object_id":58320,"id":15,"trace":"rack
+        (3.0.11) lib/rack/runtime.rb:24:in `call''"},{"exception_object_id":58320,"id":16,"trace":"activesupport
+        (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":58320,"id":17,"trace":"actionpack (7.1.3.3)
+        lib/action_dispatch/middleware/server_timing.rb:59:in `block in call''"},{"exception_object_id":58320,"id":18,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events''"},{"exception_object_id":58320,"id":19,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call''"},{"exception_object_id":58320,"id":20,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":58320,"id":21,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call''"},{"exception_object_id":58320,"id":22,"trace":"rack
+        (3.0.11) lib/rack/sendfile.rb:114:in `call''"},{"exception_object_id":58320,"id":23,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call''"},{"exception_object_id":58320,"id":24,"trace":"railties
+        (7.1.3.3) lib/rails/engine.rb:536:in `call''"},{"exception_object_id":58320,"id":25,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":58320,"id":26,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":58320,"id":27,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":58320,"id":28,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":58320,"id":29,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":58320,"id":30,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":58320,"id":31,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":58320,"id":0,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:33:in `call''"},{"exception_object_id":58320,"id":1,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:132:in `call_app''"},{"exception_object_id":58320,"id":2,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:28:in `block in call''"},{"exception_object_id":58320,"id":3,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:17:in `catch''"},{"exception_object_id":58320,"id":4,"trace":"web-console
+        (4.2.1) lib/web_console/middleware.rb:17:in `call''"},{"exception_object_id":58320,"id":5,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call''"},{"exception_object_id":58320,"id":6,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app''"},{"exception_object_id":58320,"id":7,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call''"},{"exception_object_id":58320,"id":8,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged''"},{"exception_object_id":58320,"id":9,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged''"},{"exception_object_id":58320,"id":10,"trace":"activesupport
+        (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged''"},{"exception_object_id":58320,"id":11,"trace":"activesupport
+        (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing''"},{"exception_object_id":58320,"id":12,"trace":"railties
+        (7.1.3.3) lib/rails/rack/logger.rb:24:in `call''"},{"exception_object_id":58320,"id":13,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call''"},{"exception_object_id":58320,"id":14,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call''"},{"exception_object_id":58320,"id":15,"trace":"rack
+        (3.0.11) lib/rack/runtime.rb:24:in `call''"},{"exception_object_id":58320,"id":16,"trace":"activesupport
+        (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":58320,"id":17,"trace":"actionpack (7.1.3.3)
+        lib/action_dispatch/middleware/server_timing.rb:59:in `block in call''"},{"exception_object_id":58320,"id":18,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events''"},{"exception_object_id":58320,"id":19,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call''"},{"exception_object_id":58320,"id":20,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":58320,"id":21,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call''"},{"exception_object_id":58320,"id":22,"trace":"rack
+        (3.0.11) lib/rack/sendfile.rb:114:in `call''"},{"exception_object_id":58320,"id":23,"trace":"actionpack
+        (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call''"},{"exception_object_id":58320,"id":24,"trace":"railties
+        (7.1.3.3) lib/rails/engine.rb:536:in `call''"},{"exception_object_id":58320,"id":25,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":58320,"id":26,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":58320,"id":27,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":58320,"id":28,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":58320,"id":29,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":58320,"id":30,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":58320,"id":31,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Fri, 07 Jun 2024 06:57:13 GMT
 recorded_with: VCR 6.2.0

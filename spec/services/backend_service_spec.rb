@@ -3,11 +3,12 @@ require 'rails_helper'
 RSpec.describe BackendService do
   it 'can make a call for users', :vcr do
     params = {
+      uid: '1',
       username: "bob",
       token: "example"
     }
 
-    query  = BackendService.call_db_for_user('/api/v1/users/1', params )
+    query  = BackendService.call_db_for_user(params)
     result = query[:data][:attributes]
 
     expect(query).to be_an Hash
@@ -18,7 +19,12 @@ RSpec.describe BackendService do
   end
 
   it "can return a campaign and its attributes", :vcr do
-    query = BackendService.call_db_for_campaign("/api/v1/campaigns/1")
+    query = BackendService.call_db_for_campaign("campaigns/1")
+  # it 'can call the db for a user', :vcr do
+  end
+
+  it 'can call the db for a campaign', :vcr do
+    query = BackendService.call_db_for_campaign(1) #("/api/v1/campaigns/1")
     result = query[:data]
 
     expect(query).to be_a Hash
@@ -73,6 +79,23 @@ RSpec.describe BackendService do
 
   it "can return all characters from a campaign and their attributes", :vcr do
     query  = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/1/characters")
+  # it 'can call the db for all campaign items', :vcr do
+  end
+
+  # it 'can call the db for a management_form', :vcr do
+  # end
+
+  it 'can call the db for items', :vcr do
+    query = BackendService.call_db('items/1')
+    result = query[:data]
+
+    expect(query).to be_an Hash
+    expect(result).to be_a Hash
+    check_hash_structure(result[:attributes], :name, String)
+  end
+
+  it 'can call the db for campaign characters', :vcr do
+    query = BackendService.call_db_for_campaign_characters(1)
 
     result = query[:data]
 
@@ -92,13 +115,12 @@ RSpec.describe BackendService do
                 name: "example"
               }
     query = BackendService.post_db_campaign(body)
-              require 'pry'; binding.pry
+
   end
 
   it "can hit user campaigns", :vcr do
     query  = BackendService.post_db_user_campaign_pl(1, 1)
     result = query[:data]
-    # require 'pry'; binding.pry
 
     expect(query).to be_an Hash
     expect(result).to be_a Hash
@@ -112,6 +134,25 @@ RSpec.describe BackendService do
               user_id: "99"
             }
     query = BackendService.post_db_character(data)
-    require 'pry'; binding.pry
   end
+  # it 'can create a campaign on the db', :vcr do
+  # end
+
+  # it 'can create a user_campaign_dm', :vcr do
+  # end
+
+  # it 'can create a user_campaign_pl', :vcr do
+  # end
+
+  # it 'can create character on the db', :vcr do
+  # end
+
+  # it 'update a management form on the db', :vcr do
+  # end
+
+  # it 'post a db advance week', :vcr do
+  # end
+
+  # it 'can call the db', :vcr do
+  # end
 end
