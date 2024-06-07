@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     get '/management', to: 'management#edit'
     post '/management/advance', to: 'management#advance_week'
     patch '/management/update', to: 'management#update'
-
-    #post '/advance_week', to: 'management#advance_week'
+    get '/party', to: 'party#index'
   end
 
-  resources :characters, only: [:new, :create]
+  resources :characters, only: [:new, :create]  
   resources :party, only: [:index]
+  resources :management, only: [:edit]
 end

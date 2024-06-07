@@ -35,24 +35,29 @@
     </style>
 </head>
 <body>
-    <div class="overlay-content">
-        <h1>Create a Character</h1>
-        <br>
-        <section class="character_form">
-            <%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
-                <h3>Character Name</h3>
-                <%= form.text_field :name, class: "form-control" %> <br><br>
+	<div class="overlay-content">
+		<% cache("attrs_list") do %>
+			<h1>Create a Character</h1>
+			<br>
+			<section class="character_form">
+				<%= form_with url: characters_path, method: :post, data: {turbo: false} do |form| %>
+					<h3>Character Name</h3>
+					<%= form.text_field :name, class: "form-control" %> <br><br>
 
-                <h3>Character Race</h3>
-                <%= form.select :race, @races, selected: @races.first, class: "form-control" %> <br><br>
+					<h3>Character Race</h3>
+					<%= form.select :race, @attrs.races, selected: @attrs.races.first, class: "form-control" %> <br><br>
 
-                <h3>Character Class</h3>
-                <%= form.select :class, @classes, selected: @classes.first, class: "form-control" %> <br><br><br>
+					<h3>Character Class</h3>
+					<%= form.select :class, @attrs.classes, selected: @attrs.classes.first, class: "form-control" %> <br><br><br>
 
-                <%= form.submit "Create Character", class: "btn btn-primary" %>
-            <% end %>
-        </section>
-    </div>
+                    <h3>Character Image</h3>
+                    <%= form.file_field :character_image, accept: 'image/png, image/gif, image/jpeg', class: "form-control" %> <br><br><br>
+
+					<%= form.submit "Create Character", class: "btn btn-primary" %>
+				<% end %>
+			</section>
+		<% end %>
+	</div>
 
     <!-- Bootstrap JS and dependencies -->
     <%= javascript_include_tag 'https://code.jquery.com/jquery-3.5.1.slim.min.js' %>

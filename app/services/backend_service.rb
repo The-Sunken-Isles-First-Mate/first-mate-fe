@@ -38,6 +38,11 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_campaign_characters(url)
+    response = connection.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.post_db_campaign(campaign_name)
     response = connection.post("/api/v1/campaigns") do |request|
       request.body =
@@ -79,17 +84,32 @@ class BackendService
   end
 
   def self.post_db_character(new_character_data)
-    response = connection.post("api/v1/characters") do |request|
-      request.body =
-      {
-        character: {
-          name: new_character_data[:name],
-          dnd_race: new_character_data[:dnd_race],
-          dnd_class: new_character_data[:dnd_class],
-          user_id: new_character_data[:user_id],
-          picture_url: nil
-        }
-      }.to_json
+    json_data = {
+      character: {
+          name: new_character_data[:data][:name],
+          dnd_race: new_character_data[:data][:dnd_race],
+          dnd_class: new_character_data[:data][:dnd_class],
+          user_id: new_character_data[:data][:user_id]
+    }}
+    json_payload = JSON.generate(json_data)
+
+    response = if new_character_data[:character_image][:image].present?
+      image_file = new_character_data[:character_image][:image].tempfile
+
+      RestClient::Request.execute(
+        method: :post,
+        url: 'http://localhost:3000/api/v1/characters',
+        payload: {
+          multipart: true,
+          json: json_payload,
+          file: File.new(image_file, 'rb')
+        },
+        headers: { content_type: 'multipart/form-data' }
+      )
+    else
+      connection.post("/api/v1/characters") do |request|
+        request.body = json_payload
+      end
     end
     JSON.parse(response.body, symbolize_names: true)
   end
@@ -162,7 +182,7 @@ class BackendService
   
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "http://localhost:3000/",
+      url: "https://first-mate-be-1f1d4528b074.herokuapp.com/",
       headers: {'Content-Type' => 'application/json'}
     )
   end

@@ -10,7 +10,7 @@ RSpec.describe BackendFacade do
     })
 
     expect(result).to be_a User
-    expect(result.id).to eq("1")
+    expect(result.id).to eq("100")
     expect(result.uid).to eq("1234567890")
     expect(result.username).to eq("testuser123")
   end
@@ -25,7 +25,7 @@ RSpec.describe BackendFacade do
 
   describe '#create_character', :vcr do
     it 'creates a character with the passed in argument info and returns Character', :vcr do
-      character_info = {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}
+      character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
       character = BackendFacade.create_character(character_info)
 
       expect(character).to be_a Character
@@ -48,6 +48,17 @@ RSpec.describe BackendFacade do
       expect(items).to be_a Array
       items.each do |item|
         expect(item).to be_a Item
+      end
+    end
+  end
+
+  describe '#get_campaign_characters', :vcr do
+    it 'returns an array of character objects', :vcr do
+      characters = BackendFacade.get_campaign_characters(1)
+
+      expect(characters).to be_an Array
+      characters.each do |character|
+        expect(character).to be_a Character
       end
     end
   end

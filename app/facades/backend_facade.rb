@@ -1,7 +1,6 @@
 class BackendFacade
   def self.get_user(user_hash)
     response = BackendService.call_db_for_user("/api/v1/users/#{user_hash[:uid]}", user_hash)
-
     User.new({
       id: response[:data][:id],
       uid: response[:data][:attributes][:uid],
@@ -90,6 +89,21 @@ class BackendFacade
     response[:data].map { |item| item[:attributes][:name] }
   end
 
+  def self.get_campaign_characters(campaign_id)
+    response = BackendService.call_db_for_campaign_characters("/api/v1/campaigns/#{campaign_id}/characters")
+
+    response[:data].map do |character|
+      Character.new({
+        id: character[:id],
+        name: character[:attributes][:name],
+        user_id: character[:attributes][:user_id],
+        dnd_race: character[:attributes][:dnd_race],
+        dnd_class: character[:attributes][:dnd_class],
+        image_url: character[:attributes][:image_url]
+      })
+    end
+  end
+
   def self.create_campaign(campaign_name)
     response = BackendService.post_db_campaign(campaign_name)
 
@@ -137,7 +151,7 @@ class BackendFacade
       user_id: response[:data][:attributes][:user_id],
       race: response[:data][:attributes][:dnd_race],
       class: response[:data][:attributes][:dnd_class],
-      image_url: response[:data][:attributes][:image_url]
+      image_url: response[:data][:attributes][:character_image]
     })
   end
 

@@ -47,6 +47,8 @@ gem "bootsnap", require: false
 # Universal Gems
 gem "faraday"
 gem "jsonapi-serializer"
+gem 'faraday-multipart'
+gem 'rest-client'
 
 # Design
 gem "bootstrap", "~> 5.2.0"
