@@ -105,3 +105,22 @@ nav li {
 .navbar-nav .nav-item .nav-link:hover {
   color: lightgray; /* Adjust the hover color as needed */
 }
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px
+}
+
+.management-label {
+  flex: 2;
+  text-align: left;
+}
+
+.management-qty-field {
+  flex: 2;
+  max-width: 50px;
+}
