@@ -7,9 +7,13 @@ Rails.application.routes.draw do
 
   resources :campaigns, only: [:new, :create] do
     get '/summary', to: 'summary#show'
+    get '/management', to: 'management#edit'
+    post '/management/advance', to: 'management#advance_week'
+    patch '/management/update', to: 'management#update'
     get '/party', to: 'party#index'
   end
-  resources :characters, only: [:new, :create]
 
-  resources :management, only: [:edit]
+  resources :characters, only: [:new, :create]  
+  #resources :party, only: [:index]
+  #resources :management, only: [:edit]
 end

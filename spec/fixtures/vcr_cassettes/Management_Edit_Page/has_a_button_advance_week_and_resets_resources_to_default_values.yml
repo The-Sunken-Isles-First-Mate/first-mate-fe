@@ -1,0 +1,172 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/campaigns/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"383efb3afa604e333dc8ff1e7b244373"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4baee89a-ae9c-4395-a3e1-15a55a66e7b6
+      X-Runtime:
+      - '0.011176'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.48, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=5.01
+      Content-Length:
+      - '2223'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"campaign","attributes":{"name":"Test Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"1","type":"user_campaign"},{"id":"2","type":"user_campaign"},{"id":"3","type":"user_campaign"}]},"users":{"data":[{"id":"1","type":"user"},{"id":"2","type":"user"},{"id":"3","type":"user"}]},"characters":{"data":[{"id":"1","type":"character"},{"id":"2","type":"character"}]},"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"2","type":"campaign_item"},{"id":"3","type":"campaign_item"},{"id":"4","type":"campaign_item"},{"id":"5","type":"campaign_item"},{"id":"6","type":"campaign_item"},{"id":"7","type":"campaign_item"},{"id":"8","type":"campaign_item"},{"id":"9","type":"campaign_item"},{"id":"10","type":"campaign_item"},{"id":"11","type":"campaign_item"},{"id":"12","type":"campaign_item"},{"id":"13","type":"campaign_item"},{"id":"14","type":"campaign_item"},{"id":"15","type":"campaign_item"},{"id":"16","type":"campaign_item"},{"id":"17","type":"campaign_item"},{"id":"18","type":"campaign_item"},{"id":"19","type":"campaign_item"},{"id":"20","type":"campaign_item"},{"id":"21","type":"campaign_item"},{"id":"22","type":"campaign_item"},{"id":"23","type":"campaign_item"},{"id":"24","type":"campaign_item"},{"id":"25","type":"campaign_item"},{"id":"26","type":"campaign_item"},{"id":"27","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:21:36 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/management_form
+    body:
+      encoding: UTF-8
+      string: '{"campaign_id":"1","week":0}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9e442e0fb4f706e1b175aaf6af7a1ca9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef2fad19-1aea-45a7-ae9e-e3f5c43870a2
+      X-Runtime:
+      - '0.008517'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.92, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=2.97
+      Content-Length:
+      - '729'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"management_form","attributes":{"week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"light_armor":0,"medium_armor":0,"heavy_armor":0,"simple_weapon":0,"martial_weapon":0,"ammunition":0,"adventuring_supplies":0,"assassins_blood":0,"malice":0,"midnight_tears":0,"serpent_venom":0,"truth_serum":0,"oil_of_slipperiness":0,"potion_of_climbing":0,"potion_of_healing":0,"potion_of_water_breathing":0,"barge":0,"coracle":0,"double_hulled_sailing_canoe":0,"keelboat":0,"raft":0,"single_hulled_sailing_canoe":0,"ballista":0,"cabin":0,"magical_defenses":0,"storage":0},"relationships":{"campaign":{"data":{"id":"1","type":"campaign"}}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:21:36 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8ed0ce1120dae19c3a3d28cd878097e3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1e98e80-b961-449b-a4f3-deb2ea77b22b
+      X-Runtime:
+      - '0.036340'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=5.48, instantiation.active_record;dur=0.09,
+        process_action.action_controller;dur=32.19
+      Content-Length:
+      - '11525'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"2","type":"item","attributes":{"name":"Medium
+        armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"2","type":"campaign_item"},{"id":"29","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"3","type":"item","attributes":{"name":"Heavy
+        armor","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":3,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"3","type":"campaign_item"},{"id":"30","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"4","type":"item","attributes":{"name":"Simple
+        weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"4","type":"campaign_item"},{"id":"31","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"5","type":"item","attributes":{"name":"Martial
+        weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"5","type":"campaign_item"},{"id":"32","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"6","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"6","type":"campaign_item"},{"id":"33","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"7","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"7","type":"campaign_item"},{"id":"34","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"8","type":"item","attributes":{"name":"Adventuring
+        supplies","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"8","type":"campaign_item"},{"id":"35","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"9","type":"item","attributes":{"name":"Assassin''s
+        blood","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"9","type":"campaign_item"},{"id":"36","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"10","type":"item","attributes":{"name":"Malice","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"10","type":"campaign_item"},{"id":"37","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"11","type":"item","attributes":{"name":"Midnight
+        tears","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"11","type":"campaign_item"},{"id":"38","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"12","type":"item","attributes":{"name":"Serpent
+        venom","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"12","type":"campaign_item"},{"id":"39","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"13","type":"item","attributes":{"name":"Truth
+        serum","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"13","type":"campaign_item"},{"id":"40","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"14","type":"item","attributes":{"name":"Oil
+        of slipperiness","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"14","type":"campaign_item"},{"id":"41","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"15","type":"item","attributes":{"name":"Potion
+        of climbing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"15","type":"campaign_item"},{"id":"42","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"16","type":"item","attributes":{"name":"Potion
+        of healing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"16","type":"campaign_item"},{"id":"43","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"17","type":"item","attributes":{"name":"Potion
+        of water breathing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"17","type":"campaign_item"},{"id":"44","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"18","type":"item","attributes":{"name":"Barge","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":10,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"18","type":"campaign_item"},{"id":"45","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"19","type":"item","attributes":{"name":"Coracle","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":2,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"19","type":"campaign_item"},{"id":"46","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"20","type":"item","attributes":{"name":"Double
+        hulled sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"20","type":"campaign_item"},{"id":"47","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"21","type":"item","attributes":{"name":"Keelboat","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"21","type":"campaign_item"},{"id":"48","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"22","type":"item","attributes":{"name":"Raft","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"22","type":"campaign_item"},{"id":"49","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"23","type":"item","attributes":{"name":"Single
+        hulled sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"23","type":"campaign_item"},{"id":"50","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"24","type":"item","attributes":{"name":"Ballista","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"24","type":"campaign_item"},{"id":"51","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"25","type":"item","attributes":{"name":"Cabin","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":2,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"25","type":"campaign_item"},{"id":"52","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"26","type":"item","attributes":{"name":"Magical
+        defenses","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":9,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"26","type":"campaign_item"},{"id":"53","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}},{"id":"27","type":"item","attributes":{"name":"Storage","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"27","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"}]}}}]}'
+  recorded_at: Fri, 07 Jun 2024 05:21:36 GMT
+recorded_with: VCR 6.2.0

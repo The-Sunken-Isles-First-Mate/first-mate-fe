@@ -35,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"99096ca71df014c52861b35b79429a09"
+      - W/"070f45b8f50898bd8cd07f28ee708236"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fdf24f71-99bf-41f9-be3b-bf5465d5b32d
+      - f8f78551-7abc-4ce5-9bfd-caa51408d998
       X-Runtime:
-      - '0.043879'
+      - '0.065836'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=7.18, instantiation.active_record;dur=0.46,
-        transaction.active_record;dur=31.02, process_action.action_controller;dur=38.02
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=17.14,
+        instantiation.active_record;dur=0.29, transaction.active_record;dur=55.82,
+        process_action.action_controller;dur=62.13
       Content-Length:
-      - '2023'
+      - '1996'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"109","type":"campaign_item"},{"id":"110","type":"campaign_item"},{"id":"111","type":"campaign_item"},{"id":"112","type":"campaign_item"},{"id":"113","type":"campaign_item"},{"id":"114","type":"campaign_item"},{"id":"115","type":"campaign_item"},{"id":"116","type":"campaign_item"},{"id":"117","type":"campaign_item"},{"id":"118","type":"campaign_item"},{"id":"119","type":"campaign_item"},{"id":"120","type":"campaign_item"},{"id":"121","type":"campaign_item"},{"id":"122","type":"campaign_item"},{"id":"123","type":"campaign_item"},{"id":"124","type":"campaign_item"},{"id":"125","type":"campaign_item"},{"id":"126","type":"campaign_item"},{"id":"127","type":"campaign_item"},{"id":"128","type":"campaign_item"},{"id":"129","type":"campaign_item"},{"id":"130","type":"campaign_item"},{"id":"131","type":"campaign_item"},{"id":"132","type":"campaign_item"},{"id":"133","type":"campaign_item"},{"id":"134","type":"campaign_item"},{"id":"135","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 00:11:58 GMT
+      string: '{"data":{"id":"2","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"28","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:21:33 GMT
 recorded_with: VCR 6.2.0

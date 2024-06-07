@@ -35,21 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"261bfccb188bc1ce2541514b65482b14"
+      - W/"2651f4ad7c54296e91482f6b38d93bff"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8225e753-f0d9-4c8f-bb9b-f01173b6a195
+      - 0215a5fe-3bc8-497a-9bf2-22d41fcb93f0
       X-Runtime:
-      - '0.015062'
+      - '0.011372'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.61, instantiation.active_record;dur=0.07,
-        transaction.active_record;dur=2.98, process_action.action_controller;dur=8.51
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=2.10, instantiation.active_record;dur=0.04,
+        transaction.active_record;dur=2.65, process_action.action_controller;dur=6.48
       Content-Length:
       - '279'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"8","type":"character","attributes":{"name":"Character
+      string: '{"data":{"id":"3","type":"character","attributes":{"name":"Character
         Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
-  recorded_at: Fri, 07 Jun 2024 00:11:58 GMT
+  recorded_at: Fri, 07 Jun 2024 05:21:33 GMT
 recorded_with: VCR 6.2.0

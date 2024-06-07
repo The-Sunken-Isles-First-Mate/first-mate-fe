@@ -35,22 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2d4277958d3ce91c1f24f3e0b5ea4d46"
+      - W/"efb7d920e845a487262d823b934fafc7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa23b458-9422-4a0e-a5c7-3ba36dd11e35
+      - e25e8c1c-bac8-40ca-a75c-e9fd6b9724ec
       X-Runtime:
-      - '0.082113'
+      - '0.032820'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=9.25, instantiation.active_record;dur=0.44,
-        process_action.action_controller;dur=60.78
+      - start_processing.action_controller;dur=0.02, sql.active_record;dur=1.84, instantiation.active_record;dur=0.51,
+        process_action.action_controller;dur=14.25
       Content-Length:
-      - '2057'
+      - '2046'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"campaign","attributes":{"name":"Random Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"6","type":"user_campaign"}]},"users":{"data":[{"id":"4","type":"user"}]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"55","type":"campaign_item"},{"id":"56","type":"campaign_item"},{"id":"57","type":"campaign_item"},{"id":"58","type":"campaign_item"},{"id":"59","type":"campaign_item"},{"id":"60","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"62","type":"campaign_item"},{"id":"63","type":"campaign_item"},{"id":"64","type":"campaign_item"},{"id":"65","type":"campaign_item"},{"id":"66","type":"campaign_item"},{"id":"67","type":"campaign_item"},{"id":"68","type":"campaign_item"},{"id":"69","type":"campaign_item"},{"id":"70","type":"campaign_item"},{"id":"71","type":"campaign_item"},{"id":"72","type":"campaign_item"},{"id":"73","type":"campaign_item"},{"id":"74","type":"campaign_item"},{"id":"75","type":"campaign_item"},{"id":"76","type":"campaign_item"},{"id":"77","type":"campaign_item"},{"id":"78","type":"campaign_item"},{"id":"79","type":"campaign_item"},{"id":"80","type":"campaign_item"},{"id":"81","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"3","type":"campaign","attributes":{"name":"Test","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"4","type":"user_campaign"}]},"users":{"data":[{"id":"5","type":"user"}]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"55","type":"campaign_item"},{"id":"56","type":"campaign_item"},{"id":"57","type":"campaign_item"},{"id":"58","type":"campaign_item"},{"id":"59","type":"campaign_item"},{"id":"60","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"62","type":"campaign_item"},{"id":"63","type":"campaign_item"},{"id":"64","type":"campaign_item"},{"id":"65","type":"campaign_item"},{"id":"66","type":"campaign_item"},{"id":"67","type":"campaign_item"},{"id":"68","type":"campaign_item"},{"id":"69","type":"campaign_item"},{"id":"70","type":"campaign_item"},{"id":"71","type":"campaign_item"},{"id":"72","type":"campaign_item"},{"id":"73","type":"campaign_item"},{"id":"74","type":"campaign_item"},{"id":"75","type":"campaign_item"},{"id":"76","type":"campaign_item"},{"id":"77","type":"campaign_item"},{"id":"78","type":"campaign_item"},{"id":"79","type":"campaign_item"},{"id":"80","type":"campaign_item"},{"id":"81","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:09 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/campaigns/3/items
@@ -90,18 +90,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ceac7eed-f6c7-4825-a50a-5911ddd6bbf8
+      - baec5a98-93dd-4ada-8d81-4859b7bf8bb5
       X-Runtime:
-      - '0.011341'
+      - '0.015207'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.82, instantiation.active_record;dur=0.51,
-        process_action.action_controller;dur=4.75
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.37,
+        process_action.action_controller;dur=3.90
       Content-Length:
       - '5581'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"55","type":"campaign_item","attributes":{"campaign_id":3,"item_id":1,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"1","type":"item"}}}},{"id":"56","type":"campaign_item","attributes":{"campaign_id":3,"item_id":2,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"2","type":"item"}}}},{"id":"57","type":"campaign_item","attributes":{"campaign_id":3,"item_id":3,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"3","type":"item"}}}},{"id":"58","type":"campaign_item","attributes":{"campaign_id":3,"item_id":4,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"4","type":"item"}}}},{"id":"59","type":"campaign_item","attributes":{"campaign_id":3,"item_id":5,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"5","type":"item"}}}},{"id":"60","type":"campaign_item","attributes":{"campaign_id":3,"item_id":6,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"6","type":"item"}}}},{"id":"61","type":"campaign_item","attributes":{"campaign_id":3,"item_id":7,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"7","type":"item"}}}},{"id":"62","type":"campaign_item","attributes":{"campaign_id":3,"item_id":8,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"8","type":"item"}}}},{"id":"63","type":"campaign_item","attributes":{"campaign_id":3,"item_id":9,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"9","type":"item"}}}},{"id":"64","type":"campaign_item","attributes":{"campaign_id":3,"item_id":10,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"10","type":"item"}}}},{"id":"65","type":"campaign_item","attributes":{"campaign_id":3,"item_id":11,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"11","type":"item"}}}},{"id":"66","type":"campaign_item","attributes":{"campaign_id":3,"item_id":12,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"12","type":"item"}}}},{"id":"67","type":"campaign_item","attributes":{"campaign_id":3,"item_id":13,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"13","type":"item"}}}},{"id":"68","type":"campaign_item","attributes":{"campaign_id":3,"item_id":14,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"14","type":"item"}}}},{"id":"69","type":"campaign_item","attributes":{"campaign_id":3,"item_id":15,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"15","type":"item"}}}},{"id":"70","type":"campaign_item","attributes":{"campaign_id":3,"item_id":16,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"16","type":"item"}}}},{"id":"71","type":"campaign_item","attributes":{"campaign_id":3,"item_id":17,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"17","type":"item"}}}},{"id":"72","type":"campaign_item","attributes":{"campaign_id":3,"item_id":18,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"18","type":"item"}}}},{"id":"73","type":"campaign_item","attributes":{"campaign_id":3,"item_id":19,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"19","type":"item"}}}},{"id":"74","type":"campaign_item","attributes":{"campaign_id":3,"item_id":20,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"20","type":"item"}}}},{"id":"75","type":"campaign_item","attributes":{"campaign_id":3,"item_id":21,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"21","type":"item"}}}},{"id":"76","type":"campaign_item","attributes":{"campaign_id":3,"item_id":22,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"22","type":"item"}}}},{"id":"77","type":"campaign_item","attributes":{"campaign_id":3,"item_id":23,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"23","type":"item"}}}},{"id":"78","type":"campaign_item","attributes":{"campaign_id":3,"item_id":24,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"24","type":"item"}}}},{"id":"79","type":"campaign_item","attributes":{"campaign_id":3,"item_id":25,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"25","type":"item"}}}},{"id":"80","type":"campaign_item","attributes":{"campaign_id":3,"item_id":26,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"26","type":"item"}}}},{"id":"81","type":"campaign_item","attributes":{"campaign_id":3,"item_id":27,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"3","type":"campaign"}},"item":{"data":{"id":"27","type":"item"}}}}]}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/1
@@ -137,22 +137,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"94a6917a0ae24833d86053d888cdc904"
+      - W/"66e76dbd488079abf26a9bd1f0b8f850"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1e8fe57a-6f51-425b-9a4d-2f068905a73c
+      - 3814b171-362c-4677-b616-880203cc0552
       X-Runtime:
-      - '0.010058'
+      - '0.008651'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.34, instantiation.active_record;dur=0.10,
-        process_action.action_controller;dur=4.20
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.59, instantiation.active_record;dur=0.12,
+        process_action.action_controller;dur=3.50
       Content-Length:
-      - '624'
+      - '495'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"},{"id":"55","type":"campaign_item"},{"id":"82","type":"campaign_item"},{"id":"109","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"},{"id":"55","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/2
@@ -188,22 +188,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d6651400fa0f48d4b4bb3969e6564a5d"
+      - W/"1f61bc9111e46b3d0cb0c4ba428470b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6dfb12f7-f535-4f89-af42-d68146bf7fc0
+      - aa95c6ec-82f9-4082-9afe-4d8ecfec412e
       X-Runtime:
-      - '0.007903'
+      - '0.008497'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.76, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.73
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.47, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.61
       Content-Length:
-      - '625'
+      - '496'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"item","attributes":{"name":"Medium armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"2","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"56","type":"campaign_item"},{"id":"83","type":"campaign_item"},{"id":"110","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"2","type":"item","attributes":{"name":"Medium armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"2","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"56","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/3
@@ -239,22 +239,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"db498a9e61e4027700ceead16a730bbb"
+      - W/"c39f6cb73669262ccfb8f4c1922eeb28"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 077236aa-922d-4617-b2a8-0838caae23b7
+      - a40c0773-ca57-464b-8b7e-9123fde58c64
       X-Runtime:
-      - '0.008483'
+      - '0.007481'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.81, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.99
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.69
       Content-Length:
-      - '624'
+      - '495'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"item","attributes":{"name":"Heavy armor","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":3,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"3","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"57","type":"campaign_item"},{"id":"84","type":"campaign_item"},{"id":"111","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"3","type":"item","attributes":{"name":"Heavy armor","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":3,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"3","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"57","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/4
@@ -290,22 +290,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9634b9d39ccd8cbb146c9f875f004f48"
+      - W/"65adbd44e92c18fe3ca1c29ec8a03153"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c85b13b7-f878-4bc7-ae56-694144376c55
+      - d65f4872-749f-41fa-8704-e3ad18a25f21
       X-Runtime:
-      - '0.008589'
+      - '0.007111'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.58, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=3.39
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.36
       Content-Length:
-      - '626'
+      - '497'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"item","attributes":{"name":"Simple weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"4","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"58","type":"campaign_item"},{"id":"85","type":"campaign_item"},{"id":"112","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"4","type":"item","attributes":{"name":"Simple weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"4","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"58","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/5
@@ -341,22 +341,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2b3084a0f530e52d2983bee8838969a3"
+      - W/"f6306f02ab8f930b5b250a74b0da993f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b8c4aa49-2cd7-4c2e-a6ec-fd8e2a09eba4
+      - ec8b5bd3-ad88-4c74-8456-cc726602799b
       X-Runtime:
-      - '0.007775'
+      - '0.006852'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.87, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.80
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.31
       Content-Length:
-      - '627'
+      - '498'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"item","attributes":{"name":"Martial weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"5","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"59","type":"campaign_item"},{"id":"86","type":"campaign_item"},{"id":"113","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"5","type":"item","attributes":{"name":"Martial weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"5","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"59","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/6
@@ -392,22 +392,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d26637d584773c03436655ea0340ed54"
+      - W/"481a91b790c03b15f92957acb80c0a04"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fbebe410-9942-411c-92f3-d248a848960c
+      - bb70e2ff-e2d4-4a8e-bf0c-95226501768e
       X-Runtime:
-      - '0.012087'
+      - '0.006244'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.54, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=7.12
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.46, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.22
       Content-Length:
-      - '623'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"6","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"60","type":"campaign_item"},{"id":"87","type":"campaign_item"},{"id":"114","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"6","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"6","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"60","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/7
@@ -443,22 +443,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"af3a018945cee80bae1c817c00bccddc"
+      - W/"bf19d3c3da199e15c4ef09dfc9d56e3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c1763522-c688-4402-be3d-e0aa68618fcc
+      - da3a74d4-50f8-4387-b45e-6ca07fcc43cd
       X-Runtime:
-      - '0.008839'
+      - '0.006162'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.45, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.08
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.97
       Content-Length:
-      - '623'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"7","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"88","type":"campaign_item"},{"id":"115","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"7","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"7","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/8
@@ -494,22 +494,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"23ae5c3a40ab75cdb51cee7225640207"
+      - W/"1476052b0aa7fe7376f9018e35a7b5a2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3d19453b-9222-4eca-906d-d295d26a401c
+      - 5cd494bd-9f49-41a2-a83b-84e26569eb21
       X-Runtime:
-      - '0.007517'
+      - '0.005992'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.49, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.90
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.88
       Content-Length:
-      - '633'
+      - '504'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"8","type":"item","attributes":{"name":"Adventuring supplies","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"8","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"62","type":"campaign_item"},{"id":"89","type":"campaign_item"},{"id":"116","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"8","type":"item","attributes":{"name":"Adventuring supplies","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"8","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"62","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/9
@@ -545,22 +545,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a3196c5c266d123116670d9c665bad4d"
+      - W/"b4b84867a2a7d4dd66b62f0e2d923bdc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dd644423-bef1-433c-8e21-93372910fc16
+      - f01504a6-91f9-4837-a291-5f1ef2df6d20
       X-Runtime:
-      - '0.007231'
+      - '0.005759'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.89
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.79
       Content-Length:
-      - '629'
+      - '500'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"item","attributes":{"name":"Assassin''s blood","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"9","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"63","type":"campaign_item"},{"id":"90","type":"campaign_item"},{"id":"117","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"9","type":"item","attributes":{"name":"Assassin''s blood","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"9","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"63","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/10
@@ -596,22 +596,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c9f3f870d6709aacff96e27d4d6e68b6"
+      - W/"59caec97b1658aa6646e344df420d95c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c0b4b442-7713-4422-ab4f-4bfc28dde7e1
+      - 681e58b1-3e65-4089-b52e-7c4b37d26196
       X-Runtime:
-      - '0.006215'
+      - '0.006673'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.91
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.88
       Content-Length:
-      - '621'
+      - '492'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"item","attributes":{"name":"Malice","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"10","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"64","type":"campaign_item"},{"id":"91","type":"campaign_item"},{"id":"118","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"10","type":"item","attributes":{"name":"Malice","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"10","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"64","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/11
@@ -647,22 +647,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bce8074959348cce4a74e5dead53ca1c"
+      - W/"3550764dbc8de57afa5ca1a63c36fb36"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f539f6f3-b20f-4780-8e2b-e10f9736b3da
+      - a900fc15-b883-4304-b2e9-834133c5a873
       X-Runtime:
-      - '0.006337'
+      - '0.006729'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.42, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.18
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.08
       Content-Length:
-      - '629'
+      - '500'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"11","type":"item","attributes":{"name":"Midnight tears","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"11","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"65","type":"campaign_item"},{"id":"92","type":"campaign_item"},{"id":"119","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"11","type":"item","attributes":{"name":"Midnight tears","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"11","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"65","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/12
@@ -698,22 +698,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"84e9e83ae911d6008b25c899fa741378"
+      - W/"2621fea820fc582540ac18d73bce7c89"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ab9e95e0-6be7-43dd-8094-e6c47bb50daf
+      - 3fc75297-ad1d-4712-95c6-8d5da44c6587
       X-Runtime:
-      - '0.006132'
+      - '0.006357'
       Server-Timing:
       - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.94
+        process_action.action_controller;dur=2.17
       Content-Length:
-      - '628'
+      - '499'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"item","attributes":{"name":"Serpent venom","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"12","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"66","type":"campaign_item"},{"id":"93","type":"campaign_item"},{"id":"120","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"12","type":"item","attributes":{"name":"Serpent venom","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"12","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"66","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/13
@@ -749,22 +749,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"60a4101471b538ecdb78038fc62167fd"
+      - W/"976e51382e8cb53c1b965ed476ab792f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - da516407-fb16-4d5b-aed7-01fd00ead1e0
+      - 28e0092c-301d-4a8a-affa-436744539e8f
       X-Runtime:
-      - '0.006012'
+      - '0.005368'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.85
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.63
       Content-Length:
-      - '626'
+      - '497'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"13","type":"item","attributes":{"name":"Truth serum","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"13","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"67","type":"campaign_item"},{"id":"94","type":"campaign_item"},{"id":"121","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"13","type":"item","attributes":{"name":"Truth serum","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"13","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"67","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/14
@@ -800,22 +800,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"64a3ea142a0eb1c5f2122b044836697e"
+      - W/"0a64c75508a123b5a299ea17ec6068eb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 43b7fba0-2200-48cc-8b9f-09bc37a1a768
+      - 047afbb5-be8c-49a0-b0d5-54e7002887d0
       X-Runtime:
-      - '0.006050'
+      - '0.005462'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.02
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.73
       Content-Length:
-      - '634'
+      - '505'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"14","type":"item","attributes":{"name":"Oil of slipperiness","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"14","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"68","type":"campaign_item"},{"id":"95","type":"campaign_item"},{"id":"122","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"14","type":"item","attributes":{"name":"Oil of slipperiness","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"14","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"68","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/15
@@ -851,22 +851,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bd28cb1187edfab32dbcfee4c8990ed7"
+      - W/"e365afae22798338627481193055f623"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10b1978d-65d3-4185-b720-314c37b058bc
+      - 5909ea2f-2df9-4114-810f-98ecf7cb12b5
       X-Runtime:
-      - '0.006172'
+      - '0.005586'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.02
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.81
       Content-Length:
-      - '633'
+      - '504'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"15","type":"item","attributes":{"name":"Potion of climbing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"15","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"69","type":"campaign_item"},{"id":"96","type":"campaign_item"},{"id":"123","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"15","type":"item","attributes":{"name":"Potion of climbing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"15","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"69","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/16
@@ -902,22 +902,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"6f864c7e176b9cd01908438482785321"
+      - W/"79f3dfefbf56c22eba48c40df2828d7a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - db7426d0-6009-4ada-8f3a-d6663827ff2e
+      - b3815160-0728-4632-ba31-3aaf9cc45d62
       X-Runtime:
-      - '0.005989'
+      - '0.006049'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.84
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.91
       Content-Length:
-      - '632'
+      - '503'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"16","type":"item","attributes":{"name":"Potion of healing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"16","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"70","type":"campaign_item"},{"id":"97","type":"campaign_item"},{"id":"124","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"16","type":"item","attributes":{"name":"Potion of healing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"16","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"70","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/17
@@ -953,23 +953,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c6f17b3111cecab2e16ce73af8ca628f"
+      - W/"d6dc5a2d2f87285839def0b46d384814"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - efe31fd4-45cd-44ee-99c6-ddc65d02c34c
+      - '038fedea-a978-47c4-913d-ef1fe0019a90'
       X-Runtime:
-      - '0.008449'
+      - '0.005569'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.05, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=3.12
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.71
       Content-Length:
-      - '640'
+      - '511'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"17","type":"item","attributes":{"name":"Potion of water
-        breathing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"17","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"71","type":"campaign_item"},{"id":"98","type":"campaign_item"},{"id":"125","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+        breathing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"17","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"71","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/18
@@ -1005,22 +1005,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"275e8c59bdd15a63fc0d4d83e2509771"
+      - W/"5eca0c79f065474c58327117c9a192e5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5b7ab70b-1597-4e65-b7a5-8d89832979a9
+      - 567d8502-5e8e-4212-a17e-0aae408ce303
       X-Runtime:
-      - '0.006370'
+      - '0.005488'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.98
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.73
       Content-Length:
-      - '621'
+      - '492'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"18","type":"item","attributes":{"name":"Barge","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":10,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"18","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"72","type":"campaign_item"},{"id":"99","type":"campaign_item"},{"id":"126","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"18","type":"item","attributes":{"name":"Barge","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":10,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"18","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"72","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/19
@@ -1056,22 +1056,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"88fa7e4cc0661bf6dfda44d2d34e29c9"
+      - W/"0713b9008efcf696b36d7d20a5b29970"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ecc44e54-243e-4ac2-b7e3-27ad81b63978
+      - 58093d28-2148-4d06-856c-cd96df6dbabd
       X-Runtime:
-      - '0.006557'
+      - '0.006380'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.03
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.66
       Content-Length:
-      - '623'
+      - '493'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"19","type":"item","attributes":{"name":"Coracle","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":2,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"19","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"73","type":"campaign_item"},{"id":"100","type":"campaign_item"},{"id":"127","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"19","type":"item","attributes":{"name":"Coracle","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":2,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"19","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"73","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/20
@@ -1107,23 +1107,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"ac965727b8e2ed4f7f144967ad907392"
+      - W/"b2e407dcd509e32ee853279044a70f35"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8fd7042d-b072-4d5a-8556-e2e485cc8f9b
+      - 66dbc3aa-478f-45ba-bf0c-fa41388d5dab
       X-Runtime:
-      - '0.006766'
+      - '0.013006'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.88
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=6.99, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=9.11
       Content-Length:
-      - '643'
+      - '513'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"20","type":"item","attributes":{"name":"Double hulled
-        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"20","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"74","type":"campaign_item"},{"id":"101","type":"campaign_item"},{"id":"128","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"20","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"74","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/21
@@ -1159,22 +1159,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8082d4838c635a2e76da3926a7ddb320"
+      - W/"420c527920fe2ecd409b32bc7b645ed6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5428c7d2-31bf-404b-b653-99d9372c1db0
+      - 3561d26e-7cf6-4e70-9b5d-bc92f421bdaa
       X-Runtime:
-      - '0.005981'
+      - '0.006102'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.27, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.75
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.02
       Content-Length:
-      - '624'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"21","type":"item","attributes":{"name":"Keelboat","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"21","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"75","type":"campaign_item"},{"id":"102","type":"campaign_item"},{"id":"129","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"21","type":"item","attributes":{"name":"Keelboat","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"21","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"75","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/22
@@ -1210,22 +1210,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"71b7863b3d3e117591f33ffa7508fa05"
+      - W/"b21a2dbb90584b12aec417471b435521"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ecbcdf30-c21b-4890-b4ed-e49a8f8b1dc1
+      - 2802fa8b-11c1-4912-a28c-8ccd49c5373d
       X-Runtime:
-      - '0.007191'
+      - '0.005764'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.14
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.07
       Content-Length:
-      - '620'
+      - '490'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"item","attributes":{"name":"Raft","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"22","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"76","type":"campaign_item"},{"id":"103","type":"campaign_item"},{"id":"130","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"22","type":"item","attributes":{"name":"Raft","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"22","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"76","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/23
@@ -1261,23 +1261,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"7d74918f7a39fa9d3fe446501fc672f8"
+      - W/"75380f9082408663bc8d3dad583830e8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c8f6ebd7-2f33-4897-8f97-77b86cb3c0c3
+      - 8d04125c-b097-430a-964f-b75408aa280d
       X-Runtime:
-      - '0.006196'
+      - '0.006376'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.17
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.48, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.21
       Content-Length:
-      - '643'
+      - '513'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"23","type":"item","attributes":{"name":"Single hulled
-        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"23","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"77","type":"campaign_item"},{"id":"104","type":"campaign_item"},{"id":"131","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"23","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"77","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/24
@@ -1313,22 +1313,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"05e92765c347c565494d7f79cd6c8676"
+      - W/"872cca4cfc57cb877e742261baa5ec55"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2af4c36-a95b-4c60-b5de-31a0744ac9f7
+      - cff9c995-d11d-4ea7-83eb-4a24feb90f96
       X-Runtime:
-      - '0.006709'
+      - '0.007754'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.15
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.53, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=3.46
       Content-Length:
-      - '624'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"24","type":"item","attributes":{"name":"Ballista","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"24","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"78","type":"campaign_item"},{"id":"105","type":"campaign_item"},{"id":"132","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"24","type":"item","attributes":{"name":"Ballista","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"24","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"78","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/25
@@ -1364,22 +1364,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"67a3b268d5fd2a2a11dec866ca1fe960"
+      - W/"dd0c9c235ce29559b3acba1dd9dd7b1c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 21d685aa-cf0e-4016-a79c-69b040fd4755
+      - 59dcb63c-8e11-463e-8fd3-04c285badbfe
       X-Runtime:
-      - '0.006374'
+      - '0.006675'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.23
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.60, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.29
       Content-Length:
-      - '621'
+      - '491'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"25","type":"item","attributes":{"name":"Cabin","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":2,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"25","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"79","type":"campaign_item"},{"id":"106","type":"campaign_item"},{"id":"133","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"25","type":"item","attributes":{"name":"Cabin","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":2,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"25","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"79","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/26
@@ -1415,22 +1415,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3cea6535ad6f6cbfb866101c52f6109b"
+      - W/"3ebedcdfbbbd2e66839b89ce7fd20fca"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3ae433f4-49a3-4cbd-a2f7-dfbdab476859
+      - b7afbe84-f19b-480a-91a0-077e99febd30
       X-Runtime:
-      - '0.006176'
+      - '0.027380'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.24,
-        process_action.action_controller;dur=2.02
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.10, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=23.14
       Content-Length:
-      - '632'
+      - '502'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"26","type":"item","attributes":{"name":"Magical defenses","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":9,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"26","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"80","type":"campaign_item"},{"id":"107","type":"campaign_item"},{"id":"134","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"26","type":"item","attributes":{"name":"Magical defenses","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":9,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"26","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"80","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/27
@@ -1466,22 +1466,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b591c126d290210e6f981fdc697b88e2"
+      - W/"2798f7ccfc86e73286192e3e1274702a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fed9aefd-a9b6-4e3d-a91d-5d4f37bc460a
+      - 32237be2-82d4-44f2-88d3-50102e247e3e
       X-Runtime:
-      - '0.006176'
+      - '0.006457'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.55, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.02
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.42, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.30
       Content-Length:
-      - '623'
+      - '493'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"27","type":"item","attributes":{"name":"Storage","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"27","type":"campaign_item"},{"id":"54","type":"campaign_item"},{"id":"81","type":"campaign_item"},{"id":"108","type":"campaign_item"},{"id":"135","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"27","type":"item","attributes":{"name":"Storage","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"27","type":"campaign_item"},{"id":"54","type":"campaign_item"},{"id":"81","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/campaigns/2
@@ -1517,22 +1517,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9059bbdc25c702d9476640c52d93581a"
+      - W/"070f45b8f50898bd8cd07f28ee708236"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5723d464-afc6-4b5a-be62-a0ef272321c5
+      - 7769b9d1-1928-48c8-a046-9915719310b2
       X-Runtime:
-      - '0.008442'
+      - '0.008758'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.15, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=4.34
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.13, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=4.43
       Content-Length:
-      - '2057'
+      - '1996'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"campaign","attributes":{"name":"Random Campaign","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[{"id":"5","type":"user_campaign"}]},"users":{"data":[{"id":"4","type":"user"}]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"28","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"2","type":"campaign","attributes":{"name":"Random Name","week":0,"animal_products":0,"cloth":0,"farmed_goods":0,"food":0,"foraged_goods":0,"metal":0,"monster_parts":0,"stone":0,"wood":0,"villagers":120},"relationships":{"user_campaigns":{"data":[]},"users":{"data":[]},"characters":{"data":[]},"campaign_items":{"data":[{"id":"28","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"54","type":"campaign_item"}]},"items":{"data":[{"id":"1","type":"item"},{"id":"2","type":"item"},{"id":"3","type":"item"},{"id":"4","type":"item"},{"id":"5","type":"item"},{"id":"6","type":"item"},{"id":"7","type":"item"},{"id":"8","type":"item"},{"id":"9","type":"item"},{"id":"10","type":"item"},{"id":"11","type":"item"},{"id":"12","type":"item"},{"id":"13","type":"item"},{"id":"14","type":"item"},{"id":"15","type":"item"},{"id":"16","type":"item"},{"id":"17","type":"item"},{"id":"18","type":"item"},{"id":"19","type":"item"},{"id":"20","type":"item"},{"id":"21","type":"item"},{"id":"22","type":"item"},{"id":"23","type":"item"},{"id":"24","type":"item"},{"id":"25","type":"item"},{"id":"26","type":"item"},{"id":"27","type":"item"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/campaigns/2/items
@@ -1572,18 +1572,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 183b07d3-9aaa-4745-acc0-4b05289d023a
+      - fe3d1c6c-bd5b-400a-b03b-e787e05df336
       X-Runtime:
-      - '0.014588'
+      - '0.007483'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=7.54, instantiation.active_record;dur=0.30,
-        process_action.action_controller;dur=9.93
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.21,
+        process_action.action_controller;dur=2.33
       Content-Length:
       - '5581'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"28","type":"campaign_item","attributes":{"campaign_id":2,"item_id":1,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"1","type":"item"}}}},{"id":"29","type":"campaign_item","attributes":{"campaign_id":2,"item_id":2,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"2","type":"item"}}}},{"id":"30","type":"campaign_item","attributes":{"campaign_id":2,"item_id":3,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"3","type":"item"}}}},{"id":"31","type":"campaign_item","attributes":{"campaign_id":2,"item_id":4,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"4","type":"item"}}}},{"id":"32","type":"campaign_item","attributes":{"campaign_id":2,"item_id":5,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"5","type":"item"}}}},{"id":"33","type":"campaign_item","attributes":{"campaign_id":2,"item_id":6,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"6","type":"item"}}}},{"id":"34","type":"campaign_item","attributes":{"campaign_id":2,"item_id":7,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"7","type":"item"}}}},{"id":"35","type":"campaign_item","attributes":{"campaign_id":2,"item_id":8,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"8","type":"item"}}}},{"id":"36","type":"campaign_item","attributes":{"campaign_id":2,"item_id":9,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"9","type":"item"}}}},{"id":"37","type":"campaign_item","attributes":{"campaign_id":2,"item_id":10,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"10","type":"item"}}}},{"id":"38","type":"campaign_item","attributes":{"campaign_id":2,"item_id":11,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"11","type":"item"}}}},{"id":"39","type":"campaign_item","attributes":{"campaign_id":2,"item_id":12,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"12","type":"item"}}}},{"id":"40","type":"campaign_item","attributes":{"campaign_id":2,"item_id":13,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"13","type":"item"}}}},{"id":"41","type":"campaign_item","attributes":{"campaign_id":2,"item_id":14,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"14","type":"item"}}}},{"id":"42","type":"campaign_item","attributes":{"campaign_id":2,"item_id":15,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"15","type":"item"}}}},{"id":"43","type":"campaign_item","attributes":{"campaign_id":2,"item_id":16,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"16","type":"item"}}}},{"id":"44","type":"campaign_item","attributes":{"campaign_id":2,"item_id":17,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"17","type":"item"}}}},{"id":"45","type":"campaign_item","attributes":{"campaign_id":2,"item_id":18,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"18","type":"item"}}}},{"id":"46","type":"campaign_item","attributes":{"campaign_id":2,"item_id":19,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"19","type":"item"}}}},{"id":"47","type":"campaign_item","attributes":{"campaign_id":2,"item_id":20,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"20","type":"item"}}}},{"id":"48","type":"campaign_item","attributes":{"campaign_id":2,"item_id":21,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"21","type":"item"}}}},{"id":"49","type":"campaign_item","attributes":{"campaign_id":2,"item_id":22,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"22","type":"item"}}}},{"id":"50","type":"campaign_item","attributes":{"campaign_id":2,"item_id":23,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"23","type":"item"}}}},{"id":"51","type":"campaign_item","attributes":{"campaign_id":2,"item_id":24,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"24","type":"item"}}}},{"id":"52","type":"campaign_item","attributes":{"campaign_id":2,"item_id":25,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"25","type":"item"}}}},{"id":"53","type":"campaign_item","attributes":{"campaign_id":2,"item_id":26,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"26","type":"item"}}}},{"id":"54","type":"campaign_item","attributes":{"campaign_id":2,"item_id":27,"quantity_owned":0},"relationships":{"campaign":{"data":{"id":"2","type":"campaign"}},"item":{"data":{"id":"27","type":"item"}}}}]}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/1
@@ -1619,22 +1619,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"94a6917a0ae24833d86053d888cdc904"
+      - W/"66e76dbd488079abf26a9bd1f0b8f850"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 18f9427f-a433-401d-9583-2fd014f3403f
+      - 6de1da44-dec1-4b26-96fc-b0187c451f6f
       X-Runtime:
-      - '0.006429'
+      - '0.006124'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=2.34
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.07
       Content-Length:
-      - '624'
+      - '495'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"},{"id":"55","type":"campaign_item"},{"id":"82","type":"campaign_item"},{"id":"109","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"1","type":"item","attributes":{"name":"Light armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"1","type":"campaign_item"},{"id":"28","type":"campaign_item"},{"id":"55","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/2
@@ -1670,22 +1670,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d6651400fa0f48d4b4bb3969e6564a5d"
+      - W/"1f61bc9111e46b3d0cb0c4ba428470b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8530bb9-e244-47aa-bed0-b969c451124a
+      - 7d3273c3-9823-4664-985a-fe95526994b8
       X-Runtime:
-      - '0.006411'
+      - '0.006020'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.95
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.22
       Content-Length:
-      - '625'
+      - '496'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"item","attributes":{"name":"Medium armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"2","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"56","type":"campaign_item"},{"id":"83","type":"campaign_item"},{"id":"110","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"2","type":"item","attributes":{"name":"Medium armor","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"2","type":"campaign_item"},{"id":"29","type":"campaign_item"},{"id":"56","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/3
@@ -1721,22 +1721,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"db498a9e61e4027700ceead16a730bbb"
+      - W/"c39f6cb73669262ccfb8f4c1922eeb28"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 367ea64d-b89f-4cfd-b8ef-741ff6500dc7
+      - d0a937c4-60dc-4cbe-b589-3cdfa0f4106d
       X-Runtime:
-      - '0.005653'
+      - '0.005826'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=1.97
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.07
       Content-Length:
-      - '624'
+      - '495'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"item","attributes":{"name":"Heavy armor","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":3,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"3","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"57","type":"campaign_item"},{"id":"84","type":"campaign_item"},{"id":"111","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"3","type":"item","attributes":{"name":"Heavy armor","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":3,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"3","type":"campaign_item"},{"id":"30","type":"campaign_item"},{"id":"57","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/4
@@ -1772,22 +1772,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"9634b9d39ccd8cbb146c9f875f004f48"
+      - W/"65adbd44e92c18fe3ca1c29ec8a03153"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5b41b919-0022-4bf5-8018-0298ed666f96
+      - f6aa41a1-6a77-4065-865b-602293e0dcc7
       X-Runtime:
-      - '0.005950'
+      - '0.005568'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.52, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.88
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.76
       Content-Length:
-      - '626'
+      - '497'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"item","attributes":{"name":"Simple weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"4","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"58","type":"campaign_item"},{"id":"85","type":"campaign_item"},{"id":"112","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"4","type":"item","attributes":{"name":"Simple weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"4","type":"campaign_item"},{"id":"31","type":"campaign_item"},{"id":"58","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/5
@@ -1823,22 +1823,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"2b3084a0f530e52d2983bee8838969a3"
+      - W/"f6306f02ab8f930b5b250a74b0da993f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b7684f63-1abc-46a2-9665-7fb680aaae63
+      - 2bc866c2-3ef8-4fdb-869e-dfdef3427fa8
       X-Runtime:
-      - '0.007200'
+      - '0.006165'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.43, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.97
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.35, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.87
       Content-Length:
-      - '627'
+      - '498'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5","type":"item","attributes":{"name":"Martial weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"5","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"59","type":"campaign_item"},{"id":"86","type":"campaign_item"},{"id":"113","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"5","type":"item","attributes":{"name":"Martial weapon","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":2,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"5","type":"campaign_item"},{"id":"32","type":"campaign_item"},{"id":"59","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/6
@@ -1874,22 +1874,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"d26637d584773c03436655ea0340ed54"
+      - W/"481a91b790c03b15f92957acb80c0a04"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fbdb8a6d-9054-4bc3-a774-2c01846c510e
+      - bc8b5352-6767-4403-8f2d-46cd2f4f5ce2
       X-Runtime:
-      - '0.005728'
+      - '0.006207'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.60
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.14
       Content-Length:
-      - '623'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"6","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"60","type":"campaign_item"},{"id":"87","type":"campaign_item"},{"id":"114","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"6","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"6","type":"campaign_item"},{"id":"33","type":"campaign_item"},{"id":"60","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/7
@@ -1925,22 +1925,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"af3a018945cee80bae1c817c00bccddc"
+      - W/"bf19d3c3da199e15c4ef09dfc9d56e3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e023c4fe-70c8-40f5-be6d-6351e8f436a8
+      - 64dcbed3-616e-444a-8976-cc14846e0513
       X-Runtime:
-      - '0.005523'
+      - '0.005657'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.34, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.82
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.45, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.84
       Content-Length:
-      - '623'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"7","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"7","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"},{"id":"88","type":"campaign_item"},{"id":"115","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"7","type":"item","attributes":{"name":"Ammunition","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":1,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"7","type":"campaign_item"},{"id":"34","type":"campaign_item"},{"id":"61","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/8
@@ -1976,22 +1976,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"23ae5c3a40ab75cdb51cee7225640207"
+      - W/"1476052b0aa7fe7376f9018e35a7b5a2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 034d27e4-15b5-4637-8a62-b2b722477335
+      - 591a591e-645e-4fe8-8e20-1179a7f181de
       X-Runtime:
-      - '0.006895'
+      - '0.005278'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.23
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.24, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.55
       Content-Length:
-      - '633'
+      - '504'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"8","type":"item","attributes":{"name":"Adventuring supplies","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"8","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"62","type":"campaign_item"},{"id":"89","type":"campaign_item"},{"id":"116","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"8","type":"item","attributes":{"name":"Adventuring supplies","animal_products_cost":1,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":1,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"8","type":"campaign_item"},{"id":"35","type":"campaign_item"},{"id":"62","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/9
@@ -2027,22 +2027,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a3196c5c266d123116670d9c665bad4d"
+      - W/"b4b84867a2a7d4dd66b62f0e2d923bdc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5ef7cc8c-e963-4c78-a21e-f0cc0f44a793
+      - 35b60f2c-13eb-4a11-874b-84c2c9dade01
       X-Runtime:
-      - '0.005335'
+      - '0.005258'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.29, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.85
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.49
       Content-Length:
-      - '629'
+      - '500'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"item","attributes":{"name":"Assassin''s blood","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"9","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"63","type":"campaign_item"},{"id":"90","type":"campaign_item"},{"id":"117","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"9","type":"item","attributes":{"name":"Assassin''s blood","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"9","type":"campaign_item"},{"id":"36","type":"campaign_item"},{"id":"63","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/10
@@ -2078,22 +2078,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c9f3f870d6709aacff96e27d4d6e68b6"
+      - W/"59caec97b1658aa6646e344df420d95c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5a365f1c-5986-46d3-b79c-6f5fea997c1c
+      - d5a0bf3a-e4ff-4c1e-8c65-877466356c83
       X-Runtime:
-      - '0.005629'
+      - '0.005969'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.44, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.93
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.66
       Content-Length:
-      - '621'
+      - '492'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"item","attributes":{"name":"Malice","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"10","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"64","type":"campaign_item"},{"id":"91","type":"campaign_item"},{"id":"118","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"10","type":"item","attributes":{"name":"Malice","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"10","type":"campaign_item"},{"id":"37","type":"campaign_item"},{"id":"64","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/11
@@ -2129,22 +2129,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bce8074959348cce4a74e5dead53ca1c"
+      - W/"3550764dbc8de57afa5ca1a63c36fb36"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 31db444a-d46f-4c5b-8be8-b669b6b88fcf
+      - 7793a741-1775-497c-8637-d109c4fee109
       X-Runtime:
-      - '0.005031'
+      - '0.005617'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.36, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.76
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.75
       Content-Length:
-      - '629'
+      - '500'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"11","type":"item","attributes":{"name":"Midnight tears","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"11","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"65","type":"campaign_item"},{"id":"92","type":"campaign_item"},{"id":"119","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"11","type":"item","attributes":{"name":"Midnight tears","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"11","type":"campaign_item"},{"id":"38","type":"campaign_item"},{"id":"65","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/12
@@ -2180,22 +2180,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"84e9e83ae911d6008b25c899fa741378"
+      - W/"2621fea820fc582540ac18d73bce7c89"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f12c4289-f960-4463-9c1e-8cb36e787fcd
+      - 0c727a04-4ae7-4adc-85fb-eb00fae13b8d
       X-Runtime:
-      - '0.004990'
+      - '0.004965'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.37, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.77
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.47
       Content-Length:
-      - '628'
+      - '499'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"item","attributes":{"name":"Serpent venom","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"12","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"66","type":"campaign_item"},{"id":"93","type":"campaign_item"},{"id":"120","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"12","type":"item","attributes":{"name":"Serpent venom","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"12","type":"campaign_item"},{"id":"39","type":"campaign_item"},{"id":"66","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/13
@@ -2231,22 +2231,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"60a4101471b538ecdb78038fc62167fd"
+      - W/"976e51382e8cb53c1b965ed476ab792f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9dee838c-f54d-4d0d-9406-d4e943c1709b
+      - fff05256-98fd-4a55-a0d4-a9c645008058
       X-Runtime:
-      - '0.004877'
+      - '0.005037'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.56
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.50
       Content-Length:
-      - '626'
+      - '497'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"13","type":"item","attributes":{"name":"Truth serum","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"13","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"67","type":"campaign_item"},{"id":"94","type":"campaign_item"},{"id":"121","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:01 GMT
+      string: '{"data":{"id":"13","type":"item","attributes":{"name":"Truth serum","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"13","type":"campaign_item"},{"id":"40","type":"campaign_item"},{"id":"67","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/14
@@ -2282,22 +2282,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"64a3ea142a0eb1c5f2122b044836697e"
+      - W/"0a64c75508a123b5a299ea17ec6068eb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a8f23cb9-c9ce-4d57-84f1-d5c7cb6c2ac9
+      - 00f1b50a-f3bc-44e6-aafe-2d8bee1dd853
       X-Runtime:
-      - '0.004746'
+      - '0.004870'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.55
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.43
       Content-Length:
-      - '634'
+      - '505'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"14","type":"item","attributes":{"name":"Oil of slipperiness","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"14","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"68","type":"campaign_item"},{"id":"95","type":"campaign_item"},{"id":"122","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"14","type":"item","attributes":{"name":"Oil of slipperiness","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":1},"relationships":{"campaign_items":{"data":[{"id":"14","type":"campaign_item"},{"id":"41","type":"campaign_item"},{"id":"68","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/15
@@ -2333,22 +2333,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"bd28cb1187edfab32dbcfee4c8990ed7"
+      - W/"e365afae22798338627481193055f623"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 19e86fa3-ca29-48df-9418-8ce2a9927e75
+      - f7f16adc-51c7-4085-8e97-e4bebf8891e7
       X-Runtime:
-      - '0.004849'
+      - '0.004924'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.58
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.54
       Content-Length:
-      - '633'
+      - '504'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"15","type":"item","attributes":{"name":"Potion of climbing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"15","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"69","type":"campaign_item"},{"id":"96","type":"campaign_item"},{"id":"123","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"15","type":"item","attributes":{"name":"Potion of climbing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"15","type":"campaign_item"},{"id":"42","type":"campaign_item"},{"id":"69","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/16
@@ -2384,22 +2384,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"6f864c7e176b9cd01908438482785321"
+      - W/"79f3dfefbf56c22eba48c40df2828d7a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1cbbb52e-639f-4cc0-9fc7-daad66bbb2d4
+      - 8d79fde3-8ffe-4ec9-8150-533116432dd1
       X-Runtime:
-      - '0.004884'
+      - '0.004785'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.31, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.61
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.43
       Content-Length:
-      - '632'
+      - '503'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"16","type":"item","attributes":{"name":"Potion of healing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"16","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"70","type":"campaign_item"},{"id":"97","type":"campaign_item"},{"id":"124","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"16","type":"item","attributes":{"name":"Potion of healing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"16","type":"campaign_item"},{"id":"43","type":"campaign_item"},{"id":"70","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/17
@@ -2435,23 +2435,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c6f17b3111cecab2e16ce73af8ca628f"
+      - W/"d6dc5a2d2f87285839def0b46d384814"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d4f8034-ca04-41f8-8998-ac8aafae1da7
+      - 8635dec8-3eb0-424f-bd5c-afaa4e88121d
       X-Runtime:
-      - '0.004989'
+      - '0.005019'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.60
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.48
       Content-Length:
-      - '640'
+      - '511'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"17","type":"item","attributes":{"name":"Potion of water
-        breathing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"17","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"71","type":"campaign_item"},{"id":"98","type":"campaign_item"},{"id":"125","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+        breathing","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":1,"metal_cost":0,"stone_cost":0,"wood_cost":0,"monster_parts_cost":2},"relationships":{"campaign_items":{"data":[{"id":"17","type":"campaign_item"},{"id":"44","type":"campaign_item"},{"id":"71","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/18
@@ -2487,22 +2487,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"275e8c59bdd15a63fc0d4d83e2509771"
+      - W/"5eca0c79f065474c58327117c9a192e5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ea8ceaf1-1686-4081-a62b-ce7781bd2c54
+      - e4a660de-27bf-4df2-ae75-1cdf5244cfe7
       X-Runtime:
-      - '0.005246'
+      - '0.006187'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.29, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.75
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.53
       Content-Length:
-      - '621'
+      - '492'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"18","type":"item","attributes":{"name":"Barge","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":10,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"18","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"72","type":"campaign_item"},{"id":"99","type":"campaign_item"},{"id":"126","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"18","type":"item","attributes":{"name":"Barge","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":10,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"18","type":"campaign_item"},{"id":"45","type":"campaign_item"},{"id":"72","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/19
@@ -2538,22 +2538,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"88fa7e4cc0661bf6dfda44d2d34e29c9"
+      - W/"0713b9008efcf696b36d7d20a5b29970"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fd02dcb2-3cb4-43c3-a870-3e1d164af402
+      - 71e2d412-4efb-40fb-bcce-c24e8abf7a80
       X-Runtime:
-      - '0.005245'
+      - '0.006014'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.40, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.76
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.66
       Content-Length:
-      - '623'
+      - '493'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"19","type":"item","attributes":{"name":"Coracle","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":2,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"19","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"73","type":"campaign_item"},{"id":"100","type":"campaign_item"},{"id":"127","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"19","type":"item","attributes":{"name":"Coracle","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":2,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"19","type":"campaign_item"},{"id":"46","type":"campaign_item"},{"id":"73","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/20
@@ -2589,23 +2589,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"ac965727b8e2ed4f7f144967ad907392"
+      - W/"b2e407dcd509e32ee853279044a70f35"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10a3bd9b-f010-4544-9aec-a451011cb19c
+      - 859900fa-ba2c-4670-a4d2-f83555f379ff
       X-Runtime:
-      - '0.005096'
+      - '0.005992'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.51
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.58
       Content-Length:
-      - '643'
+      - '513'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"20","type":"item","attributes":{"name":"Double hulled
-        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"20","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"74","type":"campaign_item"},{"id":"101","type":"campaign_item"},{"id":"128","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"20","type":"campaign_item"},{"id":"47","type":"campaign_item"},{"id":"74","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/21
@@ -2641,22 +2641,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"8082d4838c635a2e76da3926a7ddb320"
+      - W/"420c527920fe2ecd409b32bc7b645ed6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 03542ef6-5d39-47f2-b350-a9cb228f5eab
+      - 99f273b5-9a14-47d3-b426-f318c202484e
       X-Runtime:
-      - '0.009553'
+      - '0.005450'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.84, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=5.50
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.82
       Content-Length:
-      - '624'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"21","type":"item","attributes":{"name":"Keelboat","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"21","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"75","type":"campaign_item"},{"id":"102","type":"campaign_item"},{"id":"129","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"21","type":"item","attributes":{"name":"Keelboat","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"21","type":"campaign_item"},{"id":"48","type":"campaign_item"},{"id":"75","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/22
@@ -2692,22 +2692,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"71b7863b3d3e117591f33ffa7508fa05"
+      - W/"b21a2dbb90584b12aec417471b435521"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4596171c-9c85-4d8b-86dd-8c33da3e5f4b
+      - 275d56ae-5bd7-4508-bfd5-68ae8e89c351
       X-Runtime:
-      - '0.005288'
+      - '0.005229'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.63
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.25, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.71
       Content-Length:
-      - '620'
+      - '490'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"item","attributes":{"name":"Raft","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"22","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"76","type":"campaign_item"},{"id":"103","type":"campaign_item"},{"id":"130","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"22","type":"item","attributes":{"name":"Raft","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"22","type":"campaign_item"},{"id":"49","type":"campaign_item"},{"id":"76","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/23
@@ -2743,23 +2743,23 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"7d74918f7a39fa9d3fe446501fc672f8"
+      - W/"75380f9082408663bc8d3dad583830e8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2c4fef2-f593-4fe0-82a3-9e8b6b086378
+      - 64b77b88-3ef7-4626-9b88-08d2c0a62c4b
       X-Runtime:
-      - '0.006863'
+      - '0.005091'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.47, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=2.83
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.47
       Content-Length:
-      - '643'
+      - '513'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"23","type":"item","attributes":{"name":"Single hulled
-        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"23","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"77","type":"campaign_item"},{"id":"104","type":"campaign_item"},{"id":"131","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+        sailing canoe","animal_products_cost":0,"cloth_cost":2,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":5,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"23","type":"campaign_item"},{"id":"50","type":"campaign_item"},{"id":"77","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/24
@@ -2795,22 +2795,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"05e92765c347c565494d7f79cd6c8676"
+      - W/"872cca4cfc57cb877e742261baa5ec55"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed9f90b8-0c34-444c-9e94-2d7c5d03e54e
+      - '08a38e8e-6981-4ca1-98d2-24ec23cdd3b8'
       X-Runtime:
-      - '0.005794'
+      - '0.006157'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.39, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.90
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.52, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.72
       Content-Length:
-      - '624'
+      - '494'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"24","type":"item","attributes":{"name":"Ballista","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"24","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"78","type":"campaign_item"},{"id":"105","type":"campaign_item"},{"id":"132","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"24","type":"item","attributes":{"name":"Ballista","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"24","type":"campaign_item"},{"id":"51","type":"campaign_item"},{"id":"78","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/25
@@ -2846,22 +2846,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"67a3b268d5fd2a2a11dec866ca1fe960"
+      - W/"dd0c9c235ce29559b3acba1dd9dd7b1c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86c3c06c-03bc-410e-93bb-2c8b6cf5e1e8
+      - 06b107a9-0a11-45d8-94c6-b97e71962bf1
       X-Runtime:
-      - '0.005589'
+      - '0.004914'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.98
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=1.54
       Content-Length:
-      - '621'
+      - '491'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"25","type":"item","attributes":{"name":"Cabin","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":2,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"25","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"79","type":"campaign_item"},{"id":"106","type":"campaign_item"},{"id":"133","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"25","type":"item","attributes":{"name":"Cabin","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":2,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"25","type":"campaign_item"},{"id":"52","type":"campaign_item"},{"id":"79","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/26
@@ -2897,22 +2897,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"3cea6535ad6f6cbfb866101c52f6109b"
+      - W/"3ebedcdfbbbd2e66839b89ce7fd20fca"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 82e2bf62-2e53-4d56-8e02-35b2a900fec2
+      - 1ef7c5b8-b034-47e3-83eb-2bcca91f636f
       X-Runtime:
-      - '0.005621'
+      - '0.004760'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.41, instantiation.active_record;dur=0.02,
-        process_action.action_controller;dur=1.87
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.30, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.47
       Content-Length:
-      - '632'
+      - '502'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"26","type":"item","attributes":{"name":"Magical defenses","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":9,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"26","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"80","type":"campaign_item"},{"id":"107","type":"campaign_item"},{"id":"134","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"26","type":"item","attributes":{"name":"Magical defenses","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":9,"wood_cost":3,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"26","type":"campaign_item"},{"id":"53","type":"campaign_item"},{"id":"80","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/items/27
@@ -2948,20 +2948,20 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"b591c126d290210e6f981fdc697b88e2"
+      - W/"2798f7ccfc86e73286192e3e1274702a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 684a6d3d-6078-47f5-a19f-ae064edce3a7
+      - bd33b244-c584-4617-869b-2801d088dc34
       X-Runtime:
-      - '0.005236'
+      - '0.005097'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.33, instantiation.active_record;dur=0.01,
-        process_action.action_controller;dur=1.79
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.28, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.46
       Content-Length:
-      - '623'
+      - '493'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"27","type":"item","attributes":{"name":"Storage","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"27","type":"campaign_item"},{"id":"54","type":"campaign_item"},{"id":"81","type":"campaign_item"},{"id":"108","type":"campaign_item"},{"id":"135","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"},{"id":"4","type":"campaign"},{"id":"5","type":"campaign"}]}}}}'
-  recorded_at: Fri, 07 Jun 2024 01:10:02 GMT
+      string: '{"data":{"id":"27","type":"item","attributes":{"name":"Storage","animal_products_cost":0,"cloth_cost":0,"farmed_goods_cost":0,"food_cost":0,"foraged_goods_cost":0,"metal_cost":0,"stone_cost":0,"wood_cost":7,"monster_parts_cost":0},"relationships":{"campaign_items":{"data":[{"id":"27","type":"campaign_item"},{"id":"54","type":"campaign_item"},{"id":"81","type":"campaign_item"}]},"campaigns":{"data":[{"id":"1","type":"campaign"},{"id":"2","type":"campaign"},{"id":"3","type":"campaign"}]}}}}'
+  recorded_at: Fri, 07 Jun 2024 05:59:10 GMT
 recorded_with: VCR 6.2.0

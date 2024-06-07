@@ -1,43 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe BackendFacade do
-  # User
-  it "can get user info", :vcr do
-    result = BackendFacade.get_user({
-      uid: "1234567890",
-      username: "testuser123",
-      token: "1234asdf"
-    })
+  describe '#get_user' do
+    it "can get user info", :vcr do
+      result = BackendFacade.get_user({
+        uid: "1234567890",
+        username: "testuser123",
+        token: "1234asdf"
+      })
 
-    expect(result).to be_a User
-    expect(result.id).to eq("5")
-    expect(result.uid).to eq("1234567890")
-    expect(result.username).to eq("testuser123")
+      expect(result).to be_a User
+      expect(result.id).to eq("4")
+      expect(result.uid).to eq("1234567890")
+      expect(result.username).to eq("testuser123")
+    end
   end
 
   describe '#get_campaign' do
     it 'returns a campaign object', :vcr do
       campaign = BackendFacade.get_campaign(1)
+      result = BackendFacade.get_campaign(1)
 
       expect(campaign).to be_a Campaign
-    end
-  end
-
-  describe '#create_character', :vcr do
-    it 'creates a character with the passed in argument info and returns Character', :vcr do
-      character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
-      character = BackendFacade.create_character(character_info)
-
-      expect(character).to be_a Character
-    end
-  end
-  # User Campaign
-
-  describe '#create_campaign', :vcr do
-    it 'creates a new campaign with the argument campaign name and returns a Campaign' do
-      campaign = BackendFacade.create_campaign('Random Name')
-
-      expect(campaign).to be_a Campaign
+      expect(result).to be_a Campaign
+      expect(result.id).to be_an(String)
+      expect(result.name).to be_an(String)
+      expect(result.food).to be_an(Integer)
+      expect(result.week).to be_an(Integer)
+      expect(result.wood).to be_an(Integer)
+      expect(result.metal).to be_an(Integer)
+      expect(result.stone).to be_an(Integer)
+      expect(result.cloth).to be_an(Integer)
+      expect(result.villagers).to be_an(Integer)
+      expect(result.farmed_goods).to be_an(Integer)
+      expect(result.foraged_goods).to be_an(Integer)
+      expect(result.monster_parts).to be_an(Integer)
+      expect(result.animal_products).to be_an(Integer)
     end
   end
 
@@ -52,7 +50,32 @@ RSpec.describe BackendFacade do
     end
   end
 
-  describe '#get_campaign_characters', :vcr do
+  # describe 'get_management_form' do
+  #   it 'returns something', :vcr do
+  #   end
+  # end
+
+  describe 'get_all_items' do
+    it "can hit back end endpoint - items", :vcr do
+      query  = BackendService.call_db('api/v1/items/1')
+      result = query[:data]
+
+      expect(query).to be_an Hash
+      expect(result).to be_a Hash
+      check_hash_structure(result[:attributes], :name, String)
+      check_hash_structure(result[:attributes], :animal_products_cost, Integer)
+      check_hash_structure(result[:attributes], :cloth_cost, Integer)
+      check_hash_structure(result[:attributes], :farmed_goods_cost, Integer)
+      check_hash_structure(result[:attributes], :food_cost, Integer)
+      check_hash_structure(result[:attributes], :foraged_goods_cost, Integer)
+      check_hash_structure(result[:attributes], :metal_cost, Integer)
+      check_hash_structure(result[:attributes], :stone_cost, Integer)
+      check_hash_structure(result[:attributes], :wood_cost, Integer)
+      check_hash_structure(result[:attributes], :monster_parts_cost, Integer)
+    end
+  end
+
+  describe '#get_campaign_characters' do
     it 'returns an array of character objects', :vcr do
       characters = BackendFacade.get_campaign_characters(1)
 
@@ -62,6 +85,48 @@ RSpec.describe BackendFacade do
       end
     end
   end
+
+  describe '#create_campaign'do
+    it 'creates a new campaign with the argument campaign name and returns a Campaign', :vcr do
+      campaign = BackendFacade.create_campaign('Random Name')
+
+      expect(campaign).to be_a Campaign
+      expect(campaign.id).to eq(campaign.id)
+      expect(campaign.name).to eq('Random Name')
+      expect(campaign.week).to eq(0)
+      expect(campaign.villagers).to eq(120)
+      expect(campaign.animal_products).to eq(0)
+      expect(campaign.cloth).to eq(0)
+      expect(campaign.farmed_goods).to eq(0)
+      expect(campaign.food).to eq(0)
+      expect(campaign.foraged_goods).to eq(0)
+      expect(campaign.metal).to eq(0)
+      expect(campaign.monster_parts).to eq(0)
+      expect(campaign.stone).to eq(0)
+      expect(campaign.wood).to eq(0)
+    end
+  end
+
+  # describe '#create_user_campaign_dm' do
+  # end
+
+  # describe '#create_user_campaign_pl' do
+  # end
+
+  describe '#create_character' do
+    it 'creates a character with the passed in argument info and returns Character', :vcr do
+      character_info = {data: {name: 'Character Name', dnd_race: 'Human', dnd_class: 'Bard', user_id: 1}, character_image: {}}
+      character = BackendFacade.create_character(character_info)
+
+      expect(character).to be_a Character
+    end
+  end
+
+  # describe '#patch_management_form' do
+  # end
+
+  # describe '#post_advance_week' do
+  # end
 
   describe '#item' do
     it "can get item info", :vcr do
@@ -91,6 +156,4 @@ RSpec.describe BackendFacade do
       end
     end
   end
-
-  # ManagementForm
 end
