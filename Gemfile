@@ -49,6 +49,10 @@ gem "faraday"
 gem "jsonapi-serializer"
 gem 'faraday-multipart'
 gem 'rest-client'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+gem 'dotenv-rails'
 
 # Design
 gem "bootstrap", "~> 5.2.0"
