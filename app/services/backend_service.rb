@@ -4,8 +4,7 @@ class BackendService
       request.body =
       {
         user: {
-          username: user_hash[:username],
-          token: user_hash[:token]
+          username: user_hash[:username]
         }
       }.to_json
     end
@@ -201,7 +200,7 @@ class BackendService
 
   def self.connection # Replace with hosted database once established
     Faraday.new(
-      url: "https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1",
+      url: "http://127.0.0.1:3000/api/v1",
       headers: {'Content-Type' => 'application/json'}
     )
   end
