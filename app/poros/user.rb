@@ -1,16 +1,14 @@
 class User
-  attr_reader :id,
-              :uid,
+  attr_reader :uid,
               :username
 
   def initialize(data)
-    @id = data[:id]
     @uid = data[:uid]
     @username = data[:username]
   end
 
   def user_campaigns
-    @user_campaigns = BackendFacade.get_user_campaigns(@id)
+    @user_campaigns = BackendFacade.get_user_campaigns(@uid)
   end
 
   def dm_campaigns

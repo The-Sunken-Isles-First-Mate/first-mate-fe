@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   get "/auth/github/callback", to: "sessions#create", as: "callback"
+  get "/auth/:provider/callback", to: "sessions#omniauth"
 
   get "/dashboard", to: "dashboard#show"
 
