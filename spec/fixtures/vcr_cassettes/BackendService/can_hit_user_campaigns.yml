@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/user_campaigns
+    uri: http://127.0.0.1:3000/api/v1/user_campaigns
     body:
       encoding: UTF-8
       string: '{"user_campaign":{"user_id":1,"campaign_id":1,"role":0}}'
@@ -35,20 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"dbe3e2a3fd958454b4af1e14d3a24d2d"
+      - W/"f70daf7d5481143550eebe76a312c4b8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 64bee16c-763b-43e6-903f-9b2e2a6baf35
+      - d28ac456-32fc-435f-98b9-5a9be4467430
       X-Runtime:
-      - '0.011587'
+      - '0.021701'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.79, instantiation.active_record;dur=0.09,
-        transaction.active_record;dur=4.62, process_action.action_controller;dur=5.93
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=12.45,
+        instantiation.active_record;dur=0.08, transaction.active_record;dur=14.99,
+        process_action.action_controller;dur=16.29
       Content-Length:
-      - '214'
+      - '213'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"17","type":"user_campaign","attributes":{"role":"party_member"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}}'
-  recorded_at: Fri, 07 Jun 2024 06:57:13 GMT
+      string: '{"data":{"id":"5","type":"user_campaign","attributes":{"role":"party_member"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"campaign":{"data":{"id":"1","type":"campaign"}},"character":{"data":null}}}}'
+  recorded_at: Fri, 21 Jun 2024 08:06:09 GMT
 recorded_with: VCR 6.2.0

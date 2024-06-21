@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/characters
+    uri: http://127.0.0.1:3000/api/v1/characters
     body:
       encoding: UTF-8
       string: '{"character":{"name":"Character Name","dnd_race":"Human","dnd_class":"Bard","user_id":1}}'
@@ -35,21 +35,21 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"624e6096ac31fbce163bd204942a17c5"
+      - W/"2651f4ad7c54296e91482f6b38d93bff"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0f7ca46f-b10d-4c04-89b1-02522ab7aa33
+      - 75b76c30-f988-489d-8206-5b59df4071da
       X-Runtime:
-      - '0.011744'
+      - '0.017560'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.54, instantiation.active_record;dur=0.03,
-        transaction.active_record;dur=2.15, process_action.action_controller;dur=5.21
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=1.91, instantiation.active_record;dur=0.04,
+        transaction.active_record;dur=2.64, process_action.action_controller;dur=7.59
       Content-Length:
-      - '280'
+      - '279'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"18","type":"character","attributes":{"name":"Character
+      string: '{"data":{"id":"3","type":"character","attributes":{"name":"Character
         Name","user_id":1,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"1","type":"user"}},"user_campaigns":{"data":[]},"campaigns":{"data":[]}}}}'
-  recorded_at: Fri, 07 Jun 2024 06:50:59 GMT
+  recorded_at: Fri, 21 Jun 2024 08:06:05 GMT
 recorded_with: VCR 6.2.0
