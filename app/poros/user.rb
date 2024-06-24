@@ -32,4 +32,10 @@ class User
       campaign.character_id.nil?
     end
   end
+
+  def find_user_campaign_by_campaign_id(campaign_id)
+    user_campaigns.find do |campaign|
+      campaign.campaign_id == campaign_id
+    end
+  end
 end
