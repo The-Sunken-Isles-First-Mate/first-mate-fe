@@ -1,8 +1,10 @@
 class User
-  attr_reader :uid,
+  attr_reader :id,
+              :uid,
               :username
 
   def initialize(data)
+    @id = data[:id]
     @uid = data[:uid]
     @username = data[:username]
   end
@@ -28,6 +30,12 @@ class User
     user_campaigns.select do |campaign|
       campaign.role == 'party_member' &&
       campaign.character_id.nil?
+    end
+  end
+
+  def find_user_campaign_by_campaign_id(campaign_id)
+    user_campaigns.find do |campaign|
+      campaign.campaign_id == campaign_id
     end
   end
 end

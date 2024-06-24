@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/campaigns/1/characters
+    uri: http://127.0.0.1:3000/api/v1/campaigns/1/characters
     body:
       encoding: US-ASCII
       string: ''
@@ -35,22 +35,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"0da45370a79082764b6582e7832f1e88"
+      - W/"d29aa52ab318da85a89780066b9c4d20"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 976aa8b3-5f0d-4f92-b7e8-691f1aa965e9
+      - b2b570d4-9b04-4468-95ab-47d35f12c594
       X-Runtime:
-      - '0.062546'
+      - '0.052522'
       Server-Timing:
-      - start_processing.action_controller;dur=0.01, sql.active_record;dur=18.62,
-        instantiation.active_record;dur=6.73, process_action.action_controller;dur=46.04
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=23.13,
+        instantiation.active_record;dur=3.53, process_action.action_controller;dur=38.39
       Content-Length:
-      - '1021'
+      - '688'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"character","attributes":{"name":"Test Character
         1","user_id":2,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"2","type":"user"}},"user_campaigns":{"data":[{"id":"2","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"2","type":"character","attributes":{"name":"Test
-        Character 2","user_id":3,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"3","type":"user"}},"user_campaigns":{"data":[{"id":"3","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}},{"id":"7","type":"character","attributes":{"name":"Tidus","user_id":4,"dnd_race":"Dragonborn","dnd_class":"Barbarian","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"4","type":"user"}},"user_campaigns":{"data":[{"id":"4","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}]}'
-  recorded_at: Fri, 07 Jun 2024 06:50:59 GMT
+        Character 2","user_id":3,"dnd_race":"Human","dnd_class":"Bard","image_url":null,"character_image":null},"relationships":{"user":{"data":{"id":"3","type":"user"}},"user_campaigns":{"data":[{"id":"3","type":"user_campaign"}]},"campaigns":{"data":[{"id":"1","type":"campaign"}]}}}]}'
+  recorded_at: Fri, 21 Jun 2024 08:06:05 GMT
 recorded_with: VCR 6.2.0
