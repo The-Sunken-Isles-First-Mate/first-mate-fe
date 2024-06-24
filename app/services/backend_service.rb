@@ -4,7 +4,8 @@ class BackendService
       request.body =
       {
         user: {
-          username: user_hash[:username]
+          username: user_hash[:username],
+          password: user_hash[:password]
         }
       }.to_json
     end
