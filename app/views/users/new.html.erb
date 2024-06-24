@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="overlay-content">
+        <h1> Create a New User </h1>
+          <%= form_with url: users_path, method: :post, data: {turbo: false} do |form| %>
+            <%= form.label :username, "Username:" %> <br>
+            <%= form.text_field :username %> <br>
+            <br>
+            <%= form.label :password, "Password:" %> <br>
+            <%= form.password_field :password %> <br>
+            <br>
+            <%= form.label :password_confirmation, "Password Confirmation:" %> <br>
+            <%= form.password_field :password_confirmation %> <br>
+            <br>
+            <%= form.submit "Create User", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
