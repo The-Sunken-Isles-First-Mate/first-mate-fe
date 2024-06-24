@@ -12,7 +12,7 @@
             <div class="card-body d-flex">
               <% if character.image_url %>
                 <div class="col">
-                  <%= image_tag("https://first-mate-character-images.s3.us-east-2.amazonaws.com/#{character.image_url}", alt: character.name, class: "img-fluid card-img-start") %>
+                  <%= image_tag("http://127.0.0.1:3000/#{character.image_url}", alt: character.name, class: "img-fluid card-img-start") %>
                 </div>
               <% end %>
               <div class="col">

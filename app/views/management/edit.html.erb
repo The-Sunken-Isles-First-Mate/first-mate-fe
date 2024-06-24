@@ -114,7 +114,9 @@
         <br>
 
         <%# Only show this button if current_user.id == @campaign's DM's ID %>
-        <%= button_to "Advance Week", campaign_management_advance_path(@campaign.id), method: :post %>
+        <% if @current_role == 'dm' %>
+          <%= button_to "Advance Week", campaign_management_advance_path(@campaign.id), method: :post %>
+        <% end%>
       </div>
     </div>
   </div>

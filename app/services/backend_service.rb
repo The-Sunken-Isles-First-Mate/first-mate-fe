@@ -115,7 +115,7 @@ class BackendService
 
       RestClient::Request.execute(
         method: :post,
-        url: 'https://first-mate-be-1f1d4528b074.herokuapp.com/api/v1/characters',
+        url: 'http://127.0.0.1:3000/api/v1/characters',
         payload: {
           multipart: true,
           json: json_payload,
