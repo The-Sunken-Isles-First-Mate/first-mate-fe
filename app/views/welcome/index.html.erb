@@ -1,10 +1,22 @@
 <div class="container">
   <section class="overlay-content">
     <h1> Welcome to The Sunken Isles First Mate Application! </h1>
+
+    <%= form_with url: sessions_path, method: :post, data: {turbo: false} do |form| %>
+      <%= form.label :username, "Username:" %> <br>
+      <%= form.text_field :username %> <br>
+      <br>
+      <%= form.label :password, "Password:" %> <br>
+      <%= form.password_field :password %> <br>
+      <br>
+      <%= form.submit "Login" %>
+    <% end %>
+
+    <%= link_to "Create an Account", new_user_path %>
+    <br>
+    <br>
+
     <% unless current_user %>
-      <%= link_to "Sign in with GitHub",
-      "https://github.com/login/oauth/authorize?client_id=Ov23lisDr3te8NGMI0MW&scope=repo" %>
-      <%= button_to "Log in with Google", '/auth/google_oauth2'  %>
       <%= form_with url: '/auth/google_oauth2', method: :post do %>
         <button type="submit" class="gsi-material-button">
           <div class="gsi-material-button-state"></div>
@@ -24,5 +36,6 @@
         </button>
       <% end %>
     <% end %>
+
   </section>
 </div>
