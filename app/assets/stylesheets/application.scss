@@ -16,23 +16,31 @@
 
  @import "bootstrap";
 
- #main_logo_bg {
-   width: 100%;
-   height: 125px;
-   z-index: 2;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+//  #main_logo_bg {
+//    width: 100%;
+//    height: 125px;
+//    z-index: 2;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//  }
  
  #main_logo {
    max-width: 100%;
    height: auto;
  }
+
+ // Navbar Container with Background Image
+ .navbar-container {
+  width: 100%;
+  background-image: url('parchment.jpeg');
+  background-size: cover;
+  background-position: center;
+}
  
- .bg-dark {
-   background-color: rgba(0, 0, 0, 0.75) !important; /* Semi-transparent dark background */
- }
+//  .bg-dark {
+//    background-color: rgba(0, 0, 0, 0.75) !important; /* Semi-transparent dark background */
+//  }
  
  .nav-link {
    color: white;
@@ -53,48 +61,6 @@
  
  .col {
    padding: 0.5rem; /* Buffer between links and edge of the screen */
- }
- 
- @media (max-width: 768px) {
-   .row.no-gutters {
-     flex-direction: column;
-   }
- 
-   .col-md-4 {
-     width: 100%;
-     padding: 0.5rem 0;
-   }
- 
-   .navbar-nav {
-     display: none;
-   }
- 
-   .navbar-toggler {
-     display: block;
-     background: none;
-     border: none;
-     color: white;
-     font-size: 1.5rem;
-   }
- 
-   .navbar-toggler:focus {
-     outline: none;
-   }
- 
-   .navbar-toggler-icon {
-     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-   }
- 
-   .navbar-collapse {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
- 
-   .navbar-collapse .nav-link {
-     width: 100%;
-     text-align: center;
-   }
  }
 
 .overlay-content {
