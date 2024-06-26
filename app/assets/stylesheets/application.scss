@@ -16,6 +16,33 @@
 
  @import "bootstrap";
 
+ // Custom Font Face
+@font-face {
+  font-family: 'Treasure Map Font';
+  src: font-url("treasuremap.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.treasure-map-font {
+  font-family: 'Treasure Map Font', sans-serif;
+  font-size: 24px;
+}
+
+ // Navbar Container with Background Image
+.navbar-container {
+  width: 100%;
+  background-image: url('parchment.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+#main_logo {
+  max-width: 100%;
+  height: auto;
+}
+
+// Dark background navbar
 //  #main_logo_bg {
 //    width: 100%;
 //    height: 125px;
@@ -25,25 +52,13 @@
 //    align-items: center;
 //  }
  
- #main_logo {
-   max-width: 100%;
-   height: auto;
- }
 
- // Navbar Container with Background Image
- .navbar-container {
-  width: 100%;
-  background-image: url('parchment.jpeg');
-  background-size: cover;
-  background-position: center;
-}
- 
 //  .bg-dark {
 //    background-color: rgba(0, 0, 0, 0.75) !important; /* Semi-transparent dark background */
 //  }
  
- .nav-link {
-   color: white;
+.nav-link {
+   color: black;
    padding: 0.5rem 1rem;
  }
  
