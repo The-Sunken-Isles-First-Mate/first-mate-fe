@@ -13,10 +13,10 @@
             <%= form.text_field :name, class: "form-control" %> <br><br>
 
             <h3>Character Race</h3>
-            <%= form.select :race, @attrs.races, selected: @attrs.races.first, class: "form-control" %> <br><br>
+            <%= form.select :race, options_for_select(dnd_races), class: "form-control" %> <br><br>
 
             <h3>Character Class</h3>
-            <%= form.select :class, @attrs.classes, selected: @attrs.classes.first, class: "form-control" %> <br><br><br>
+            <%= form.select :class, options_for_select(dnd_classes), class: "form-control" %> <br><br><br>
 
             <h3>Character Image</h3>
             <%= form.file_field :character_image, accept: 'image/png, image/gif, image/jpeg', class: "form-control" %> <br><br><br>
