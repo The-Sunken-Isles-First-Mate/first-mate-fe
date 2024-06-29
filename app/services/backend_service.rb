@@ -13,6 +13,20 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.call_db_for_user_all(user_hash)
+    response = connection.get("users") do |request|
+      request.body =
+      {
+        user: {
+          username: user_hash[:username],
+          password: user_hash[:password]
+        }
+      }.to_json
+    end
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.patch_db_for_user_campaign(params)
     response = connection.patch("user_campaigns/#{params[:user_campaign_id]}") do |request|
       request.body = {
