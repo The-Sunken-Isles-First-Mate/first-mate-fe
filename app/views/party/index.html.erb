@@ -15,8 +15,8 @@
                   <%= image_tag("http://127.0.0.1:3000/#{character.image_url}", alt: character.name, class: "img-fluid card-img-start") %>
                 </div>
               <% end %>
-              <div class="col">
-                <h5 class="card-title"><%= character.name %></h5>
+              <div class="col" style="display: flex; flex-direction: column; justify-content: center;">
+                <h3 class="card-title"><%= character.name %></h3>
                 <p class="card-text">Race: <%= character.dnd_race %></p>
                 <p class="card-text">Class: <%= character.dnd_class %></p>
               </div>
