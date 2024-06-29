@@ -60,7 +60,7 @@
         <section class="management_form">
           <%= form_with url: campaign_management_update_path(@campaign.id), method: :patch, data: {turbo: false} do |form| %>
             <h4> Assign Villagers:
-              <a href="#" data-toggle="tooltip" placement="right" title="test"> <i class="fas fa-question-circle ml-2 black-link"></i> </a>
+              <a href="#" data-toggle="tooltip" placement="right" title= "<%=villager_distribution_info%>"> <i class="fas fa-question-circle ml-2 black-link"></i> </a>
             </br> <%= @campaign.villagers %> Available </h4>
             <div class="container-flex">
               <div class="form-group">
@@ -111,7 +111,9 @@
 
             <br>
 
-            <h4> Item Crafting </h4>
+            <h4> Item Crafting:
+              <a href="#" data-toggle="tooltip" placement="right" title= "<%=item_crafting_info%>"> <i class="fas fa-question-circle ml-2 black-link"></i> </a>
+            </h4>
 
             <%= form.label :item_1, "Craft a:" %>
             <%= form.select :item_1, @all_items, class: "management-qty-field", :include_blank => true, selected: @management_form %>

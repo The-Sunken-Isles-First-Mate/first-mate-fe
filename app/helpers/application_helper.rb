@@ -14,4 +14,12 @@ module ApplicationHelper
       "Sorcerer", "Warlock", "Wizard"
     ]
   end
+
+  def villager_distribution_info
+    "Note: Villagers can only be sent out in groups of 10.  You do not need to distribute all villagers, but cannot allocate more villagers than you have available for expeditions."
+  end
+
+  def item_crafting_info
+    "Note: Only 1 of each item may be crafted per week.  There must be enough current resources to construct each item on its own. Please reference the campaign guide for crafting resource costs."
+  end
 end
