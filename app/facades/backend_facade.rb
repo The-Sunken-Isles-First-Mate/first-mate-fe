@@ -8,6 +8,19 @@ class BackendFacade
     })
   end
 
+  def self.get_user_all(user_hash)
+    response = BackendService.call_db_for_user_all(user_hash)
+    if response.keys.first == :error
+      return response
+    else
+      User.new({
+        id: response[:data][:id],
+        uid: response[:data][:attributes][:uid],
+        username: response[:data][:attributes][:username]
+      })
+    end
+  end
+
   def self.get_user_campaigns(user_id)
     response = BackendService.call_db_for_user_campaigns("/api/v1/users/#{user_id}/user_campaigns")
 
