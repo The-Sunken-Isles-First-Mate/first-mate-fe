@@ -172,7 +172,11 @@ body {
  }
 
 .btn {
-  margin-top: 10px; /* Add some margin between buttons */
+  margin-top: 5px; /* Add some margin between buttons */
+  background-color: green;
+  min-height: 50px;
+  min-width: 100px;
+  font-family: 'Treasure Map Font', sans-serif;
 }
 
 .campaign-form {
