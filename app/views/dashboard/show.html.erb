@@ -15,7 +15,7 @@
         <h3>DM Campaigns</h3>
         <ul>
           <% current_user.dm_campaigns.each do |campaign| %>
-            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id) %></li>
+            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id), style: "color: black;" %></li>
           <% end %>
         </ul>
       </section>
@@ -26,7 +26,7 @@
         <h3>Party Campaigns</h3>
         <ul>
           <% current_user.party_campaigns.each do |campaign| %>
-            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id) %></li>
+            <li><%= link_to "##{campaign.campaign_id}", campaign_summary_path(campaign.campaign_id), style: "color: black;" %></li>
           <% end %>
         </ul>
       </section>

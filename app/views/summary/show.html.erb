@@ -1,47 +1,71 @@
-<div class="container text-center">
+<div class="container align-text-center">
   <div class="overlay-content">
-    <h1>Summary for <%= @campaign.name %> </h1>
     <section id="campaign_summary">
+    <h1>Summary for <%= @campaign.name %> </h1> 
       <div class="row">
         <div class="col">
-          <h2> Week <%= @campaign.week %> </h2>
-          <p> Current Villagers: <%= @campaign.villagers %> </h2>
+          <h1> * Week <%= @campaign.week %> *</h1> </br>
+          <h4> Villagers: <span style="text-decoration: underline;"><%= @campaign.villagers %></span></h4> </br>
 
           <section id="campaign_summary_resources">
             <h3> Resources </h3>
-            <ul style="list-style-type: none; padding: 0">
-              <li>Animal Products: <%= @campaign.animal_products %></li>
-              <li>Cloth: <%= @campaign.cloth %></li>
-              <li>Farmed Goods: <%= @campaign.farmed_goods %></li>
-              <li>Food: <%= @campaign.food %></li>
-              <li>Foraged Goods: <%= @campaign.foraged_goods %></li>
-              <li>Metal: <%= @campaign.metal %></li>
-              <li>Monster Parts: <%= @campaign.monster_parts %></li>
-              <li>Stone: <%= @campaign.stone %></li>
-              <li>Wood: <%= @campaign.wood %></li>
-            </ul>
+            <div class="table-container">
+            <table>
+              <tr>
+                <td>Animal Products:</td>
+                <td><%= @campaign.animal_products %></td>
+              </tr>
+              <tr>
+                <td>Cloth:</td>
+                <td><%= @campaign.cloth %></td>
+              </tr>
+              <tr>
+                <td>Farmed Goods:</td>
+                <td><%= @campaign.farmed_goods %></td>
+              </tr>
+              <tr>
+                <td>Food:</td>
+                <td><%= @campaign.food %></td>
+              </tr>
+              <tr>
+                <td>Foraged Goods:</td>
+                <td><%= @campaign.foraged_goods %></td>
+              </tr>
+              <tr>
+                <td>Metal:</td>
+                <td><%= @campaign.metal %></td>
+              </tr>
+              <tr>
+                <td>Monster Parts:</td>
+                <td><%= @campaign.monster_parts %></td>
+              </tr>
+              <tr>
+                <td>Stone:</td>
+                <td><%= @campaign.stone %></td>
+              </tr>
+              <tr>
+                <td>Wood:</td>
+                <td><%= @campaign.wood %></td>
+              </tr>
+            </table>
+          </div>
           </section>
         </div>
-      </div>
+      </div> </br>
 
         <section id="campaign_summary_items">
           <div class="row">
             <h3>Owned Items</h3>
-            <div class="col">
-              <ul style="list-style-type: none; padding: 0">
-                <% @items[0..13].each do |item| %>
-                  <li><%= item.name %>: <%= item.quantity %></li>
-                <% end %>
-              </ul>
-            </div>
-
-            <div class="col">
-              <ul style="list-style-type: none; padding: 0">
-                <% @items[14..-1].each do |item| %>
-                  <li><%= item.name %>: <%= item.quantity %></li>
-                <% end %>
-              </ul>
-            </div>
+            <table>
+              <% @items.each_slice(2) do |item_pair| %>
+                <tr>
+                  <% item_pair.each do |item| %>
+                    <td><%= item.name.titleize %>:</td>
+                    <td><%= item.quantity %></td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </table>
           </div>
         </section>
       </div>

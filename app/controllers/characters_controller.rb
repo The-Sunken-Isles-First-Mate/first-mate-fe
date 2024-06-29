@@ -1,17 +1,6 @@
 class CharactersController < ApplicationController
   def new
     @user_campaign_id = params[:user_campaign_id]
-    @attrs = nil
-    cache_data = Rails.cache.instance_variable_get(:@data)
-
-    if cache_data
-      cache_data.keys.each do |key|
-        @attrs = cached_attrs(key)
-        break if @attrs
-      end
-    end
-
-    @attrs ||= DndFacade.get_attrs
   end
 
   def create

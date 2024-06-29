@@ -56,6 +56,7 @@ gem 'dotenv-rails'
 
 # Design
 gem "bootstrap", "~> 5.2.0"
+gem 'font-awesome-sass', '~> 5.15.1'
 
 group :development do
   gem "web-console"
