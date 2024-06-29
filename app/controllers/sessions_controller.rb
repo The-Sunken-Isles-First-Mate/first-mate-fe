@@ -18,16 +18,25 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
+    user = BackendFacade.get_user_all({
+      username: params[:username],
+      password: params[:password]
+    })
 
-    # user = BackendFacade.get_user({
-    #   username: params[:username],
-    #   password: params[:password],
-    # })
+    if user.is_a?(User)
+      session_user = BackendFacade.get_user({
+        uid: user.id,
+        username: params[:username],
+        password: params[:password]
+      })
 
-    # session[:user] = user
+      session[:user] = session_user
 
-    # redirect_to dashboard_path
+      redirect_to dashboard_path
+    else
+      flash[:error] = 'Bad credentials. Please try again.'
+      redirect_to root_path
+    end
   end
 
   def destroy
