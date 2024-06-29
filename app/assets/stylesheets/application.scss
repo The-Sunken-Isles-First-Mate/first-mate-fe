@@ -15,6 +15,8 @@
  */
 
  @import "bootstrap";
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
 
  // Custom Font Face
 @font-face {
@@ -56,14 +58,55 @@
 //  .bg-dark {
 //    background-color: rgba(0, 0, 0, 0.75) !important; /* Semi-transparent dark background */
 //  }
- 
+
+h1 {
+  font-size: 40px;
+  font-family: 'Treasure Map Font', sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: 'Treasure Map Font', sans-serif;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: 'Treasure Map Font', sans-serif;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: 'Treasure Map Font', sans-serif;
+}
+
+.table-container {
+  margin: 0 auto; /* Center horizontally */
+  width: fit-content; /* Adjust width to fit content */
+  text-align: left; /* Left justify content within the table container */
+}
+
+table {
+  border-spacing: 8px; /* Adjust spacing between columns */
+  width: 100%; /* Ensure table fills the container width */
+}
+
+td {
+  padding: 8px; /* Add padding around content for better readability */
+}
+
+.black-link {
+  color: black; /* Set link text color to black */
+  text-decoration: none; /* Remove underline */
+}
+
 .nav-link {
    color: black;
    padding: 0.5rem 1rem;
  }
  
  .nav-link:hover {
-   color: lightgray;
+   color: #8C0C0F;
  }
  
  .container-fluid {
@@ -79,8 +122,10 @@
  }
 
 .overlay-content {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: rgb(0, 0, 0);
+  background-image: url('parchment.jpeg');
+  background-size: cover;
+  background-position: center;
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
@@ -115,7 +160,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh; /* Full height of the viewport */
+  height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -150,14 +195,6 @@ a {
 
 nav li {
   padding-left: 20%;
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: white; /* Adjust the color as needed */
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-  color: lightgray; /* Adjust the hover color as needed */
 }
 
 .form-group {

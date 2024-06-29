@@ -3,39 +3,65 @@
     <div class="col">
       <div class="overlay-content">
         <h1> Resource Management for <%= @campaign.name %> </h1> <br>
-        <h1> Week <%= @campaign.week %></h1> <br>
+        <h1> * Week <%= @campaign.week %> * </h1>
+        <br>
 
-        <h2> Resources Available </h2> <br>
-        <section class="available_resources">
-          <h4> Villagers </h4>
-          <ul>
-            <li> <p> Available Villagers: <%= @campaign.villagers %> </p> </li>
-          </ul>
-
-          <h4> Essentials </h4>
-          <ul>
-            <li> <p> Food: <%= @campaign.food %> </p> </li>
-            <li> <p> Farmed Goods: <%= @campaign.farmed_goods %> </p> </li>
-            <li> <p> Foraged Goods: <%= @campaign.foraged_goods %> </p> </li>
-          </ul>
-
-          <h4> Crafting Materials </h4>
-          <ul>
-            <li> <p> Wood: <%= @campaign.wood %> </p> </li>
-            <li> <p> Stone: <%= @campaign.stone %> </p> </li>
-            <li> <p> Metal: <%= @campaign.metal %> </p> </li>
-            <li> <p> Cloth: <%= @campaign.cloth %> </p> </li>
-            <li> <p> Animal Products: <%= @campaign.animal_products %> </p> </li>
-            <li> <p> Monster Parts: <%= @campaign.monster_parts %> </p> </li>
-          </ul>
+        <h2>Current Resources</h2>
+        <br>
+        <section class="current_resources">
+          <h4>Villagers: <span style="text-decoration: underline;"><%= @campaign.villagers %></span></h4> </br>
+          <h4>Resources</h4>
+          
+          <div class="table-container">
+            <table>
+              <tr>
+                <td>Animal Products:</td>
+                <td><%= @campaign.animal_products %></td>
+              </tr>
+              <tr>
+                <td>Cloth:</td>
+                <td><%= @campaign.cloth %></td>
+              </tr>
+              <tr>
+                <td>Farmed Goods:</td>
+                <td><%= @campaign.farmed_goods %></td>
+              </tr>
+              <tr>
+                <td>Food:</td>
+                <td><%= @campaign.food %></td>
+              </tr>
+              <tr>
+                <td>Foraged Goods:</td>
+                <td><%= @campaign.foraged_goods %></td>
+              </tr>
+              <tr>
+                <td>Metal:</td>
+                <td><%= @campaign.metal %></td>
+              </tr>
+              <tr>
+                <td>Monster Parts:</td>
+                <td><%= @campaign.monster_parts %></td>
+              </tr>
+              <tr>
+                <td>Stone:</td>
+                <td><%= @campaign.stone %></td>
+              </tr>
+              <tr>
+                <td>Wood:</td>
+                <td><%= @campaign.wood %></td>
+              </tr>
+            </table>
+          </div>
         </section>
-
+  
         <br>
 
         <h2> Management Form </h2> <br>
         <section class="management_form">
           <%= form_with url: campaign_management_update_path(@campaign.id), method: :patch, data: {turbo: false} do |form| %>
-            <h4> Assign Villagers - <%= @campaign.villagers %> Available </h4>
+            <h4> Assign Villagers:
+              <a href="#" data-toggle="tooltip" placement="right" title="test"> <i class="fas fa-question-circle ml-2 black-link"></i> </a>
+            </br> <%= @campaign.villagers %> Available </h4>
             <div class="container-flex">
               <div class="form-group">
                 <%= form.label :food, "Food:", class: "management-label" %>
