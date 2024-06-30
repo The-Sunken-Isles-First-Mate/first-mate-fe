@@ -130,7 +130,7 @@ class BackendService
 
       RestClient::Request.execute(
         method: :post,
-        url: "#{api_base_url}/characters",
+        url: "#{api_base_url}/api/v1/characters",
         payload: {
           multipart: true,
           json: json_payload,
