@@ -65,47 +65,47 @@
             <div class="container-flex">
               <div class="form-group">
                 <%= form.label :food, "Food:", class: "management-label" %>
-                <%= form.text_field :food, value: @management_form.food, class: "management-qty-field" %>
+                <%= form.number_field :food, value: @management_form.food, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :farmed_goods, "Farmed Goods:", class: "management-label" %>
-                <%= form.text_field :farmed_goods, value: @management_form.farmed_goods, class: "management-qty-field" %>
+                <%= form.number_field :farmed_goods, value: @management_form.farmed_goods, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :foraged_goods, "Foraged Goods:", class: "management-label" %>
-                <%= form.text_field :foraged_goods, value: @management_form.foraged_goods, class: "management-qty-field" %>
+                <%= form.number_field :foraged_goods, value: @management_form.foraged_goods, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :wood, "Wood:", class: "management-label" %>
-                <%= form.text_field :wood, value: @management_form.wood, class: "management-qty-field" %>
+                <%= form.number_field :wood, value: @management_form.wood, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :stone, "Stone:", class: "management-label" %>
-                <%= form.text_field :stone, value: @management_form.stone, class: "management-qty-field" %>
+                <%= form.number_field :stone, value: @management_form.stone, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :metal, "Metal:", class: "management-label" %>
-                <%= form.text_field :metal, value: @management_form.metal, class: "management-qty-field" %>
+                <%= form.number_field :metal, value: @management_form.metal, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :cloth, "Cloth:", class: "management-label" %>
-                <%= form.text_field :cloth, value: @management_form.cloth, class: "management-qty-field" %>
+                <%= form.number_field :cloth, value: @management_form.cloth, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :animal_products, "Animal Products:", class: "management-label" %>
-                <%= form.text_field :animal_products, value: @management_form.animal_products, class: "management-qty-field" %>
+                <%= form.number_field :animal_products, value: @management_form.animal_products, class: "management-qty-field" %>
               </div>
 
               <div class="form-group">
                 <%= form.label :monster_parts, "Monster Parts:", class: "management-label" %>
-                <%= form.text_field :monster_parts, value: @management_form.monster_parts, class: "management-qty-field" %>
+                <%= form.number_field :monster_parts, value: @management_form.monster_parts, class: "management-qty-field" %>
               </div>
             </div>
 
@@ -116,24 +116,24 @@
             </h4>
 
             <%= form.label :item_1, "Craft a:" %>
-            <%= form.select :item_1, @all_items, class: "management-qty-field", :include_blank => true, selected: @management_form %>
+            <%= form.select :item_1, @all_items, :include_blank => true, selected: @management_form %>
             <%= form.label :item_1_quantity, "Quantity:" %>
-            <%= form.text_field :item_1_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.number_field :item_1_quantity, value: 0, class: "management-qty-field" %> <br><br>
 
             <%= form.label :item_2, "Craft a:" %>
-            <%= form.select :item_2, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.select :item_2, @all_items, :include_blank => true %>
             <%= form.label :item_2_quantity, "Quantity:" %>
-            <%= form.text_field :item_2_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.number_field :item_2_quantity, value: 0, class: "management-qty-field" %> <br><br>
 
             <%= form.label :item_3, "Craft a:" %>
-            <%= form.select :item_3, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.select :item_3, @all_items, :include_blank => true %>
             <%= form.label :item_3_quantity, "Quantity:" %>
-            <%= form.text_field :item_3_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.number_field :item_3_quantity, value: 0, class: "management-qty-field" %> <br><br>
 
             <%= form.label :item_4, "Craft a:" %>
-            <%= form.select :item_4, @all_items, class: "management-qty-field", :include_blank => true %>
+            <%= form.select :item_4, @all_items, :include_blank => true %>
             <%= form.label :item_4_quantity, "Quantity:" %>
-            <%= form.text_field :item_4_quantity, :size=>"4", value: 0 %> <br><br>
+            <%= form.number_field :item_4_quantity, value: 0, class: "management-qty-field" %> <br><br>
 
             <%= form.submit "Update" %>
           <% end %>
