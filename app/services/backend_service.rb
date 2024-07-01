@@ -130,7 +130,7 @@ class BackendService
 
       RestClient::Request.execute(
         method: :post,
-        url: 'http://127.0.0.1:3000/api/v1/characters',
+        url: "#{api_base_url}/api/v1/characters",
         payload: {
           multipart: true,
           json: json_payload,
@@ -213,9 +213,13 @@ class BackendService
 
   private
 
-  def self.connection # Replace with hosted database once established
+  def self.api_base_url
+    ENV['API_BASE_URL']
+  end
+
+  def self.connection
     Faraday.new(
-      url: "http://127.0.0.1:3000/api/v1",
+      url: "#{api_base_url}/api/v1",
       headers: {'Content-Type' => 'application/json'}
     )
   end
