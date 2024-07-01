@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     # BE needs to find or create a user with the uid
     user = BackendFacade.get_user({
       uid: auth[:uid],
-      username: auth[:info][:email]
+      username: auth[:info][:email].downcase
     })
 
     session[:user] = user
@@ -19,14 +19,14 @@ class SessionsController < ApplicationController
 
   def create
     user = BackendFacade.get_user_all({
-      username: params[:username],
+      username: params[:username].downcase,
       password: params[:password]
     })
 
     if user.is_a?(User)
       session_user = BackendFacade.get_user({
         uid: user.id,
-        username: params[:username],
+        username: params[:username].downcase,
         password: params[:password]
       })
 

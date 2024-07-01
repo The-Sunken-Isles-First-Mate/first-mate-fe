@@ -164,8 +164,8 @@ class BackendFacade
     })
   end
 
-  def self.create_user_campaign_pl(campaign_id, player_id)
-    response = BackendService.post_db_user_campaign_pl(campaign_id, player_id)
+  def self.create_user_campaign_pl(campaign_id, player_email)
+    response = BackendService.post_db_user_campaign_pl(campaign_id, player_email)
 
     Pl.new({
       id: response[:data][:id],
