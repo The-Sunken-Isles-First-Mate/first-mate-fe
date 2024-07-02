@@ -140,6 +140,20 @@ td {
   color: rgb(0, 0, 0);
   border-radius: 8px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.character-image {
+  max-width: 100%;
+  height: auto;
+  align-self: center;
 }
 
 .inner_bg {

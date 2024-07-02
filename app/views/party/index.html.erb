@@ -17,8 +17,7 @@
               </div>
               <% if character.image_url %>
                 <div class="col">
-                  <%= image_tag("#{ENV['API_BASE_URL']}#{character.image_url}", alt: character.name, class: "img-fluid card-img-start") %>
-                </div>
+                  <%= image_tag("#{ENV['API_BASE_URL']}#{character.image_url}", alt: character.name, class: "img-fluid card-img-start character-image") %>
                 </div>
               <% end %>
             </div>
