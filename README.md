@@ -2,7 +2,7 @@
 
 ### [First Mate BE GH Repo](https://github.com/The-Sunken-Isles-First-Mate/first-mate-be)
 
-### There is currently no live deployment of this application.
+### [Live deployment](https://first-mate-fe-0787570249fd.herokuapp.com/)
 
 ### About
 
