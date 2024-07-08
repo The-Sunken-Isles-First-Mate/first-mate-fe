@@ -1,7 +1,7 @@
 # First Mate FE
 [Deployed Site](https://first-mate-fe-0787570249fd.herokuapp.com/)
 
-## About
+### About
 
 This is the frontend repo for the Sunken Isles First Mates web application. Our minimal viable product (MVP) includes functionality for a user to log in to the web application through GitHub OAuth and create a campaign, create a character, and manipulate data related to the campaign that changes from week to week.
 
