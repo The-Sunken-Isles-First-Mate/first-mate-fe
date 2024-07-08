@@ -1,8 +1,5 @@
 # First Mate FE
-
-### [First Mate BE GH Repo](https://github.com/The-Sunken-Isles-First-Mate/first-mate-be)
-
-### [Live deployment](https://first-mate-fe-0787570249fd.herokuapp.com/)
+[Deployed Site](https://first-mate-fe-0787570249fd.herokuapp.com/)
 
 ### About
 
@@ -18,11 +15,11 @@ There are three main pages for a campaign - the Summary page, the Resource Manag
 
 This application is only one half of the Sunken Isles First Mates web application, and is primarily responsible for handling everything user facing (presenting the user the option to login through GH Oauth, displaying the appropriate information for a user, and displaying all the important information for creating a campaign, creating a character, and entering data into a form.
 
-### End Users
+## End Users
 
 Simply put, the end user for this application is someone that loves to play the game Dungeons and Dragons, and wants an easy-to-use tool that would allow them to keep track of all the resouces they currently have in their DnD campaign. We primarily exhibited user empathy by creating a simple, web application that is mobile-friendly and responsive to different screen sizes. There are a limited number of pages, and each page has a semi-transparent background to make reading easier.
 
-### Local Setup
+## Local Setup
 
 ```
 Fork and clone this repository
@@ -35,15 +32,15 @@ bundle install
 rails db:{drop,create,migrate,seed}
 ```
 
-### Local App Navigation
+## Local App Navigation
 
-1. Sign in through the GitHub OAuth
+1. Sign in through the Google OAuth
 
 This will take you to the user dashboard.
 
 2. Click 'Create Campaign'
 
-This will bring you to a form where you will be able to enter a campaign name, and invite any additional players to your campaign (they must have created an account prior).
+This will bring you to a form where you will be able to enter a campaign name, and invite any additional players to your campaign with their email (they must have created an account prior).
 
 3. Click the 'Create Campaign' Button
 
@@ -62,47 +59,20 @@ This will take you to the Party page which will list all the current party membe
 - Ruby 3.2.2
 - Rails 7.1.2
 
-### Implementation of OAuth
-
-For this project, we decided to implement GitHub OAuth as the primary way of signing into our web application. We initially tried to implement Google's OAuth, but found some challenges with it that we weren't able to figure out. All of us have prior experience with implementing GitHub OAuth so it was nice to have that as a backup plan while we tried using a new OAuth provider. However, it was not without its challenges. Due to this web application having both a frontend and backend, and the backend is where the users' information is stored, there were some issues with sending the data to the backend, creating the user model, and assigning the current user of the application to the new model that was created. We did succeed in getting it to work by creating a PORO and manually assigning the attributes to they values of the nested hash from the backend API call to see if the user already existed.
-
 ### Screenshots
 
 <details>
   <summary> See Screenshots </summary>
-  
-![image (7)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/f652e424-f42d-4279-b954-2de617303a4c)
-![image (6)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/9ac1a2a1-2968-4901-ba57-d6533d0e7393)
-![image (8)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/44d495e1-6dde-46ff-90a5-bc6a6d99d230)
-![image (2)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/78983368-51fb-4e8f-84e7-a8ab2d6a7b6b)
-![image (4)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/6a5e941f-5067-463d-a917-ba6811fe5179)
-![image (5)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/a31b8477-3770-4948-ae04-ff22f9313ce4)
-![image (3)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/2a08831c-6477-461c-8c50-341784fddcf9)
-![image (1)](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/142369918/f3795f66-bd30-403b-be0a-6a0500f75356)
+
+![Image 1](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/6a8e92ce-f5f8-4f6f-b043-95cad29c9998)
+![Image 2](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/94880661-bc2c-45df-9cc3-557804e59e38)
+![Image 3](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/115c1daa-cebf-42ce-9996-9e278d2c5d49)
+![Image 4](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/68a790a4-1767-48ec-b7b3-fc059f37dd3f)
+![Image 5](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/7f58e2b9-4b15-45eb-9bea-31e92169c716)
+![Image 6](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/782ad0d7-21ab-49af-847b-b87024bd430a)
+![Image 7](https://github.com/The-Sunken-Isles-First-Mate/first-mate-fe/assets/155924313/a8ddc490-4834-48cf-909f-94636f2e298f)
 
 </details>
-
-### Goals
-
-Feature Delivery
-- [x] 90% or more MVP stories are completed
-- [x] at least 1 external API is consumed
-- [x] OAuth works error-free in incognito/private
-- [x] Students can explain in-depth what features use their chosen technologies, either FE or BE
-- [x] Project meets point threshold (5)
-
-Technical Quality
-- [x] Code follows DRY and SRP design
-- [x] Routes follow RESTful patterns (Frontend, User-facing routes are friendly)
-- [x] Controllers utilize Facades
-- [x] Facades utilize Service calls to store/retrieve data
-- [x] Deploy to the internet (using Render, Heroku, etc)
-- [x] No data storage (models, database schema, etc) is done at this layer; user info, sessions and caching are the exception
-- [x] Application is easy to navigate for non-technical users
-
-Testing
-- [x] FE Repo - 90% or more test coverage, includes happy path and sad path expectations
-- [x] API calls to external services are tested using mocks/stubs in at least one application (using tools like Webmock, VCR, etc.)
 
 ### Tests
 
@@ -112,13 +82,8 @@ To run the test suite, in the root folder of the application:
 bundle exec rspec spec
 ```
 
-* 51 Total Tests (Over 90% test coverage)
-
 ### Resources
-
-* [DTR](https://docs.google.com/document/d/14kgT_dFLwxf5YbhW60A4qFVJ9nUUK9TJIrYoOJ1D1JE/edit)
-* [Miro Board](https://miro.com/app/board/uXjVKCJ_O7U=/)
-* [DnD API](https://www.dnd5eapi.co/)
+* [Miro Planning Board](https://miro.com/app/board/uXjVKCJ_O7U=/)
 
 ### Contributors
 
